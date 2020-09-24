@@ -1,5 +1,5 @@
 # Warrior-Delivery
-A dining hall food delivery service.
+**A dining hall food delivery service.**
 
 Project Concept:
 
