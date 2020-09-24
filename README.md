@@ -5,8 +5,9 @@
 
 - Current Issues:
 
-Due to COVID, it is important to maintain safety on campus. Many students do not feel safe visiting high-risk locations such as dining halls. 
-Current delivery options do not delivery directly to student.
+1. Due to COVID, it is important to maintain safety on campus.
+2. Many students do not feel safe visiting high-risk locations such as dining halls. 
+3. Current delivery options do not delivery directly to student.
 
 - Solution:
 
