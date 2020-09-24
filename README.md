@@ -1,7 +1,7 @@
 # Warrior-Delivery
-**A Dining Hall Food Delivery Service.**
+## A Dining Hall Food Delivery Service.**
 
-Project Concept:
+### Project Concept:
 
 - Current Issues:
 
@@ -12,7 +12,7 @@ Current delivery options do not delivery directly to student.
 
 Create a service that can deliver food directly to any dorm or location on campus.
 
-Project Description:
+### Project Description:
 
 Our Website:
 
