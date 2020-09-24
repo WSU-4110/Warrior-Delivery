@@ -1,5 +1,5 @@
 # Warrior-Delivery
-A dining hall food delivery service
+A dining hall food delivery service.
 
 Project Concept:
 Current Issues:
@@ -14,10 +14,10 @@ Create a service that can deliver food directly to any dorm or location on campu
 Project Description:
 Our Website:
 
-is available for students/faculty to order food and have it delivered anywhere on campus.​​
+1. is available for students/faculty to order food and have it delivered anywhere on campus.
 
-verifies the user is a Wayne State student based on access ID.​
+2. verifies the user is a Wayne State student based on access ID.
 
-can specify the cafeteria and can support multiple menu items.​ ​​
+3. can specify the cafeteria and can support multiple menu items.
 
-confirms order and displays delivery status for each user
+4. confirms order and displays delivery status for each user.
