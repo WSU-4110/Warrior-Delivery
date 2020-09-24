@@ -2,6 +2,7 @@
 A dining hall food delivery service.
 
 Project Concept:
+
 Current Issues:
 
 Due to COVID, it is important to maintain safety on campus. Many students do not feel safe visiting high-risk locations such as dining halls. 
