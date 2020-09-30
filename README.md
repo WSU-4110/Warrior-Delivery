@@ -1,5 +1,16 @@
 # Warrior-Delivery: A dining hall food delivery service.
-## Developers: Affan Atif,  Neelesh Bollu, Timothy Haddad, Miguel Manzanarez, Sanaz Rabinia, Mazin Shulaiba
+## Developers:  
+
+Affan Atif, Neelesh Bollu (Lead), Timothy Haddad, Miguel Manzanarez, Sanaz Rabinia, Mazin Shulaiba
+
+| Backend       | Frontend      | Database |
+| ------------- |:-------------:| -----:|
+| Sanaz         | Neelesh       | Sanaz|
+|               | Affan         |      |
+|               | Timothy       |      |
+|               | Miguel        |      |
+|               | Sanaz         |      |
+|               | Mazin         |      |
 
 ### Current Issues:
 1. Due to COVID, it is important to maintain safety on campus.
