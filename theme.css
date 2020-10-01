@@ -57,3 +57,13 @@ label {
 	line-height: 2.5;
 }
 
+table { border: 5px solid #FFC842;
+		width: 85%;
+		border-collapse: collapse; 
+		background-color: white; }
+		
+td, th { padding: 3px;
+		border: 2px solid #FFC842; }
+		
+td { text-align: center; }
+
