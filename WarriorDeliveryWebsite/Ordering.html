@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="theme.css">
+    <title>Order | Warrior Delivery</title>
+</head>
+<body>
+
+<h1 style="color:#FFC842;">Ordering Page</h1>
+<a href='Homepage.html'>Home</a>
+
+<p>This page will contain the ordering interface</p>
+<p>We will include the food items, location, and delivery style on this page.</p>
+
+<form action="ordering.php">
+    <fieldset>
+        <legend>Place an Order</legend>
+
+        <label for="items">Items:</label>   <!-- could make this datalist instead of select -->
+        <select id="food" name="items" placeholder="Choose an Item" required>
+            <option value="null">Choose an Item</option>
+            <option value="Cheese Pizza">Slice of Cheese Pizza</option>
+            <option value="Veggie Pizza">Slice of Veggie Pizza</option>
+            <option value="Fries">Fries</option>
+            <option value="Cheese Breadsticks">Cheese Breadsticks</option>
+            <option value="Chicken Tenders">Chicken Tenders</option>
+            <option value="Peach Cup">Diced Peaches</option>
+            <option value="Apple Slices">Apple Slices</option>
+            <option value="Coca Cola">Coca Cola</option>
+            <option value="Pepsi">Pepsi</option>
+            <option value="Sprite">Sprite</option>
+            <option value="Water">Bottled Water</option>
+        </select>
+
+        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1"><br>
+
+        <fieldset>
+            <legend>Select your Delivery Style:</legend>
+            <input type="radio" id="hand" name="ordStyle" value="In your hand">
+            <label for="hand">In your Hand</label><br>
+            <input type="radio" id="door" name="ordStyle" value="On your Doorstep">
+            <label for="door">On your Doorstep</label><br>
+        </fieldset>
+
+        <label for="comment">Comments:</label><br>
+        <textarea name="comment" rows="3" cols="65" placeholder="Comment"></textarea><br>
+
+        <input type="submit" value="Place Order" formaction="ordering.php">
+    </fieldset> <!-- formaction is uneccessary, as it is meant to override the default 'action' at the top at <form> -->
+</form><br>
+
+
+
+</body>
+</html>
