@@ -10,11 +10,13 @@
 <a href='homepage.html'>Home</a>
 <p>Welcome to the Warrior Delivery Page. Before beginning, please enter which location you stationed at</P>
 
-<form action="/deliverer_info.php">
+<form action="/deliverer_info.php" method="post">
 	<legend>Pick Your Location</legend>
 	<input type="radio" id="FoodCourt" name="Station" value="Student Center Food Court" required>
+	<?php if (isset($station) && $station=="Student Center Food Court") echo "checked";?>
 	<label for="FoodCourt">Student Center Food Court</label><br>
 	<input type="radio" id="Towers" name="Station" value="Towers Cafe" required>
+	<?php if (isset($station) && $station=="Towers Cafe") echo "checked";?>
 	<label for="Towers">Towers Cafe</label><br>
 	<input type="submit" value="Submit">
 </form>

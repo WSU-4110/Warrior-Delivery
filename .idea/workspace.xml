@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="990ec568-549b-47a1-8d3b-96266dea5a15" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/deliverer_info.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/DelivererPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/DelivererPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/DelivererPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/DelivererPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
