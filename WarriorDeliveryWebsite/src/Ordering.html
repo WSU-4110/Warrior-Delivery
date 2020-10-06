@@ -6,9 +6,13 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 <h1 style="color:#FFC842;">Ordering Page</h1>
 <a href='Homepage.html'>Home</a>
-
+=======
+<h1>Ordering Page</h1>
+<a href='homepage.html'>Home</a>
+>>>>>>> 8115544c2fad3491bc7f6f8b18c810a640c9cfa5
 <p>This page will contain the ordering interface</p>
 <p>We will include the food items, location, and delivery style on this page.</p>
 
@@ -16,23 +20,84 @@
     <fieldset>
         <legend>Place an Order</legend>
 
-        <label for="items">Items:</label>   <!-- could make this datalist instead of select -->
-        <select id="food" name="items" placeholder="Choose an Item" required>
-            <option value="null">Choose an Item</option>
-            <option value="Cheese Pizza">Slice of Cheese Pizza</option>
-            <option value="Veggie Pizza">Slice of Veggie Pizza</option>
-            <option value="Fries">Fries</option>
-            <option value="Cheese Breadsticks">Cheese Breadsticks</option>
-            <option value="Chicken Tenders">Chicken Tenders</option>
-            <option value="Peach Cup">Diced Peaches</option>
-            <option value="Apple Slices">Apple Slices</option>
-            <option value="Coca Cola">Coca Cola</option>
-            <option value="Pepsi">Pepsi</option>
-            <option value="Sprite">Sprite</option>
-            <option value="Water">Bottled Water</option>
-        </select>
+        <label for="item">Choose your food items and quantity from this list:</label>
+  <input type="items" name="getItems" id="item" list="food">
+  <datalist id="food">
+    <option value="Cheese Pizza (Slice)">$2.00</option>
+    <option value="Veggie Pizza (Slice)">$2.00</option>
+    <option value="Fries (Bowl)">$1.00</option>
+    <option value="Cheese Breadsticks">$1.50</option>
+    <option value="Chicken Tenders">$3.50</option>
+    <option value="Diced Peaches">$1.00</option>
+    <option value="Apple Slices">$1.00</option>
+
+  </datalist>
+
+  
+  
+  
+  
+ 
+  </script>
+  <input type="submit">
 
         <input type="number" id="quantity" name="quantity" min="1" max="10" value="1"><br>
+
+        <label for="beverage">Choose your beverage from this list:</label>
+        <input list="beverages" name="beverage" id="selectedBeverage">
+        <datalist id="beverages">
+        <option value="Coca-Cola (Can)">$1.00 </option>
+        <option value="Pepsi (Can)"> $1.00 </option>
+        <option value="Sprite (Can)"> $1.00 </option>
+        <option value="Water (Bottle)"> $1.00 </option
+        <option value="Apple Juice (Bottle)">$1.50 </option>
+        <option value="Orange Juice (Bottle)">$1.50</option>
+</datalist>
+
+
+
+
+
+
+
+
+
+
+<script>
+	var getValue = document.getElementById('quantity');
+	var temp1 = "2"
+	var temp2 = ""
+	getValue.addEventListener('input', function()
+	{
+	temp1 = this.value
+	
+	})
+	
+	var getValue = document.getElementById('item');
+	getValue.addEventListener('input', function()
+	{
+	document.getElementById("spanresult").innerHTML="Food Item: " + this.value + temp1;
+	});
+  </script>
+ <script>
+	var getValue = document.getElementById('selectedBeverage');
+	getValue.addEventListener('input', function()
+	{
+	document.getElementById("BeverageResult").innerHTML="Beverage. " + this.value;
+	});
+  </script>
+
+<input type="submit">
+
+      <input type="number" id="quantity" name="quantity" min="1" max="10" value="1"><br>
+        <fieldset>
+            <legend>Select your Delivery Style:</legend>
+            <input type="radio" id="hand" name="ordStyle" value="In your hand">
+            <label for="hand">In your Hand</label><br>
+            <input type="radio" id="door" name="ordStyle" value="On your Doorstep">
+            <label for="door">On your Doorstep</label><br>
+        </fieldset>
+
 
         <fieldset>
             <legend>Select your Delivery Style:</legend>
@@ -42,12 +107,26 @@
             <label for="door">On your Doorstep</label><br>
         </fieldset>
 
+
         <label for="comment">Comments:</label><br>
         <textarea name="comment" rows="3" cols="65" placeholder="Comment"></textarea><br>
 
         <input type="submit" value="Place Order" formaction="ordering.php">
-    </fieldset> <!-- formaction is uneccessary, as it is meant to override the default 'action' at the top at <form> -->
+    
+	<h1> Current Cart </h1>
+<span id="spanresult"></span>
+<br>
+<span id="BeverageResult"></span>
+	
+	</fieldset> <!-- formaction is uneccessary, as it is meant to override the default 'action' at the top at <form> -->
+
+
+
+
+
+
 </form><br>
+
 
 
 
