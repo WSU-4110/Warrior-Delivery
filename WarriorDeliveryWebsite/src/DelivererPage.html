@@ -13,10 +13,23 @@
 <a href='DelivererPage.html'>Delivery</a>
 <a href='StudentProfile.html'>Student Profile</a>
 <a href='DeliveryProfile.html'>Deliverer Profile</a>
-<a href='MakeAccountD.html'>Deliverer Profile</a>
+<a href='MakeAccountD.html'>Make an Account</a>
+
 <p>Welcome to the Warrior Delivery Page. Before beginning, please enter which location you stationed at</P>
 
 <form action="/deliverer_info.php" method="post">
+	<legend>Please login to your Wayne State Account:</legend>
+
+	<label for="uname">Username</label><br>
+	<input type="text" id="uname" name="uname" placeholder="Username" required autofocus autocomplete><br>
+
+	<label for="pass">Password</label><br>
+	<input type="password" id="pass" name="pass" placeholder="Password" required><br>
+
+	<input type="checkbox" checked="checked" name="remember">
+	<label for="remember">Remember Me</label><br>
+	<span class="psw"><a href="Homepage.html">Forgot password?</a></span>
+
 	<legend>Pick Your Location</legend>
 	<input type="radio" id="FoodCourt" name="Station" value="Student Center Food Court" required>
 	<?php if (isset($station) && $station=="Student Center Food Court") echo "checked";?>
