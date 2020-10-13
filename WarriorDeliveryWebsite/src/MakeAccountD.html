@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="theme.css">
+    <title>Create Account | Warrior Delivery</title>
+</head>
+<body>
+
+<h1>Account Creation</h1>
+<a href='menu.html'>Menu</a>  <!-- Notice how I was able to hyperlink to a local file that is found in the same folder as this file -->
+<a href='login.html'>Login</a>
+<a href='ordering.html'>Order</a>
+<a href='DelivererPage.html'>Delivery</a>
+<a href='StudentProfile.html'>Student Profile</a>
+<a href='DeliveryProfile.html'>Deliverer Profile</a>
+<p>Please Enter your Information</p>
+
+<form action="AccountD.php" autocomplete="on">
+    <fieldset>
+        <legend>Please fill out the following information</legend>
+
+        <label for="name">First Name</label><br>
+        <input type="text" id="name" name="name" placeholder="First Name" required autofocus autocomplete><br>
+
+        <label for="Lname">Last Name</label><br>
+        <input type="text" id="Lname" name="Lname" placeholder="Last Name" required autofocus autocomplete><br>
+
+        <label for="SID">Student ID</label><br>
+        <input type="text" id="SID" name="SID" placeholder="Student ID" required autofocus autocomplete><br>
+
+        <label for="uname">Username</label><br>
+        <input type="text" id="uname" name="uname" placeholder="Username" required autofocus autocomplete><br>
+
+        <label for="pass">Password</label><br>
+        <input type="password" id="pass" name="pass" placeholder="Password" required><br>
+
+        <label for="pass">Re-enter Password</label><br>
+        <input type="password" id="passTest" name="passTest" placeholder="Password" required><br>
+
+        <input type="submit" value="Register" formaction="AccountD.php"><br><br>
+        <label>
+            
+        </label>
+        <span class="psw"><a href="Homepage.html">Forgot password?</a></span>
+
+
+    </fieldset>
+</form>
+
+</body>
+</html>
