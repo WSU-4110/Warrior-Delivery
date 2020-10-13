@@ -9,32 +9,21 @@
 
 <h1 style="color:#FFC842;">Menu</h1>
 <a href='Homepage.html'>Home</a>
-<a href='Menu.html'>Menu</a>  <!-- Notice how I was able to hyperlink to a local file that is found in the same folder as this file -->
-<a href='Login.html'>Login</a>
-<a href='Ordering.html'>Order</a>
-<a href='DelivererPage.html'>Delivery</a>
-<a href='StudentProfile.html'>Student Profile</a>
-<a href='DeliveryProfile.html'>Deliverer Profile</a>
-
 <br><br>
-<table style="width:10%">
+<legend>Select your Delivery Style:</legend>
+
+<table>
 	<thead>	
-		<th>Door Prices*</th>
+		<th>Door Prices (will be the starting price of your order before delivery fees):</th>
 	</thead>
 	
 	<tbody>
-		<tr>
-			<td>Breakfast: $7.50</td>
-		</tr>
-		<tr>
-			<td>Lunch: $9.00</td>
-		</tr>
-		<tr>
-			<td>Dinner $9.75</td>
-		</tr>
+		<tr>Breakfast: $7.50</tr>
+		<tr>Lunch: $9.00</tr>
+		<tr>Dinner $9.75</tr>
 	</tbody>
-</table>
-<p>*Will be the starting price of your order before delivery fees</p>
+<br><br>
+
 <table>
 	<thead>
 		<th>Category</th>
