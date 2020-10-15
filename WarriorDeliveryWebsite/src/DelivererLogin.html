@@ -1,0 +1,46 @@
+<html>
+<head>
+<link rel="stylesheet" href="theme.css">
+<title>Warrior Delivery | </title>
+</head>
+
+<body style="background-color:#00584D;">
+
+<h1 style="color:#FFC842;">Delivery Page</h1>
+<a href='menu.html'>Menu</a>  <!-- Notice how I was able to hyperlink to a local file that is found in the same folder as this file -->
+<a href='login.html'>Login</a>
+<a href='ordering.html'>Order</a>
+<a href='DelivererPage.html'>Delivery</a>
+<a href='StudentProfile.html'>Student Profile</a>
+<a href='DeliveryProfile.html'>Deliverer Profile</a>
+<a href='MakeAccountD.html'>Make an Account</a>
+
+<p>Welcome to the Warrior Delivery Page. Before beginning, please enter which location you stationed at</P>
+
+<form action="/deliverer_info.php" method="post">
+	<legend>Please login to your Wayne State Account:</legend>
+
+	<label for="uname">Username</label><br>
+	<input type="text" id="uname" name="uname" placeholder="Username" required autofocus autocomplete><br>
+
+	<label for="pass">Password</label><br>
+	<input type="password" id="pass" name="pass" placeholder="Password" required><br>
+
+	<input type="checkbox" checked="checked" name="remember">
+	<label for="remember">Remember Me</label><br>
+	<span class="psw"><a href="Homepage.html">Forgot password?</a></span>
+
+	<legend>Pick Your Location</legend>
+	<input type="radio" id="FoodCourt" name="Station" value="Student Center Food Court" required>
+	<?php if (isset($station) && $station=="Student Center Food Court") echo "checked";?>
+	<label for="FoodCourt">Student Center Food Court</label><br>
+	<input type="radio" id="Towers" name="Station" value="Towers Cafe" required>
+	<?php if (isset($station) && $station=="Towers Cafe") echo "checked";?>
+	<label for="Towers">Towers Cafe</label><br>
+	<input type="submit" value="Submit">
+</form>
+
+<a href='DeliveryMainPage.html'>Continue to Main Page</a>
+
+</body>
+</html>
