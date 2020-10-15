@@ -20,6 +20,7 @@
 <p> </p>
 
 <form style="text-align:center;max-width:400px;margin:auto;padding:0px 0px 10px 0px" action="/deliverer_info.php" method="post">
+	<fieldset>
 	<legend>Login to your account:</legend>
 
 	<label for="uname">Username</label><br>
@@ -31,9 +32,11 @@
 	<input type="checkbox" checked="checked" name="remember">
 	<label for="remember">Remember Me</label><br>
 	<a style="padding:2px;font-size:1em" href="Homepage.html">Forgot password?</a>
+	</fieldset>
 </form><br>
 
 <form style="max-width:400px;margin:auto;">
+ <fieldset>
 	<legend style="text-align:center">Select Your Location</legend>
 	<input type="radio" id="FoodCourt" name="Station" value="Student Center Food Court" required>
 	<?php if (isset($station) && $station=="Student Center Food Court") echo "checked";?>
@@ -41,8 +44,9 @@
 	<input type="radio" id="Towers" name="Station" value="Towers Cafe" required>
 	<?php if (isset($station) && $station=="Towers Cafe") echo "checked";?>
 	<label for="Towers">Towers Cafe</label><br>
-	<input style="padding:2px;font-size:1.2em;" type="submit" value="Submit">
-</form>
+	<input style="padding:2px;font-size:1.2em;margin:5px 0px 0px 0px" type="submit" value="Submit">
+	</fieldset>
+</form><br>
 
 <a style="padding:2px;font-size:1em" href='DeliveryMainPage.html'>Continue to Deliverer Main Page</a>
 <a style="padding:2px;font-size:1em" href='DeliveryProfile.html'>Continue to Deliverer Profile</a>
