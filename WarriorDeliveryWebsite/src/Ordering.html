@@ -17,14 +17,14 @@
 <a href='MakeAccountD.html'>Make an Account</a>
 
 
-<p>This page will contain the ordering interface</p>
-<p>We will include the food items, location, and delivery style on this page.</p>
+<p><b>In order to place an order, please fill out the following fields below.</b></p>
+
 
 <form action="ordering.php">
     <fieldset>
         <legend>Place an Order</legend>
 
-        <label for="item">Choose your food items and quantity from this list:</label>
+        <label for="item">Choose food items and quantity:</label>
   <input type="items" name="getItems" id="item" list="food">
   <datalist id="food">
     <option value="Cheese Pizza (Slice)">$2.00</option>
@@ -43,22 +43,25 @@
   
  
   </script>
-  <input type="submit">
+ 
 
         <input type="number" id="quantity" name="quantity" min="1" max="10" value="1"><br>
 
-        <label for="beverage">Choose your beverage from this list:</label>
+        <label for="beverage">Choose beverages and quantity:</label>
         <input list="beverages" name="beverage" id="selectedBeverage">
         <datalist id="beverages">
         <option value="Coca-Cola (Can)">$1.00 </option>
         <option value="Pepsi (Can)"> $1.00 </option>
         <option value="Sprite (Can)"> $1.00 </option>
-        <option value="Water (Bottle)"> $1.00 </option
+        <option value="Water (Bottle)"> $1.00 </option>
         <option value="Apple Juice (Bottle)">$1.50 </option>
         <option value="Orange Juice (Bottle)">$1.50</option>
+		
+		
+		
 </datalist>
 
-
+<input type="number" id="quantity2" name="quantity" min="1" max="10" value="1"><br>
 
 
 
@@ -69,7 +72,7 @@
 
 <script>
 	var getValue = document.getElementById('quantity');
-	var temp1 = "2"
+	var temp1 = "1"
 	var temp2 = ""
 	getValue.addEventListener('input', function()
 	{
@@ -80,36 +83,60 @@
 	var getValue = document.getElementById('item');
 	getValue.addEventListener('input', function()
 	{
-	document.getElementById("spanresult").innerHTML="Food Item: " + this.value + temp1;
+	document.getElementById("spanresult").innerHTML="Food Item: " + this.value + "  - Quantity: " + temp1;
 	});
   </script>
  <script>
-	var getValue = document.getElementById('selectedBeverage');
-	getValue.addEventListener('input', function()
+	var getValue2 = document.getElementById('quantity2');
+	var temp1 = "1"
+	var temp2 = ""
+	getValue2.addEventListener('input', function()
 	{
-	document.getElementById("BeverageResult").innerHTML="Beverage. " + this.value;
+	temp1 = this.value
+	
+	})
+	
+	var getValue2 = document.getElementById('selectedBeverage');
+	getValue2.addEventListener('input', function()
+	{
+	document.getElementById("BeverageResult").innerHTML="Beverage Item: " + this.value + "  - Quantity: " + temp1;
 	});
   </script>
 
-<input type="submit">
 
-      <input type="number" id="quantity" name="quantity" min="1" max="10" value="1"><br>
+
+      
         <fieldset>
-            <legend>Select your Delivery Style:</legend>
-            <input type="radio" id="hand" name="ordStyle" value="In your hand">
-            <label for="hand">In your Hand</label><br>
-            <input type="radio" id="door" name="ordStyle" value="On your Doorstep">
-            <label for="door">On your Doorstep</label><br>
+            <legend>Select Campus Location:</legend>
+            <input type="radio" id="hand" name="ordStyle" value="Towers Residential">
+            <label for="hand">Towers Residential</label><br>
+            <input type="radio" id="door" name="ordStyle" value="Anthony Wayne Drive Apartments">
+            <label for="door">Anthony Wayne Drive Apartments</label><br>
+			<input type="radio" id="door" name="ordStyle" value="Ghafari Hall">
+            <label for="door">Ghafari Hall</label><br>
+			<input type="radio" id="door" name="ordStyle" value="Atchison Hall">
+            <label for="door">Atchison Hall</label><br>
+			<input type="radio" id="door" name="ordStyle" value="Student Center">
+            <label for="door">Student Center</label><br>
+			<input type="radio" id="door" name="ordStyle" value="Undergraduate Library">
+            <label for="door">Undergraduate Library</label><br>
         </fieldset>
 
 
         <fieldset>
-            <legend>Select your Delivery Style:</legend>
+            <legend>(If selecting a housing location) Select your Delivery Style:</legend>
             <input type="radio" id="hand" name="ordStyle" value="In your hand">
             <label for="hand">In your Hand</label><br>
             <input type="radio" id="door" name="ordStyle" value="On your Doorstep">
             <label for="door">On your Doorstep</label><br>
+			<input type="radio" id="door" name="ordStyle" value="N/A">
+            <label for="door">N/A</label><br>
         </fieldset>
+
+
+		<label for="Phone Number">Enter Phone Number</label><br>
+        <textarea name="comment" rows="1" cols="30" placeholder="Please enter your phone number"></textarea><br>
+
 
 
         <label for="comment">Comments:</label><br>
