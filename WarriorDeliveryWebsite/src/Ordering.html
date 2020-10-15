@@ -108,18 +108,18 @@
       
         <fieldset>
             <legend>Select Campus Location:</legend>
-            <input type="radio" id="hand" name="ordStyle" value="Towers Residential">
-            <label for="hand">Towers Residential</label><br>
-            <input type="radio" id="door" name="ordStyle" value="Anthony Wayne Drive Apartments">
-            <label for="door">Anthony Wayne Drive Apartments</label><br>
-			<input type="radio" id="door" name="ordStyle" value="Ghafari Hall">
-            <label for="door">Ghafari Hall</label><br>
-			<input type="radio" id="door" name="ordStyle" value="Atchison Hall">
-            <label for="door">Atchison Hall</label><br>
-			<input type="radio" id="door" name="ordStyle" value="Student Center">
-            <label for="door">Student Center</label><br>
-			<input type="radio" id="door" name="ordStyle" value="Undergraduate Library">
-            <label for="door">Undergraduate Library</label><br>
+            <input type="radio" id="towers" name="location" value="Towers Residential">
+            <label for="towers">Towers Residential</label><br>
+            <input type="radio" id="awd" name="location" value="Anthony Wayne Drive Apartments">
+            <label for="awd">Anthony Wayne Drive Apartments</label><br>
+			<input type="radio" id="ghafari" name="location" value="Ghafari Hall">
+            <label for="ghafari">Ghafari Hall</label><br>
+			<input type="radio" id="atchinson" name="location" value="Atchison Hall">
+            <label for="atchinson">Atchison Hall</label><br>
+			<input type="radio" id="stucen" name="location" value="Student Center">
+            <label for="stucen">Student Center</label><br>
+			<input type="radio" id="ugl" name="location" value="Undergraduate Library">
+            <label for="ugl">Undergraduate Library</label><br>
         </fieldset>
 
 
@@ -140,11 +140,11 @@
 
 
         <label for="comment">Comments:</label><br>
-        <textarea name="comment" rows="3" cols="65" placeholder="Comment"></textarea><br>
+        <textarea name="comment" rows="3" cols="65" placeholder="Additional Delivery Comments"></textarea><br>
 
-        <input type="submit" value="Place Order" formaction="ordering.php">
+        <input type="submit" value="Place Order" formaction="ordering.php" style="font-size:1.5em">
     
-	<h2> Current Cart </h2>
+	<h2>Shopping Cart</h2>
 <span id="spanresult"></span>
 <br>
 <span id="BeverageResult"></span>
