@@ -20,17 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="439bde84-7576-4837-9a11-5eda016f1580" name="Default Changelist" comment="Added an avatar to the login page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/CreateStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/CreateStudent.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/DelivererLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/DelivererLogin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/DeliveryMainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/DeliveryMainPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/DeliveryProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/DeliveryProfile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/Homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/Homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/Login.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/MakeAccountD.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/MakeAccountD.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/Menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/Menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/OrderStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/OrderStatus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/Ordering.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/Ordering.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
