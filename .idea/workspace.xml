@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="439bde84-7576-4837-9a11-5eda016f1580" name="Default Changelist" comment="Added an avatar to the login page">
-      <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/StudntLogin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/Homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/Homepage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,5 +182,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1601994305754" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602787769121">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602787769121" />
   </component>
 </project>
