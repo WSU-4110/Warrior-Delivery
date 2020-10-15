@@ -7,31 +7,32 @@
 <body>
 
 <h1>Account Login</h1>
-<a href='menu.html'>Menu</a>  <!-- Notice how I was able to hyperlink to a local file that is found in the same folder as this file -->
+<a href='Homepage.html'>Home</a>
+<a href='menu.html'>Menu</a>
 <a href='login.html'>Login</a>
 <a href='ordering.html'>Order</a>
-<a href='DelivererPage.html'>Delivery</a>
+<a href='DelivererLogin.html'>Delivery</a>
 <a href='StudentProfile.html'>Student Profile</a>
 <a href='DeliveryProfile.html'>Deliverer Profile</a>
 <a href='MakeAccountD.html'>Make an Account</a>
+
 <p>This page will contain the student account login</p>
 
-<form action="login.php" autocomplete="on">
+<form style="text-align:center" action="login.php" autocomplete="on">
     <fieldset>
         <legend>Please login to your Wayne State Account:</legend>
 
         <label for="uname">Username</label><br>
-        <input type="text" id="uname" name="uname" placeholder="Username" required autofocus autocomplete><br>
+        <input style="text-align:center" type="text" id="uname" name="uname" placeholder="Username" required autofocus autocomplete><br>
 
         <label for="pass">Password</label><br>
-        <input type="password" id="pass" name="pass" placeholder="Password" required><br>
+        <input style="text-align:center" type="password" id="pass" name="pass" placeholder="Password" required><br>
 
-        <input type="submit" value="Login as Student"><br>
-		
 		<input type="checkbox" checked="checked" name="remember">
 		<label for="remember">Remember Me</label><br>
-    <span class="psw"><a href="Homepage.html">Forgot password?</a></span>
 		
+		<a style="padding:2px;font-size:1em" href="Homepage.html">Forgot password?</a><br>
+		<input type="submit" value="Login as Student">
 		
     </fieldset>
 </form>

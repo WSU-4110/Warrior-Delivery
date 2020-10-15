@@ -56,6 +56,18 @@ label {
 	color: #FBFBFF;
 	line-height: 2.5;
 }
+input[type=submit] {
+	padding: 2px;
+	margin: 15px 0px 15px;
+	
+	color: #01BAEF;
+	background-color: #B80C09;
+	border:2px outset #B80C09;
+	border-radius: 3px;
+	font-size: 1em;
+	text-decoration: none;
+
+}
 
 table { border: 5px solid #FFC842;
 		width: 85%;
