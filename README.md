@@ -6,7 +6,7 @@ Affan Atif, Neelesh Bollu, Timothy Haddad, Miguel Manzanarez, Sanaz Rabinia, Maz
 | Backend       | Frontend      | Database | JUnit   |
 | ------------- |:-------------:|:--------:| ------:  |     
 | Neelesh       | Neelesh       |  Neelesh |         |
-|               | Affan         |          |         |
+|               | Affan         |   Affan  |         |
 |               | Timothy       |          |         |
 |               | Miguel        |          |         |
 |     Sanaz     | Sanaz         | Sanaz    |   Sanaz |
