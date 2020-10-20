@@ -4,12 +4,12 @@
 Affan Atif, Neelesh Bollu, Timothy Haddad, Miguel Manzanarez, Sanaz Rabinia, Mazin Shulaiba
 
 | Backend       | Frontend      | Database | JUnit   |
-| ------------- |:-------------:|:--------:| ------:  |     
+| ------------- |:-------------:|:--------:| ------: |     
 | Neelesh       | Neelesh       |  Neelesh |         |
 |               | Affan         |   Affan  |         |
 |               | Timothy       |          |         |
 |               | Miguel        |          |         |
-|     Sanaz     | Sanaz         | Sanaz    |   Sanaz |
+|     Sanaz     | Sanaz         |  Sanaz   |  Sanaz  |
 |               | Mazin         |          |         |
 
 ### Current Issues:
