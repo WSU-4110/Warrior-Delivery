@@ -19,6 +19,34 @@
         <link rel="manifest" href="/site.webmanifest">
         
         <title> Warrior Delivery</title>
+		
+		<script type="text/javascript">
+		function validatePassword() {
+			<!-- grabs the data from the password and confirmPassword ID and stores them in variables -->
+			var password = document.getElementById("password")
+            if (password.value.match(/[a-z]/g) && password.value.match(/[A-Z]/g) && password.value.match(/[0-9]/g) && password.value.match(/[^a-zA-Z\d]/g) && password.value.length >= 8) {
+                password.setCustomValidity('');
+				checkMatching();
+			}
+            else {
+                password.setCustomValidity("Password doesn't meet minimum requirements");
+				password.onchange = validatePassword;
+			}				
+			
+		}
+		
+		function checkMatching() {
+			var confirm_password = document.getElementById("confirmPassword");
+			<!-- checks if the text value in the two variables are equal -->
+			if (password.value != confirm_password.value) {
+				confirm_password.setCustomValidity("Passwords don't match");
+			} 
+			else {
+				confirm_password.setCustomValidity('');
+			}	
+			confirm_password.onkeyup = checkMatching;
+		}
+	</script>
     
     
     </head>
@@ -260,73 +288,38 @@
                 </div>
         </section>
         <section class="section-plans js--section-plans" id="plans">
-            <div class="row">
-                <h2>Start eating healthy today</h2>
-            </div>
-            <div  class="row">
-                <div class="col span-1-of-3">
-                    <div class="plan-box js--wp-4">
-                        <div>
-                            <h3>Premium</h3>
-                            <p class="plan-price">$399 <span>/ month</span></p>
-                            <p class="plan-price-meal">That's only 13.30$ per meal</p>
-                        </div>
-                         <div>
-                           <ul>
-                               <li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal every day</li>
-                               <li><i class="ion-ios-checkmark-empty icon-small"></i>Order 24/7</li>
-                               <li><i class="ion-ios-checkmark-empty icon-small"></i>Access to newest creations</li>
-                               <li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
-                           </ul> 
-                        </div>
-                         <div>
-                            <a href="#" class="btn btn-full"> Sign up now</a>
-                        </div>
-                    </div>
-                </div>
-                 <div class="col span-1-of-3">
-                    <div class="plan-box">
-                        <div>
-                            <h3>Pro</h3>
-                            <p class="plan-price">$149 <span>/ month</span></p>
-                            <p class="plan-price-meal">That’s only 14.90$ per meal</p>
-                        </div>
-                         <div>
-                           <ul>
-                               <li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal e0 days/month</li>
-                               <li><i class="ion-ios-checkmark-empty icon-small"></i>Order 24/7</li>
-                               <li><i class="ion-ios-checkmark-empty icon-small"></i>Access to newest creations</li>
-                               <li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
-                           </ul> 
-                        </div>
-                         <div>
-                            <a href="#" class="btn btn-ghost"> Sign up now</a>
-                        </div>
-                    </div>
-                
-                </div>
-                 <div class="col span-1-of-3">
-                    <div class="plan-box">
-                        <div>
-                            <h3>Starter</h3>
-                            <p class="plan-price">19$ <span>/ meal</span></p>
-                            <p class="plan-price-meal">&nbsp;</p>
-                        </div>
-                         <div>
-                           <ul>
-                               <li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal </li>
-                               <li><i class="ion-ios-checkmark-empty icon-small"></i>Order from 8 am to 12 pm 24/7</li>
-                               <li><i class="ion-ios-close-empty icon-small"></i></li>
-                               <li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
-                           </ul> 
-                        </div>
-                         <div>
-                            <a href="#" class="btn btn-ghost"> Sign up now</a>
-                        </div>
-                    </div>
-                
-                </div>
-            </div>
+            <form action="AccountD.php" autocomplete="on">
+    <fieldset>
+        <legend>Please fill out the following information</legend>
+		<br>
+        <label for="name">First Name</label><br>
+        <input type="text" id="name" name="name" placeholder="First Name" required autofocus autocomplete><br>
+		<br>
+        <label for="Lname">Last Name</label><br>
+        <input type="text" id="Lname" name="Lname" placeholder="Last Name" required autofocus autocomplete><br>
+		<br>
+        <label for="SID">Student ID</label><br>
+        <input type="text" id="SID" name="SID" placeholder="Student ID" required autofocus autocomplete><br>
+		<br>
+        <label for="uname">Username</label><br>
+        <input type="text" id="uname" name="uname" placeholder="Username" required autofocus autocomplete><br>
+		<br>
+        <label for="password">Password (must contain 8 characters, one uppercase letter, one number, and one special character)</label><br>
+        <input type="password" id="password" name="password" placeholder="Password" required><br>
+		<br>
+        <label for="confirmPassword">Re-enter Password</label><br>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter Password" required><br>
+		<br>
+		<!--onclick forces the page to run the validatePassword when button pressed-->
+        <input type="submit" value="Register" formaction="AccountD.php" onclick="validatePassword()"><br><br>
+        <label>
+            
+        </label>
+        <span class="psw"><a style="padding:2px;font-size:1em" href="Homepage.html">Forgot password?</a></span>
+
+
+    </fieldset>
+</form>
         </section>
         <section class="section-form">
             <div class="row">
