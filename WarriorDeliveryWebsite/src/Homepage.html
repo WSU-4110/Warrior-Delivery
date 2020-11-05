@@ -24,7 +24,8 @@
 		function validatePassword() {
 			<!-- grabs the data from the password and confirmPassword ID and stores them in variables -->
 			var password = document.getElementById("password")
-            if (password.value.match(/[a-z]/g) && password.value.match(/[A-Z]/g) && password.value.match(/[0-9]/g) && password.value.match(/[^a-zA-Z\d]/g) && password.value.length >= 8) {
+            if (password.value.match(/[a-z]/g) && password.value.match(/[A-Z]/g) && password.value.match(/[0-9]/g) 
+			&& password.value.match(/[^a-zA-Z\d]/g) && password.value.length >= 8) {
                 password.setCustomValidity('');
 				checkMatching();
 			}
@@ -68,7 +69,7 @@
                 </div>
             </nav>
         <div class = "hero-text-box">
-            <h1> Welcome Warriors! </h1>
+            <h1>Welcome Warriors!</h1>
             <a class ="btn btn-full js--scroll-to-start" href = "Ordering.html" >Are you hungry?</a>
             <a class ="btn btn-ghost js--scroll-to-start" href = "Menu.html" >Show me more</a>
         </div>
@@ -79,7 +80,8 @@
                 
                 <h2>Get food safely delivered! &mdash; Go warriors!</h2>
                 <p class="long-copy">
-                Hello, we're Warrior Delivery, and we are here to offer you a safe on-campus delivery service. Now you can easily order meals from various locations around campus and have it delivered right to your door!
+                Hello, we're Warrior Delivery, and we are here to offer you a safe on-campus delivery service. 
+				Now you can easily order meals from various locations around campus and have it delivered right to your door!
                 </p>
             </div>
             
@@ -88,28 +90,32 @@
                     <i class="ion-ios-infinite-outline icon-big"></i>
                     <h3>Up to 365 days/year</h3>
                     <p>
-                        Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.
+                        Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. 
+						You can also choose to order more flexibly if that's your style.
                     </p>
                 </div>
              <div class="col span-1-of-4 box">
                   <i class="ion-ios-stopwatch-outline icon-big"></i>
                     <h3>Ready in 20 minutes</h3>
                     <p>
-                        You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.
+                        You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. 
+						We work with the best chefs in each town to ensure that you're 100% happy.
                     </p>
                 </div>
                  <div class="col span-1-of-4 box">
                       <i class="ion-ios-nutrition-outline icon-big"></i>
                     <h3>100% organic</h3>
                     <p>
-                       All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!
+                       All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. 
+					   Good for your health, the environment, and it also tastes better!
                     </p>
                 </div>
                  <div class="col span-1-of-4 box">
                      <i class="ion-ios-cart-outline icon-big"></i>
                     <h3>Order anything</h3>
                     <p>
-                     We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!
+                     We don't limit your creativity, which means you can order whatever you feel like. 
+					 You can also choose from our menu containing over 100 delicious meals. It's up to you!
                     </p>
                 </div>
             </div>-->
@@ -234,19 +240,22 @@
                 <div class="row">
                     <div class="col span-1-of-3">
                         <blockquote>
-                        Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
+                        Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking,
+						so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
                             <cite><img src="resources/img/customer-1.jpg">(Alberto Duncan)</cite>
                         </blockquote>
                    </div>
                      <div class="col span-1-of-3">
                         <blockquote>
-                        Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!
+                        Inexpensive, healthy and great-tasting meals, delivered right to my home. 
+						We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!
                             <cite><img src="resources/img/customer-2.jpg">(Joana Silva)</cite>
                         </blockquote>
                    </div>
                      <div class="col span-1-of-3">
                         <blockquote>
-                       I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
+                       I was looking for a quick and easy food delivery service in San Franciso. 
+					   I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
                             <cite><img src="resources/img/customer-3.jpg">(Milton Chapman)</cite>
                         </blockquote>
                    </div>
@@ -293,10 +302,11 @@
                 <form method="post" action="#" class="contact-form">
                     <div class="row">
                         <div class="col span-1-of-3">
-                            <label for="name">Name</label>
+                            <label for="fullname">Name</label>
                         </div> <!-- 1+2 = 3, the second column will be twice as the first column-->
                         <div class="col span-2-of-3">
-                            <input type="text" name="name" id="name" placeholder="Your name" required><!--required doesn't allow us to go to the next step without filling this step-->
+                            <input type="text" name="fullname" id="fullname" placeholder="Your name" required>
+							<!--required doesn't allow us to go to the next step without filling this step-->
                         </div>
                     </div>
                     <div class="row">
@@ -304,7 +314,8 @@
                             <label for="email">Email</label>
                         </div> 
                         <div class="col span-2-of-3">
-                            <input type="email" name="email" id="email" placeholder="Your email" required><!--required doesn't allow us to go to the next step without filling this step with a valid email-->
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
+							<!--required doesn't allow us to go to the next step without filling this step with a valid email-->
                         </div>
                     </div>
                     <!--<div class="row">
@@ -330,10 +341,10 @@
                     </div>
                     <div class="row">
                         <div class="col span-1-of-3">
-                            <label>Message</label>
+                            <label for="message">Message</label>
                         </div> 
                         <div class="col span-2-of-3">
-                            <textarea name="message" placeholder="Your message"></textarea>
+                            <textarea name="message" id="message" placeholder="Your message"></textarea>
                         </div>
                     </div>
                     <div class="row">
