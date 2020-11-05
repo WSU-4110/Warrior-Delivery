@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="theme.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
     <title>Order | Warrior Delivery</title>
+	
 </head>
 <body>
 
@@ -20,11 +21,15 @@
 
 <p><b>To place an order, please fill out the following fields below.</b></p>
 
+
+
+
 <form action="ordering.php">
     <fieldset>
         <legend>Place an Order</legend>
 
         <label for="item">Choose food items and quantity:</label>
+		
   <input type="items" name="getItems" id="item" list="food">
   <datalist id="food">
     <option value="Cheese Pizza (Slice)">$2.00</option>
@@ -39,13 +44,71 @@
 
   
   
-  
-  
- 
+ <script>
+function add(type) {
+var element = document.createElement("input");
+	var newLine = document.createElement('div');
+	element.setAttribute("value", "");
+	newLine.innerHTML = "new line";
+
+
+	var appendItem = document.getElementById("valueAdd");
+
+	
+	appendItem.appendChild(element);
+	document.getElementById(type).appendChild(newLine);
+	
+	
+}
   </script>
  
+ 
+  <script>
+function addBeverage(type) {
+var element = document.createElement("input");
+	var newLine = document.createElement('div');
+	element.setAttribute("value", "");
+	newLine.innerHTML = "new line";
 
-        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1"><br>
+
+	var appendItem = document.getElementById("beverageAdd");
+
+	
+	appendItem.appendChild(element);
+	document.getElementById(type).appendChild(newLine);
+	
+	
+}
+  </script>
+  
+  
+  
+    <script>
+function deliveryLocation(type) {
+alert(type);
+var element = document.createElement("input");
+	var newLine = document.createElement('div');
+	element.setAttribute("value", "");
+	newLine.innerHTML = "new line";
+
+
+	var appendItem = document.getElementById("beverageAdd");
+
+	
+	appendItem.appendChild(element);
+	document.getElementById(type).appendChild(newLine);
+	
+	
+}
+  </script>
+
+        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+		
+		<INPUT type="button" value="Add Item" onclick="add(HTMLInputElement)"/><br>
+
+<span id="valueAdd"></span><br>
+  
+  
 
         <label for="beverage">Choose beverages and quantity:</label>
         <input list="beverages" name="beverage" id="selectedBeverage">
@@ -61,11 +124,12 @@
 		
 </datalist>
 
-<input type="number" id="quantity2" name="quantity" min="1" max="10" value="1"><br>
+<input type="number" id="quantity2" name="quantity" min="1" max="10" value="1">
 
+<INPUT type="button" value="Add Beverage" onclick="addBeverage(HTMLInputElement)"/><br>
 
-
-
+<span id="beverageAdd"></span><br>
+<br>
 
 
 
@@ -135,7 +199,7 @@
 
 
 		<label for="Phone Number">Enter Phone Number</label><br>
-        <textarea name="comment" rows="1" cols="30" placeholder="Please enter your phone number"></textarea><br>
+        <textarea name="comment" rows="1" cols="30" placeholder="Please enter your phone number" required></textarea><br>
 
 
 
