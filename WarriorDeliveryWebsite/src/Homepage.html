@@ -1,48 +1,401 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="theme.css">
-	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
-	<title>Warrior Delivery</title>
-</head>
-<body>
-<a href="homepage.html" style="background:none;border:none;display:inline-block;margin:0px;">
-<img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
-</a>
-<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
+<html lang= "en">
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel = "stylesheet" type ="text/css" href = "vendors/css/normalize.css">
+        <link rel = "stylesheet" type ="text/css" href = "vendors/css/grid.css">
+        <link rel = "stylesheet" type ="text/css" href="resources/css/style.css">
+        <link rel = "stylesheet" type ="text/css" href="resources/css/queries.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css"> 
+        <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+        <link rel="apple-touch-icon" sizes="180x180" href="Warrior-Delivery/resources/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Warrior-Delivery/resources/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Warrior-Delivery/resources/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        
+        <title> Warrior Delivery</title>
+		
+		<script type="text/javascript">
+		function validatePassword() {
+			<!-- grabs the data from the password and confirmPassword ID and stores them in variables -->
+			var password = document.getElementById("password")
+            if (password.value.match(/[a-z]/g) && password.value.match(/[A-Z]/g) && password.value.match(/[0-9]/g) && password.value.match(/[^a-zA-Z\d]/g) && password.value.length >= 8) {
+                password.setCustomValidity('');
+				checkMatching();
+			}
+            else {
+                password.setCustomValidity("Password doesn't meet minimum requirements");
+				password.onchange = validatePassword;
+			}				
+			
+		}
+		
+		function checkMatching() {
+			var confirm_password = document.getElementById("confirmPassword");
+			<!-- checks if the text value in the two variables are equal -->
+			if (password.value != confirm_password.value) {
+				confirm_password.setCustomValidity("Passwords don't match");
+			} 
+			else {
+				confirm_password.setCustomValidity('');
+			}	
+			confirm_password.onkeyup = checkMatching;
+		}
+	</script>
+    
+    
+    </head>
+    <body>
+       <!-- <div class = "row"> <h1>Warrior Delivery</h1> </div> -->
+        <header>
+            <nav>
+                <div class = "row">
+                <img src= "resources/img/android-chrome-512x512.png" alt = "Warrior Delivery" class ="logo">
+                <img src= "resources/img/android-chromeW-512x512.png" alt = "Warrior delivery" class ="logo-black">
+                <ul class = "main-nav js--main-nav">
+                    <li><a href= "Menu.html">Menu</a></li>
+                    <li><a href= "Ordering.html">Order</a></li>
+                    <li><a href= "SelectCreation.html">Sign up</a></li>
+                    <li><a href= "StudentLogin.html">Login as a Student</a></li>
+                    <li><a href= "DelivererLogin.html">Login as a deliverer</a></li>
+                </ul>
+                <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+                </div>
+            </nav>
+        <div class = "hero-text-box">
+            <h1> Welcome Warriors! </h1>
+            <a class ="btn btn-full js--scroll-to-start" href = "Ordering.html" >Are you hungry?</a>
+            <a class ="btn btn-ghost js--scroll-to-start" href = "Menu.html" >Show me more</a>
+        </div>
+        </header>
+        
+        <section class="section-features js--section-features" id="features">
+            <div class="row">
+                
+                <h2>Get food safely delivered! &mdash; Go warriors!</h2>
+                <p class="long-copy">
+                Hello, we're Warrior Delivery, and we are here to offer you a safe on-campus delivery service. Now you can easily order meals from various locations around campus and have it delivered right to your door!
+                </p>
+            </div>
+            
+            <!--<div class="row js--wp-1">
+                <div class="col span-1-of-4 box">
+                    <i class="ion-ios-infinite-outline icon-big"></i>
+                    <h3>Up to 365 days/year</h3>
+                    <p>
+                        Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.
+                    </p>
+                </div>
+             <div class="col span-1-of-4 box">
+                  <i class="ion-ios-stopwatch-outline icon-big"></i>
+                    <h3>Ready in 20 minutes</h3>
+                    <p>
+                        You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.
+                    </p>
+                </div>
+                 <div class="col span-1-of-4 box">
+                      <i class="ion-ios-nutrition-outline icon-big"></i>
+                    <h3>100% organic</h3>
+                    <p>
+                       All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!
+                    </p>
+                </div>
+                 <div class="col span-1-of-4 box">
+                     <i class="ion-ios-cart-outline icon-big"></i>
+                    <h3>Order anything</h3>
+                    <p>
+                     We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!
+                    </p>
+                </div>
+            </div>-->
+        
+        </section>
+        
+        <section class = "section-meals">
+            <ul class = "meals-showcase clearfix">
+                <li>
+                    <figure class= "meal-photo">
+                        <img src="resources/img/1.jpg" alt= "Korean bibimbap with egg and vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class= "meal-photo">
+                        <img src="resources/img/2.jpg" alt= "Simple italian pizza with cherry tomatoes">
+                    </figure>
+                </li>
+                <li>
+                    <figure class= "meal-photo">
+                        <img src="resources/img/3.jpg" alt= "Chicken breast steak with vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class= "meal-photo">
+                        <img src="resources/img/4.jpg" alt= "Autumn pumpkin soup">
+                    </figure>
+                </li>
+            </ul>
+            <ul class = "meals-showcase clearfix">
+                <li>
+                   <figure class= "meal-photo">
+                        <img src="resources/img/5.jpg" alt= "Paleo beef steak with vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class= "meal-photo">
+                        <img src="resources/img/6.jpg" alt= "Healthy baguette with egg and vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class= "meal-photo">
+                        <img src="resources/img/7.jpg" alt= "Burger with cheddar and bacon">
+                    </figure>
+                </li>
+                <li>
+                    <figure class= "meal-photo">
+                        <img src="resources/img/8.jpg" alt= "Granola with cherries and strawberries">
+                    </figure>
+                </li>
+            </ul>
+        </section>
+        
+       <!-- <section class="section-steps" id="works">
+            <div class ="row">
+                <h2>How it works &mdash; Simple as 1, 2, 3</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-2 steps-box">
+                    <img src="resources/img/app-iPhone.png" alt = "Omnifood app on iphone" class="app-screen js--wp-2">
+                </div>
+                <div class="col span-1-of-2 steps-box">
+                    <div class="works-step">
+                        <div>1</div>
+                        <p>Choose the subscription plan that best fits your needs and sign up today.</p>
+                    </div>
+                    <div class="works-step">
+                        <div>2</div>
+                        <p>Order your delicious meal using our mobile app or website. Or you can even call us!</p>
+                    </div>
+                    <div class="works-step">
+                        <div>3</div>
+                        <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
+                    </div>
+                    
+                    <a href="#" class="btn-app"><img src="resources/img/download-app.svg" alt="App Store Button"></a>
+                    <a href="#" class="btn-app"><img src="resources/img/download-app-android.png" alt="Play Store Button"></a>
+                </div>
+            </div>
+          
+        </section> -->
+        <!--<section class="section-cities" id="cities">
+            <div class ="row js--wp-3">
+                <h2>Current Locations</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-4 box">
+                    <img src="Gold_N_Greens_image.jpg" alt="Gold N Greens" style="width:200px; height:200px;">
+                    <h3>Gold 'N' Greens</h3>
+                    <div class="city-feature">
+                    <!--<i class="ion-ios-person icon-small"></i>
+                    </div>
+                    <div class="city-feature">
+                    <!--<i class="ion-ios-star icon-small"></i>
+                    </div>
+                    <div class="city-feature">
+                    <!--<i class="ion-social-twitter icon-small"></i>
+                    <a href="#">@omnifood_lx</a>
+                    </div>
+                 <div class="col span-1-of-4 box">
+                    <img src="resources/img/maccabees.jpg" style="width:200px; height:200px;" alt="Maccabees">
+                    <h3>Maccabees</h3>
+                    <div class="city-feature">
+                    <i class="ion-ios-person icon-small"></i>
+                    3700+ happy eaters
+                    </div>
+                    <div class="city-feature">
+                    <!--<i class="ion-ios-star icon-small"></i>
+                    160+ top chefs
+                    </div>
+                    <!--<div class="city-feature">
+                    <i class="ion-social-twitter icon-small"></i>
+                    </div>
+                 </div>
+            </div>
+            
+        </section>-->
+        <!--<section class="section-testimonials">
+            <div class="row">
+            <h2> Our customers can't live without us</h2>
+            </div>  
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <blockquote>
+                        Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
+                            <cite><img src="resources/img/customer-1.jpg">(Alberto Duncan)</cite>
+                        </blockquote>
+                   </div>
+                     <div class="col span-1-of-3">
+                        <blockquote>
+                        Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!
+                            <cite><img src="resources/img/customer-2.jpg">(Joana Silva)</cite>
+                        </blockquote>
+                   </div>
+                     <div class="col span-1-of-3">
+                        <blockquote>
+                       I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
+                            <cite><img src="resources/img/customer-3.jpg">(Milton Chapman)</cite>
+                        </blockquote>
+                   </div>
+                </div>
+        </section>-->
+        <section class="section-plans js--section-plans" id="plans">
+            <form action="AccountD.php" autocomplete="on">
+    <fieldset>
+        <legend>Please fill out the following information</legend>
+		<br>
+        <label for="name">First Name</label><br>
+        <input type="text" id="name" name="name" placeholder="First Name" required autofocus autocomplete><br>
+		<br>
+        <label for="Lname">Last Name</label><br>
+        <input type="text" id="Lname" name="Lname" placeholder="Last Name" required autofocus autocomplete><br>
+		<br>
+        <label for="SID">Student ID</label><br>
+        <input type="text" id="SID" name="SID" placeholder="Student ID" required autofocus autocomplete><br>
+		<br>
+        <label for="uname">Username</label><br>
+        <input type="text" id="uname" name="uname" placeholder="Username" required autofocus autocomplete><br>
+		<br>
+        <label for="password">Password (must contain 8 characters, one uppercase letter, one number, and one special character)</label><br>
+        <input type="password" id="password" name="password" placeholder="Password" required><br>
+		<br>
+        <label for="confirmPassword">Re-enter Password</label><br>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter Password" required><br>
+		<br>
+		<!--onclick forces the page to run the validatePassword when button pressed-->
+        <input type="submit" value="Register" formaction="AccountD.php" onclick="validatePassword()"><br><br>
+        <label>
+            
+        </label>
+        <span class="psw"><a style="padding:2px;font-size:1em" href="Homepage.html">Forgot password?</a></span>
 
-<a href='menu.html'>Menu</a>  
-<a href='StudentLogin.html'>Student Login</a>
-<a href='ordering.html'>Order</a>
-<a href='DelivererLogin.html'>Delivery</a>
-<a href='SelectCreation.html'>Make an Account</a>
+
+    </fieldset>
+</form>
+        </section>
+        <section class="section-form">
+            <div class="row">
+                <h2>Comments or Concerns?</h2>
+            </div>
+            <div class="row">
+                <form method="post" action="#" class="contact-form">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                        </div> <!-- 1+2 = 3, the second column will be twice as the first column-->
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="Your name" required><!--required doesn't allow us to go to the next step without filling this step-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">Email</label>
+                        </div> 
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Your email" required><!--required doesn't allow us to go to the next step without filling this step with a valid email-->
+                        </div>
+                    </div>
+                    <!--<div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="find-us">How did you find us?</label>
+                        </div>
+                        div class="col span-2-of-3">
+                            <select name="find-us" id="find-us">
+                                <option value="friends" selected>Friends</option>
+                                <option value="search">Search engine</option>
+                                <option value="ad">Advertisement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>-->
+                     <div class="row">
+                        <!--<div class="col span-1-of-3">
+                            <label>Newsletter?</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="checkbox" name="news" id="news" checked> Yes, please!
+                        </div>-->
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Message</label>
+                        </div> 
+                        <div class="col span-2-of-3">
+                            <textarea name="message" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div> 
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Send it!"> 
+                        </div>
+                    </div>
+                </form>
+            
+            </div>
+        
+        </section>
+        
+        <footer>
+            <!--<div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="#"> About us</a> </li>
+                        <li><a href="#"> Blog</a> </li>
+                        <li><a href="#"> Press</a> </li>
+                        <li><a href="#"> iOS Ap</a> </li>
+                        <li><a href="#"> Android Ap</a> </li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                    
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    Copyright &copy; 2015 by Omnifood. All rights reserved.
+                </p>
+            
+            
+            </div>-->
+                 
+                 
+                 
+        </footer>
+      
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <script src="resources/js/script.js"></script>
+       
+    </body>
+  
+    
+    
 
 
-
-<h2>Welcome to Warrior Delivery!</h2>
-<h3> Warrior-Delivery: A dining hall food delivery service. </h3>
-<img src="Gold_N_Greens_image.jpg" alt="A Campus Dining Hall" style="width:500px;height:400px;">
-
-<h3>Current Issues:</h3>
-<p>1. Due to COVID, it is important to maintain safety on campus.</p>
-<p>2. Many students do not feel safe visiting high-risk locations such as dining halls.</p>
-<p>3. Current delivery options do not delivery directly to student.</p>
-<h3>Solution:</h3>
-<p>Create a service that can deliver food directly to any dorm or location on campus.</p> 
-
-<h3>This Website:</h3>
-<p>1. is available for students/faculty to order food and have it delivered anywhere on campus.</p>
-<p>2. verifies the user is a Wayne State student based on access ID.</p>
-<p>3. can specify the cafeteria and can support multiple menu items.</p>
-<p>4. confirms order and displays delivery status for each user.</p>
-<br>
-<h3>Developers:</h3>
-<p>Neelesh Bollu (Team Lead) </p>
-<p>Affan Atif</p>
-<p>Timothy Haddad</p>
-<p>Miguel Manzanarez</p>
-<p>Sanaz Rabinia</p>
-<p>Mazin Shulaiba</p>
-
-</body>
 </html>
