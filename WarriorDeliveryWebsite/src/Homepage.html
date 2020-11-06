@@ -1,236 +1,48 @@
 <!DOCTYPE html>
-<html lang= "en">
-    <head>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel = "stylesheet" type ="text/css" href = "vendors/css/normalize.css">
-        <link rel = "stylesheet" type ="text/css" href = "vendors/css/grid.css">
-        <link rel = "stylesheet" type ="text/css" href="resources/css/style.css">
-        <link rel = "stylesheet" type ="text/css" href="resources/css/queries.css">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css"> 
-        <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-        <link rel="apple-touch-icon" sizes="180x180" href="Warrior-Delivery/resources/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="Warrior-Delivery/resources/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="Warrior-Delivery/resources/favicons/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        
-        <title> Warrior Delivery</title>
-		
-		<script type="text/javascript">
-		function validatePassword() {
-			<!-- grabs the data from the password and confirmPassword ID and stores them in variables -->
-			var password = document.getElementById("password")
-            if (password.value.match(/[a-z]/g) && password.value.match(/[A-Z]/g) && password.value.match(/[0-9]/g) 
-			&& password.value.match(/[^a-zA-Z\d]/g) && password.value.length >= 8) {
-                password.setCustomValidity('');
-				checkMatching();
-			}
-            else {
-                password.setCustomValidity("Password doesn't meet minimum requirements");
-				password.onchange = validatePassword;
-			}				
-			
-		}
-		
-		function checkMatching() {
-			var confirm_password = document.getElementById("confirmPassword");
-			<!-- checks if the text value in the two variables are equal -->
-			if (password.value != confirm_password.value) {
-				confirm_password.setCustomValidity("Passwords don't match");
-			} 
-			else {
-				confirm_password.setCustomValidity('');
-			}	
-			confirm_password.onkeyup = checkMatching;
-		}
-	</script>
-    
-    
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class = "row">
-                <img src= "resources/img/android-chrome-512x512.png" alt = "Warrior Delivery" class ="logo">
-                <img src= "resources/img/android-chromeW-512x512.png" alt = "Warrior delivery" class ="logo-black">
-                <ul class = "main-nav js--main-nav">
-                    <li><a href= "Menu.html">Menu</a></li>
-                    <li><a href= "Ordering.html">Order</a></li>
-                    <li><a href= "SelectCreation.html">Sign up</a></li>
-                    <li><a href= "StudentLogin.html">Login as a Student</a></li>
-                    <li><a href= "DelivererLogin.html">Login as a deliverer</a></li>
-                </ul>
-                <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
-                </div>
-            </nav>
-        <div class = "hero-text-box">
-            <h1>Welcome Warriors!</h1>
-            <a class ="btn btn-full js--scroll-to-start" href = "Ordering.html" >Are you hungry?</a>
-            <a class ="btn btn-ghost js--scroll-to-start" href = "Menu.html" >Show me more</a>
-        </div>
-        </header>
-        
-        <section class="section-features js--section-features" id="features">
-            <div class="row">
-                
-                <h2>Get food safely delivered! &mdash; Go warriors!</h2>
-                <p class="long-copy">
-                Hello, we're Warrior Delivery, and we are here to offer you a safe on-campus delivery service. 
-				Now you can easily order meals from various locations around campus and have it delivered right to your door!
-                </p>
-            </div>
-        
-        </section>
-        
-        <section class = "section-meals">
-            <ul class = "meals-showcase clearfix">
-                <li>
-                    <figure class= "meal-photo">
-                        <img src="resources/img/1.jpg" alt= "Korean bibimbap with egg and vegetables">
-                    </figure>
-                </li>
-                <li>
-                    <figure class= "meal-photo">
-                        <img src="resources/img/2.jpg" alt= "Simple italian pizza with cherry tomatoes">
-                    </figure>
-                </li>
-                <li>
-                    <figure class= "meal-photo">
-                        <img src="resources/img/3.jpg" alt= "Chicken breast steak with vegetables">
-                    </figure>
-                </li>
-                <li>
-                    <figure class= "meal-photo">
-                        <img src="resources/img/4.jpg" alt= "Autumn pumpkin soup">
-                    </figure>
-                </li>
-            </ul>
-            <ul class = "meals-showcase clearfix">
-                <li>
-                   <figure class= "meal-photo">
-                        <img src="resources/img/5.jpg" alt= "Paleo beef steak with vegetables">
-                    </figure>
-                </li>
-                <li>
-                    <figure class= "meal-photo">
-                        <img src="resources/img/6.jpg" alt= "Healthy baguette with egg and vegetables">
-                    </figure>
-                </li>
-                <li>
-                    <figure class= "meal-photo">
-                        <img src="resources/img/7.jpg" alt= "Burger with cheddar and bacon">
-                    </figure>
-                </li>
-                <li>
-                    <figure class= "meal-photo">
-                        <img src="resources/img/8.jpg" alt= "Granola with cherries and strawberries">
-                    </figure>
-                </li>
-            </ul>
-        </section>
-        
-        <section class="section-form" id="plans">
-		<h2>Sign up for Warrior Delivery</h2>
-			<form method="post" class="contact-form">
-				<fieldset>
-					<legend>Please fill out the following information</legend>
-					<br>
-					<label for="name">First Name</label><br>
-					<input type="text" id="name" name="name" placeholder="First Name" required autocomplete><br>
-					<br>
-					<label for="Lname">Last Name</label><br>
-					<input type="text" id="Lname" name="Lname" placeholder="Last Name" required autocomplete><br>
-					<br>
-					<label for="SID">Student ID</label><br>
-					<input type="text" id="SID" name="SID" placeholder="Student ID" required autocomplete><br>
-					<br>
-					<label for="uname">Username</label><br>
-					<input type="text" id="uname" name="uname" placeholder="Username" required autocomplete><br>
-					<br>
-					<label for="password">Password (must contain 8 characters, one uppercase letter, one number, and one special character)</label><br>
-					<input type="password" id="password" name="password" placeholder="Password" required><br>
-					<br>
-					<label for="confirmPassword">Re-enter Password</label><br>
-					<input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter Password" required><br>
-					<br>
-					<!--onclick forces the page to run the validatePassword when button pressed-->
-					<input type="submit" value="Register" formaction="AccountD.php" onclick="validatePassword()"><br><br>
-					<label>
-						
-					</label>
-					<span class="psw"><a style="padding:2px;font-size:1em" href="Homepage.html">Forgot password?</a></span>
-				</fieldset>
-			</form>
-        </section>
-        <section class="section-form">
-            <div class="row">
-                <h2>Comments or Concerns?</h2>
-            </div>
-            <div class="row">
-                <form method="post" action="#" class="contact-form">
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="fullname">Name</label>
-                        </div> <!-- 1+2 = 3, the second column will be twice as the first column-->
-                        <div class="col span-2-of-3">
-                            <input type="text" name="fullname" id="fullname" placeholder="Your name" required>
-							<!--required doesn't allow us to go to the next step without filling this step-->
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="email">Email</label>
-                        </div> 
-                        <div class="col span-2-of-3">
-                            <input type="email" name="email" id="email" placeholder="Your email" required>
-							<!--required doesn't allow us to go to the next step without filling this step with a valid email-->
-                        </div>
-                    </div>
-                
-                    <div class="row">
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="message">Message</label>
-                        </div> 
-                        <div class="col span-2-of-3">
-                            <textarea name="message" id="message" placeholder="Your message"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label>&nbsp;</label>
-                        </div> 
-                        <div class="col span-2-of-3">
-                            <input type="submit" value="Send it!"> 
-                        </div>
-                    </div>
-                </form>
-            
-            </div>
-        
-        </section>
-        
-        <footer>
-            
-        </footer>
-      
-        
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
-    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
-    <script src="vendors/js/jquery.waypoints.min.js"></script>
-    <script src="resources/js/script.js"></script>
-       
-    </body>
-  
-    
-    
+<html>
+<head>
+    <link rel="stylesheet" href="theme.css">
+	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
+	<title>Warrior Delivery</title>
+</head>
+<body>
+<a href="homepage.html" style="background:none;border:none;display:inline-block;margin:0px;">
+<img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
+</a>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
+
+<a href='menu.html'>Menu</a>  
+<a href='StudentLogin.html'>Student Login</a>
+<a href='ordering.html'>Order</a>
+<a href='DelivererLogin.html'>Delivery</a>
+<a href='SelectCreation.html'>Make an Account</a>
 
 
+
+<h2>Welcome to Warrior Delivery!</h2>
+<h3> Warrior-Delivery: A dining hall food delivery service. </h3>
+<img src="Gold_N_Greens_image.jpg" alt="A Campus Dining Hall" style="width:500px;height:400px;">
+
+<h3>Current Issues:</h3>
+<p>1. Due to COVID, it is important to maintain safety on campus.</p>
+<p>2. Many students do not feel safe visiting high-risk locations such as dining halls.</p>
+<p>3. Current delivery options do not delivery directly to student.</p>
+<h3>Solution:</h3>
+<p>Create a service that can deliver food directly to any dorm or location on campus.</p> 
+
+<h3>This Website:</h3>
+<p>1. is available for students/faculty to order food and have it delivered anywhere on campus.</p>
+<p>2. verifies the user is a Wayne State student based on access ID.</p>
+<p>3. can specify the cafeteria and can support multiple menu items.</p>
+<p>4. confirms order and displays delivery status for each user.</p>
+<br>
+<h3>Developers:</h3>
+<p>Neelesh Bollu (Team Lead) </p>
+<p>Affan Atif</p>
+<p>Timothy Haddad</p>
+<p>Miguel Manzanarez</p>
+<p>Sanaz Rabinia</p>
+<p>Mazin Shulaiba</p>
+
+</body>
 </html>

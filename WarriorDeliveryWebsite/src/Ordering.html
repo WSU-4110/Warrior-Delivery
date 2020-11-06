@@ -1,124 +1,229 @@
 <!DOCTYPE html>
-<html lang= "en">
-    <head>
+<html>
+<head>
+    <link rel="stylesheet" href="theme.css">
+	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
+    <title>Order | Warrior Delivery</title>
+	
+</head>
+<body>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<a href="homepage.html" style="background:none;border:none;display:inline-block;margin:0px;">
+<img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
+</a>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Ordering Page</h1><br>
+<a href='Homepage.html'>Home</a>
+<a href='menu.html'>Menu</a>  
+<a href='StudentLogin.html'>Student Login</a>
+<a href='ordering.html'>Order</a>
+<a href='DelivererLogin.html'>Delivery</a>
+<a href='SelectCreation.html'>Make an Account</a>
 
-        <link rel = "stylesheet" type ="text/css" href = "vendors/css/normalize.css">
-        <link rel = "stylesheet" type ="text/css" href = "vendors/css/grid.css">
-        <link rel = "stylesheet" type ="text/css" href="resources/css/style2.css">
-        <link rel = "stylesheet" type ="text/css" href="resources/css/queries.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
-        <title> Warrior Delivery</title>
-    <h1>Order Page</h1>
-
-    </head>
-        <body>
-
-
-
-        <header>
-
-        </header>
-
-                <figure class="pizza">
-            <div class="pizza__hero"><!--BEM methodology: Block, element, modifier. block__element--modifier-->
-                <img src= https://images.unsplash.com/photo-1598023696416-0193a0bcd302?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60 alt="Pizza" class="pizza__img">
-            </div>
-
-            <div class="pizza__content">
-                <div class="pizza__title">
-                    <INPUT type="button" value="Vegetarian Pizza (1 Slice)" onclick="addPizza('Vegeterian Pizza (1 Slice)')"/><br>
-                    <div class="pizza__tag pizza__tag--1">Vegeterian</div>
-
-                 </div>
-                <p class="pizza__description">Vegeterian pizza with green peppers, black olives, mushrooms, and diced tomatoes. Additional toppings can be requested.</p>
-
-            </div>
-
-
-                </figure>
-
-
-
-				<figure class="pizza">
-            <div class="pizza__hero"><!--BEM methodology: Block, element, modifier. block__element--modifier-->
-                <img src= https://images.unsplash.com/photo-1598023696416-0193a0bcd302?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60 alt="Pizza" class="pizza__img">
-            </div>
-
-            <div class="pizza__content">
-                <div class="pizza__title">
-                    <INPUT type="button" value="Meat Pizza (1 Slice)" onclick="addPizza('Meat Pizza (1 Slice)')"/><br>
-                    <div class="pizza__tag pizza__tag--1">#MeatLovers</div>
-
-                 </div>
-                <p class="pizza__description">Vegeterian pizza with green peppers, black olives, mushrooms, and diced tomatoes.</p>
-
-            </div>
-
-
-                </figure>
+<p><b>To place an order, please fill out the following fields below.</b></p>
 
 
 
 
+<form action="ordering.php">
+    <fieldset>
+        <legend>Place an Order</legend>
+
+        <label for="item">Choose food items and quantity:</label>
+		
+  <input type="items" name="getItems" id="item" list="food">
+  <datalist id="food">
+    <option value="Cheese Pizza (Slice)">$2.00</option>
+    <option value="Veggie Pizza (Slice)">$2.00</option>
+    <option value="Fries (Bowl)">$1.00</option>
+    <option value="Cheese Breadsticks">$1.50</option>
+    <option value="Chicken Tenders">$3.50</option>
+    <option value="Diced Peaches">$1.00</option>
+    <option value="Apple Slices">$1.00</option>
+
+  </datalist>
+
+  
+  
+ <script>
+function add(type) {
+var element = document.createElement("input");
+	var newLine = document.createElement('div');
+	element.setAttribute("value", "");
+	newLine.innerHTML = "new line";
+
+
+	var appendItem = document.getElementById("valueAdd");
+
+	
+	appendItem.appendChild(element);
+	document.getElementById(type).appendChild(newLine);
+	
+	
+}
+  </script>
+ 
+ 
+  <script>
+function addBeverage(type) {
+var element = document.createElement("input");
+	var newLine = document.createElement('div');
+	element.setAttribute("value", "");
+	newLine.innerHTML = "new line";
+
+
+	var appendItem = document.getElementById("beverageAdd");
+
+	
+	appendItem.appendChild(element);
+	document.getElementById(type).appendChild(newLine);
+	
+	
+}
+  </script>
+  
+  
+  
+    <script>
+function deliveryLocation(type) {
+alert(type);
+var element = document.createElement("input");
+	var newLine = document.createElement('div');
+	element.setAttribute("value", "");
+	newLine.innerHTML = "new line";
+
+
+	var appendItem = document.getElementById("beverageAdd");
+
+	
+	appendItem.appendChild(element);
+	document.getElementById(type).appendChild(newLine);
+	
+	
+}
+  </script>
+
+        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+		
+		<INPUT type="button" value="Add Item" onclick="add(HTMLInputElement)"/><br>
+
+<span id="valueAdd"></span><br>
+  
+  
+
+        <label for="beverage">Choose beverages and quantity:</label>
+        <input list="beverages" name="beverage" id="selectedBeverage">
+        <datalist id="beverages">
+        <option value="Coca-Cola (Can)">$1.00 </option>
+        <option value="Pepsi (Can)"> $1.00 </option>
+        <option value="Sprite (Can)"> $1.00 </option>
+        <option value="Water (Bottle)"> $1.00 </option>
+        <option value="Apple Juice (Bottle)">$1.50 </option>
+        <option value="Orange Juice (Bottle)">$1.50</option>
+		
+		
+		
+</datalist>
+
+<input type="number" id="quantity2" name="quantity" min="1" max="10" value="1">
+
+<INPUT type="button" value="Add Beverage" onclick="addBeverage(HTMLInputElement)"/><br>
+
+<span id="beverageAdd"></span><br>
+<br>
 
 
 
-         </body>
-  <footer>
-  <span id="spanresult"></span>
-  <span id="space"></span>
-  <span id="counterItems"></span>
-    </footer>
-	<script>
 
-  var counter = 1;
-  var itemList = [];
-  var countingList = [];
-var check = false;
-
-	function addPizza(value){
-
-	alert(value + " added!");
-  for (var x = 0; x < itemList.length; x++){
-
-    if (itemList[x] === value){
-var a = itemList.indexOf(value);
-countingList[a] = countingList[a] + 1;
-      check = true;
-    }
-
-
-  }
-
-  if (check === false){
-    itemList.push(value);
-    countingList.push(1);
-
-  }
-
-
-  var stringList = " ";
-  for (var i = 0; i < itemList.length; i++){
-
-    stringList += itemList[i];
-    console.log(stringList);
-  }
-
-  document.getElementById("spanresult").innerHTML= "Current List: " + stringList + "\n";
-
-  document.getElementById("space").innerHTML= "";
-  document.getElementById("counterItems").innerHTML = "Number of items: " + counter;
-  counter = counter + 1
-
-
-	}
-
-
+<script>
+	var getValue = document.getElementById('quantity');
+	var temp1 = "1"
+	var temp2 = ""
+	getValue.addEventListener('input', function()
+	{
+	temp1 = this.value
+	
+	})
+	
+	var getValue = document.getElementById('item');
+	getValue.addEventListener('input', function()
+	{
+	document.getElementById("spanresult").innerHTML="Food Item: " + this.value + "  - Quantity: " + temp1;
+	});
+  </script>
+ <script>
+	var getValue2 = document.getElementById('quantity2');
+	var temp1 = "1"
+	var temp2 = ""
+	getValue2.addEventListener('input', function()
+	{
+	temp1 = this.value
+	
+	})
+	
+	var getValue2 = document.getElementById('selectedBeverage');
+	getValue2.addEventListener('input', function()
+	{
+	document.getElementById("BeverageResult").innerHTML="Beverage Item: " + this.value + "  - Quantity: " + temp1;
+	});
   </script>
 
 
 
+      
+        <fieldset>
+            <legend>Select Campus Location:</legend>
+            <input type="radio" id="towers" name="location" value="Towers Residential">
+            <label for="towers">Towers Residential</label><br>
+            <input type="radio" id="awd" name="location" value="Anthony Wayne Drive Apartments">
+            <label for="awd">Anthony Wayne Drive Apartments</label><br>
+			<input type="radio" id="ghafari" name="location" value="Ghafari Hall">
+            <label for="ghafari">Ghafari Hall</label><br>
+			<input type="radio" id="atchinson" name="location" value="Atchison Hall">
+            <label for="atchinson">Atchison Hall</label><br>
+			<input type="radio" id="stucen" name="location" value="Student Center">
+            <label for="stucen">Student Center</label><br>
+			<input type="radio" id="ugl" name="location" value="Undergraduate Library">
+            <label for="ugl">Undergraduate Library</label><br>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>(If selecting a housing location) Select your Delivery Style:</legend>
+            <input type="radio" id="hand" name="ordStyle" value="In your hand">
+            <label for="hand">In your Hand</label><br>
+            <input type="radio" id="door" name="ordStyle" value="On your Doorstep">
+            <label for="door">On your Doorstep</label><br>
+			<input type="radio" id="na" name="ordStyle" value="N/A">
+            <label for="na">N/A</label><br>
+        </fieldset>
+
+
+		<label for="Phone Number">Enter Phone Number</label><br>
+        <textarea name="comment" rows="1" cols="30" placeholder="Please enter your phone number" required></textarea><br>
+
+
+
+        <label for="comment">Comments:</label><br>
+        <textarea name="comment" rows="3" cols="65" placeholder="Additional Delivery Comments"></textarea><br>
+
+        <input type="submit" value="Place Order" formaction="OrderStatus.html" style="font-size:1.5em">
+    
+	<h2>Shopping Cart</h2>
+<span id="spanresult"></span>
+<br>
+<span id="BeverageResult"></span>
+	
+	</fieldset>
+
+
+
+
+
+
+</form><br>
+
+
+
+
+</body>
 </html>
