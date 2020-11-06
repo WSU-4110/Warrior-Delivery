@@ -5,12 +5,12 @@ Affan Atif, Neelesh Bollu, Timothy Haddad, Miguel Manzanarez, Sanaz Rabinia, Maz
 
 | Backend       | Frontend      | Database | JUnit   |
 | ------------- |:-------------:|:--------:| ------: |     
-| Neelesh       | Neelesh       |  Neelesh |         |
-|               | Affan         |   Affan  |         |
+|    Neelesh    |               |  Neelesh |         |
+|               | Affan         |          |         |
 |               | Timothy       |          |         |
 |               | Miguel        |          |         |
 |     Sanaz     | Sanaz         |  Sanaz   |  Sanaz  |
-|               | Mazin         |          |         |
+|     Mazin     |               |          |         |
 
 ### Current Issues:
 1. Due to COVID, it is important to maintain safety on campus.
