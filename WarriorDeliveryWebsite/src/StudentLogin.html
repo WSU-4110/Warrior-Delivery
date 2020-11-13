@@ -1,4 +1,42 @@
 <!DOCTYPE html>
+
+
+<?php
+
+include("queries.php") //this file establishes connection to database
+session_start();
+
+
+
+//THE queried results show if the username/login match and return whether the user is a resident or non resident using true/false values
+//Depending on the residency of the student, the respective ordering page is redirected to
+$values = mysqli_query($db, "select username, resident from list")
+ 
+if($username == username and $password == password){
+
+session_register(username)
+
+if ($resident == false){
+
+	header("location: OrderNonResident.html");
+}
+else{
+
+	header("location: Ordering.html");
+
+}
+
+
+
+
+}
+
+?>
+
+
+
+
+
 <html>
 <head>
     <link rel="stylesheet" href="theme.css">

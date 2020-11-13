@@ -11,7 +11,7 @@
 <a href="homepage.html" style="background:none;border:none;display:inline-block;margin:0px;">
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
-<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Ordering Page (Residents)</h1><br>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Ordering Page (Non-Residents)</h1><br>
 <a href='Homepage.html'>Home</a>
 <a href='menu.html'>Menu</a>  
 <a href='StudentLogin.html'>Student Login</a>
@@ -19,7 +19,7 @@
 <a href='DelivererLogin.html'>Delivery</a>
 <a href='SelectCreation.html'>Make an Account</a>
 
-<p><b>Ordering Page for Residents On-Campus </b></p>
+<p><b>Ordering Page for Residents On Campus </p></b>
 <p><b>To place an order, please fill out the following fields below.</b></p>
 
 
@@ -174,29 +174,21 @@ var element = document.createElement("input");
         <fieldset>
             <legend>Select Campus Location:</legend>
             <input type="radio" id="towers" name="location" value="Towers Residential">
-            <label for="towers">Towers Residential</label><br>
+            <label for="towers">Undergraduate Library</label><br>
             <input type="radio" id="awd" name="location" value="Anthony Wayne Drive Apartments">
-            <label for="awd">Anthony Wayne Drive Apartments</label><br>
+            <label for="awd">Purdy-Kresge Library</label><br>
 			<input type="radio" id="ghafari" name="location" value="Ghafari Hall">
-            <label for="ghafari">Ghafari Hall</label><br>
+            <label for="ghafari">Student Center</label><br>
 			<input type="radio" id="atchinson" name="location" value="Atchison Hall">
-            <label for="atchinson">Atchison Hall</label><br>
+            <label for="atchinson">State Hall</label><br>
 			<input type="radio" id="stucen" name="location" value="Student Center">
-            <label for="stucen">Student Center</label><br>
+            <label for="stucen">Old Main</label><br>
 			<input type="radio" id="ugl" name="location" value="Undergraduate Library">
-            <label for="ugl">Undergraduate Library</label><br>
+            <label for="ugl">Mort-Harris Recreation Center</label><br>
         </fieldset>
 
 
-        <fieldset>
-            <legend>Select your Delivery Style:</legend>
-            <input type="radio" id="hand" name="ordStyle" value="In your hand">
-            <label for="hand">In your Hand</label><br>
-            <input type="radio" id="door" name="ordStyle" value="On your Doorstep">
-            <label for="door">On your Doorstep</label><br>
-			<input type="radio" id="na" name="ordStyle" value="N/A">
-            <label for="na">N/A</label><br>
-        </fieldset>
+   
 
 
 		<label for="Phone Number">Enter Phone Number</label><br>
@@ -205,7 +197,7 @@ var element = document.createElement("input");
 
 
         <label for="comment">Comments:</label><br>
-        <textarea name="comment" rows="3" cols="65" placeholder="Additional Delivery Comments"></textarea><br>
+        <textarea name="comment" rows="3" cols="65" placeholder="Additional Delivery Comments" required></textarea><br>
 
         <input type="submit" value="Place Order" formaction="OrderStatus.html" style="font-size:1.5em">
     
