@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="439bde84-7576-4837-9a11-5eda016f1580" name="Default Changelist" comment="Added an avatar to the login page">
+      <change afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/Deliverer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/currentStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/Homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/Homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/DelivererLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/DelivererLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/DeliveryMainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/WarriorDeliveryWebsite/src/DeliveryMainPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +146,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added an avatar to the login page" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="808" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1605229131686">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="808" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605229131686" />
     <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1601409173169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -170,10 +178,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602780045130" />
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1602786588156">
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1605233366815">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602786588156" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605233366815" />
     <state x="92" y="92" width="1736" height="856" key="dock-window-1" timestamp="1601994305754">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
