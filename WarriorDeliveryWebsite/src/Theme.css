@@ -19,7 +19,7 @@ h1.title {
 	display:inline-block;
 	font-size:5vw;
 	vertical-align:bottom;
-	margin:5px;
+	margin:1vw;
 }
 h2 {
 	color: #FFC842;
@@ -67,13 +67,13 @@ a:active {
 }
 fieldset {
 	border:2px solid #FFC842;
-	padding: 15px;
+	padding: 1.5vw;
 }
 legend {
 	color: #FFC842;
 	/*border:2px solid #FFC842;*/
 	background-color: #B80C09;
-	font-size: 24px;
+	font-size: 1.75em;
 }
 
 label {
@@ -99,22 +99,23 @@ nav {
 	padding: 0px;
 	display: block;
 	clear: both;
+	margin: 1vw 0vw 1vw 0vw;
 }
 
 nav a:link{
 	color: #000000;
 	background-color: #B80C09;
-	font-size: 1.5em;
+	font-size: 1.75em;
 	border: none;
 	border-radius: 0px;
-	padding: 10px;
+	padding: 1vw;
 	clear: right;
 }
 
 a.on {
 	background-color: #FFC842;
 	color: #000000;
-	font-size: 1.5em;
+	font-size: 1.75em;
 	border: none;
 	text-decoration: none;
 }

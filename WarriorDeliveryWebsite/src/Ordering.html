@@ -8,16 +8,17 @@
 </head>
 <body>
 
-<a href="homepage.html" style="background:none;border:none;display:inline-block;margin:0px;">
-<img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
-</a>
-<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Ordering Page</h1><br>
-<a href='Homepage.html'>Home</a>
-<a href='menu.html'>Menu</a>  
-<a href='StudentLogin.html'>Student Login</a>
-<a href='ordering.html'>Order</a>
-<a href='DelivererLogin.html'>Delivery</a>
-<a href='SelectCreation.html'>Make an Account</a>
+<a href="homepage.html" style="background:none;border:none;display:inline;margin:0px;">
+<img src="shield_only_color.png" alt="Logo" style="max-width:10%;"></a>
+<h1 class="title">Ordering Page</h1><br>
+
+<nav>
+	<a style="float:left" href='Homepage.html'>Home</a>
+	<a style="float:left" href='menu.html'>Menu</a>
+	<a style="float:left" class="on" href='ordering.html'>Order</a>
+	<a href='DelivererLogin.html'>Delivery</a> <!--The last link on the left should not have float:left-->
+	<a style="float:right" href='StudentLogin.html'>Login</a>
+</nav>
 
 <p><b>To place an order, please fill out the following fields below.</b></p>
 
@@ -131,9 +132,6 @@ var element = document.createElement("input");
 <span id="beverageAdd"></span><br>
 <br>
 
-
-
-
 <script>
 	var getValue = document.getElementById('quantity');
 	var temp1 = "1"
@@ -167,9 +165,6 @@ var element = document.createElement("input");
 	});
   </script>
 
-
-
-      
         <fieldset>
             <legend>Select Campus Location:</legend>
             <input type="radio" id="towers" name="location" value="Towers Residential">
@@ -186,7 +181,6 @@ var element = document.createElement("input");
             <label for="ugl">Undergraduate Library</label><br>
         </fieldset>
 
-
         <fieldset>
             <legend>(If selecting a housing location) Select your Delivery Style:</legend>
             <input type="radio" id="hand" name="ordStyle" value="In your hand">
@@ -197,16 +191,13 @@ var element = document.createElement("input");
             <label for="na">N/A</label><br>
         </fieldset>
 
-
 		<label for="Phone Number">Enter Phone Number</label><br>
         <textarea name="comment" rows="1" cols="30" placeholder="Please enter your phone number" required></textarea><br>
-
-
 
         <label for="comment">Comments:</label><br>
         <textarea name="comment" rows="3" cols="65" placeholder="Additional Delivery Comments"></textarea><br>
 
-        <input type="submit" value="Place Order" formaction="OrderStatus.html" style="font-size:1.5em">
+        <input type="submit" value="Place Order" formaction="OrderStatus.html" style="font-size:1.5vw">
     
 	<h2>Shopping Cart</h2>
 <span id="spanresult"></span>
