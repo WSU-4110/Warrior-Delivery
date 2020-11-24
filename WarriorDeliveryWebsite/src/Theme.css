@@ -1,17 +1,25 @@
-* {font-family: Arial; }
+* {
+	font-family: Arial; 
+}
 
-footer
-{
+footer{
     background-color: #0c5449;
 }
 
 body {
 	background-color:#00584D;
-	margin: 50px 100px 50px 100px;
+	margin: 5vw 10vw 5vw 10vw;
 }
+
 h1 {
 	color: #FFC842;
 	font-size: 2.25em;
+}
+h1.title {
+	display:inline-block;
+	font-size:5vw;
+	vertical-align:bottom;
+	margin:5px;
 }
 h2 {
 	color: #FFC842;
@@ -21,9 +29,11 @@ h3 {
 	color: #FFC842;
 	font-size: 1.2em;
 }
+
 p {
 	color: #FBFBFF;
 }
+
 a:link {
 	color: #01BAEF;
 	background-color: #B80C09;
@@ -65,32 +75,65 @@ legend {
 	background-color: #B80C09;
 	font-size: 24px;
 }
+
 label {
 	color: #FBFBFF;
 	line-height: 2.5;
 }
+
 input[type=submit] {
 	padding: 2px;
 	margin: 15px 0px 15px;
-	
 	color: #01BAEF;
 	background-color: #B80C09;
 	border:2px outset #B80C09;
 	border-radius: 3px;
 	font-size: 1em;
 	text-decoration: none;
-
 }
 
-table { border: 5px solid #FFC842;
-		width: 85%;
-		border-collapse: collapse; 
-		background-color: white; }
+nav {
+	position: sticky;
+	top: 0;
+	background-color: #003528;
+	padding: 0px;
+	display: block;
+	clear: both;
+}
+
+nav a:link{
+	color: #000000;
+	background-color: #B80C09;
+	font-size: 1.5em;
+	border: none;
+	border-radius: 0px;
+	padding: 10px;
+	clear: right;
+}
+
+a.on {
+	background-color: #FFC842;
+	color: #000000;
+	font-size: 1.5em;
+	border: none;
+	text-decoration: none;
+}
+
+table {
+	border: 5px solid #FFC842;
+	width: 85%;
+	border-collapse: collapse; 
+	background-color: white; 
+}
+
+td, th { 
+	padding: 3px;
+	border: 2px solid #FFC842; 
+}
 		
-td, th { padding: 3px;
-		border: 2px solid #FFC842; }
-		
-td { text-align: center; }
+td { 
+	text-align: center; 
+}
 
 .avatar {
   vertical-align: middle;
@@ -102,5 +145,4 @@ td { text-align: center; }
 #spanresult, #BeverageResult {
 	color: #FFFFFF;
 	font-weight: bold;
-	
 }
