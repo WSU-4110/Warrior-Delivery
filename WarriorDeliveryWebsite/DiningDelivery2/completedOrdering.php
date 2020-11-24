@@ -14,8 +14,8 @@ session_start();
    
    $currentOrder = $value['order_id'];
    //echo $value['order_id'];
-   $sql = "DELETE FROM orderlist WHERE order_id = '$currentOrder'";
-   
+   //$sql = "DELETE FROM orderlist WHERE order_id = '$currentOrder'";
+   $sql = "UPDATE orderlist SET status = '4' WHERE order_id = '$currentOrder'";
    //$sql = "UPDATE delivererlogin SET hasOrder = '1', order_id = '$currentOrder' WHERE username = '$nameofuser'";
 	$result = mysqli_query($db,$sql);
 	
@@ -23,8 +23,8 @@ session_start();
 	$sql = "UPDATE delivererlogin SET hasOrder = '0', order_id = '0' WHERE username = '$nameofuser'";
 	$result = mysqli_query($db,$sql);
 	
-	$_SESSION['orderIDnumber'] = 'None';
-	$_SESSION['orderListItems'] = 'None';
+	$_SESSION['orderIDnumber'] = NULL;
+	$_SESSION['orderListItems'] = NULL;
 	
 	echo "Thank You!";
 ?>

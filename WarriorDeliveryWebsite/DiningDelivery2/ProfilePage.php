@@ -4,7 +4,11 @@ session_start();
 
 $user_value = $_SESSION['login_user'];
 
-
+if($user_value == NULL){
+	header("Location: StudentLogin.html");
+	exit();
+	
+}
 
 ?>
 
@@ -34,14 +38,17 @@ $user_value = $_SESSION['login_user'];
 <br>
 <?php
 
-echo "<h1>Welcome " . $user_value . "!</h1>";
+echo "<h1>Welcome " . $user_value . "</h1>";
+
 ?>
 <br>
 
-<a href='Ordering.html'>Order</a><br>
+<a href='Ordering.php'>Order</a><br>
 <a href='StudentOrderStatus.php'>Check Order Status</a><br>
 <a href='CheckBalance.php'>Check Balance</a><br>
+<a href = "AddBalance.php">Add Balance</a><br>
 <a href='ViewOrderHistory.php'>View Order History</a><br>
+<a href = "YourInfoS.php">Your Information</a><br>
 <a href = "LogOut.php">Sign Out</a>
 
 

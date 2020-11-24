@@ -32,8 +32,15 @@ session_start();
 
 echo "<h1>Welcome " . $user_value . "!</h1>";
 ?>
-<h2> Current Order Status </h2>
+<h2> Current Balance </h2>
 
+
+<form action="AddBalanceQuery.php" method="post" autocomplete="on">
+
+<label> Enter Balance to Add </label><br>
+<input type="text" id="amount" name="amount" placeholder="Enter Amount"><br>
+<input type="submit" value="Submit"><br><br>
+</form>
 
 
 

@@ -9,7 +9,7 @@
       $mypassword = $_POST['password']; 
       
       //$sql = "INSERT INTO `testvalues`(`user_id`, `user_name`, `user_password`) VALUES (NULL,'$myusername','$mypassword')";
-      $sql = "SELECT user_id FROM delivererlogin WHERE username = '$myusername' and password = '$mypassword'";
+      $sql = "SELECT user_id FROM testvalues WHERE user_name = '$myusername' AND user_password = '$mypassword' AND Authenticated = '1'";
 	  
 	  $result = mysqli_query($db,$sql);
       $row = mysqli_num_rows($result);
@@ -23,7 +23,7 @@
 			//$sql = "INSERT INTO `orderlist`(`order_id`, `user_name`, `order_item`) VALUES (NULL,'$myusername', '$foodItems')";
 			$result = mysqli_query($db,$sql);
          
-         header("location: SignedInDeliverer.php");
+         header("location: ProfilePage.php");
 			
 		}else{
 			echo "Incorrect Login";
