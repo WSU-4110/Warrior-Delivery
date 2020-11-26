@@ -23,7 +23,7 @@
 			//$sql = "INSERT INTO `orderlist`(`order_id`, `user_name`, `order_item`) VALUES (NULL,'$myusername', '$foodItems')";
 			$result = mysqli_query($db,$sql);
          
-         header("location: SignedInKitchen.php");
+         header("location: ProfilePageKitchen.php");
 			
 		}else{
 			echo "Incorrect Login";
