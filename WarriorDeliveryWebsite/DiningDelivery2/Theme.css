@@ -70,14 +70,14 @@ fieldset {
 	padding: 1.5vw;
 }
 legend {
-	color: #FFC842;
+	color: #DDDDDD;
 	/*border:2px solid #FFC842;*/
 	background-color: #B80C09;
 	font-size: 1.75em;
 }
 
 label {
-	color: #FBFBFF;
+	color: #DDDDDD;
 	line-height: 2.5;
 }
 
@@ -98,7 +98,6 @@ nav {
 	background-color: #960D0D;
 	padding: 0px;
 	display: block;
-	clear: both;
 	margin: 1vw 0vw 1vw 0vw;
 }
 
@@ -109,7 +108,6 @@ nav a:link{
 	border: none;
 	border-radius: 0px;
 	padding: 1vw;
-	clear: right;
 }
 nav a:visited {
 	color: #DDDDDD;
