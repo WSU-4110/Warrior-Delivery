@@ -2,28 +2,65 @@
 <html>
 <head>
     <link rel="stylesheet" href="theme.css">
+	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
     <title>Menu | Warrior Delivery</title>
 </head>
 <body>
 
-
-<h1 style="color:#FFC842;">Menu</h1>
+<a href="homepage.html" style="background:none;border:none;display:inline-block;margin:0px;">
+<img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
+</a>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Menu</h1><br>
+<br>
 <a href='Homepage.html'>Home</a>
-<br><br>
-<legend>Select your Delivery Style:</legend>
+<a href='menu.html'>Menu</a>  
+<a href='StudentLogin.html'>Student Login</a>
+<a href='DelivererLoginPage.html'>Delivery Login</a>
+<a href='SelectCreation.html'>Create an Account</a>
 
-<table>
+<br><br>
+<h3> Today's Available Menu </h3>
+<table style="width:15%">
 	<thead>	
-		<th>Door Prices (will be the starting price of your order before delivery fees):</th>
+		<th>Item</th>
+		<th>Price*</th>
+		<th>Description</th>
+		<th>Calories</th>
 	</thead>
 	
 	<tbody>
-		<tr>Breakfast: $7.50</tr>
-		<tr>Lunch: $9.00</tr>
-		<tr>Dinner $9.75</tr>
-	</tbody>
-<br><br>
+		<tr>
+		<?php
 
+
+session_start();
+	$db = new mysqli('localhost','root','','diningdelivery');
+
+	$sql = "SELECT item_name, description, price, calories FROM menu";
+$result = mysqli_query($db,$sql);
+
+ while($row = mysqli_fetch_array($result)){	
+?>
+			<td><?php echo $row['item_name'];?></td>
+			<td>$<?php echo (($row['price']));?>.00</td>
+			<td><?php echo (($row['description']));?></td>
+			<td><?php echo (($row['calories']));?></td>
+		</tr>
+		
+		
+	<?php
+ }
+ ?>
+	</tbody>
+</table>
+
+
+
+
+
+
+
+<p>*Items do not include tax or delivery fee</p>
 <table>
 	<thead>
 		<th>Category</th>

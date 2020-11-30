@@ -4,6 +4,12 @@ session_start();
 
 $user_value = $_SESSION['login_user'];
 
+if($user_value == NULL){
+	header("Location: StudentLogin.html");
+	exit();
+	
+}
+
 
 $db = new mysqli('localhost','root','','diningdelivery');
 
@@ -34,7 +40,7 @@ $db = new mysqli('localhost','root','','diningdelivery');
 <a href="ProfilePage.php" style="background:none;border:none;display:inline-block;margin:0px;">
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
-<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Ordering Page</h1><br>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Order | WSU Dining Delivery</h1><br>
 <a href='ProfilePage.php'>Home</a>
 
 
@@ -67,6 +73,7 @@ $result = mysqli_query($db,$sql);
 
 <?php
 		}
+		$_SESSION["reason"] = "Your Order has been successfully placed! Your order will be delivered as soon as possible!";
 ?>
 
 
@@ -205,7 +212,8 @@ function additionalText(){
 <p id="showFinal"></p>
 
 <br>
-	<button onclick="sendData()">Checkout</button><br>
+	<button onclick="return confirm('Are you sure you want to submit your order?') && sendData()">Checkout</button><br>
+	
 	</fieldset>
 
 
@@ -324,7 +332,7 @@ $.ajax({
 
 
 
-
+window.location.replace('ConfirmationPage.php');
 }
 </script>
 
