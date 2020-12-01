@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +21,6 @@
 
 <?php
 
-session_start();
 $message = $_SESSION["reason"];
 
 echo "<h3>$message</h3>";

@@ -1,21 +1,21 @@
-
-
-
 <?php
-session_start();
 
+session_start();
 
 $user_value = $_SESSION['login_user'];
 
 if($user_value == NULL){
-	header("Location: StudentLogin.html");
+    
+    ?>
+    
+    <script>
+	window.location.replace("StudentLogin.html");
+	</script>
+	<?php
 	exit();
 	
 }
 
-
-
-   
 ?>
 
 
@@ -52,22 +52,45 @@ if($user_value == NULL){
 
 <?php
 
-$db = new mysqli('localhost','root','','diningdelivery');
+$db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
 
-$sql = "SELECT user_id, email, access_id, firstname, lastname, user_name, Authenticated FROM testvalues WHERE user_name = '$user_value'";
+$sql = "SELECT user_id, email, access_id, firstname, lastname, user_name, Authenticated FROM testvalues WHERE access_id = '$user_value'";
 $result = mysqli_query($db,$sql);
 $value = mysqli_fetch_assoc($result);
 
-echo nl2br ("User ID: " . $value['user_id'] . "\n"
-	. "Email: " . $value['email'] . "\n"
-	. "First Name: " . $value['firstname'] . "\n"
-	. "Last Name: " . $value['lastname'] . "\n"
-	. "Username: " . $value['user_name'] . "\n"
-	. "Authentication: " . $value['Authenticated'] . "\n");
-	
-
-
 ?>
+
+<table style="width:40%">
+	<thead>	
+		<th>Details</th>
+		<th>Information</th>
+		
+	</thead>
+	
+	<tbody>
+		<tr>
+	
+	<td> User ID: </td>
+	<td> <?php echo $value['user_id']; ?> </td>
+	</tr>
+	<tr>
+	    <td> Email: </td>
+	    <td> <?php echo $value['email']; ?> </td>
+	    </tr>
+	<tr>
+	    <td>First Name: </td>
+	    <td> <?php echo $value['firstname']; ?> </td>
+	</tr>
+	<tr>
+	    <td>Last Name: </td>
+	    <td> <?php echo $value['lastname']; ?></td>
+	</tr>
+
+	</tbody>
+	
+</table>
+
+
 
 
 

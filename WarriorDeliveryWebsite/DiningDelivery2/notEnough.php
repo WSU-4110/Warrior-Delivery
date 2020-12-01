@@ -19,8 +19,8 @@ if($user_value == NULL){
 
 $user_value = $_SESSION['login_user'];
 
-$db = new mysqli('localhost','root','','diningdelivery');
-$sql = "UPDATE testvalues SET balance = '0' WHERE access_id = '$user_value'";	
+$db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
+$sql = "UPDATE testvalues SET balance = '$_POST[test1]' WHERE access_id = '$user_value'";	
  $result = mysqli_query($db,$sql);
 
 

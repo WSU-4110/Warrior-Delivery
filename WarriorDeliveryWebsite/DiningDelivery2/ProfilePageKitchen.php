@@ -5,7 +5,13 @@ session_start();
 $user_value = $_SESSION['login_user'];
 
 if($user_value == NULL){
-	header("Location: KitchenLogin.html");
+    
+    ?>
+    
+    <script>
+	window.location.replace("index.html");
+	</script>
+	<?php
 	exit();
 	
 }

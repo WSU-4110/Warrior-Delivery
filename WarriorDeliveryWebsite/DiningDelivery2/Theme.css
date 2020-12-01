@@ -84,7 +84,7 @@ input[type=submit] {
 }
 
 table { border: 5px solid #FFC842;
-		width: 85%;
+	
 		border-collapse: collapse; 
 		background-color: white; }
 		
@@ -104,4 +104,10 @@ td { text-align: center; }
 	color: #FFFFFF;
 	font-weight: bold;
 	
+}
+
+#output {
+    
+ color: white;   
+    
 }

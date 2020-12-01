@@ -26,7 +26,7 @@ echo "Welcome " . $user_value . "!";
 
 <h2> Current Available Orders </h2>
 <?php
-   $db = new mysqli('localhost','root','','diningdelivery');
+   $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
    
    $sql = "SELECT order_id, user_name, order_item, status FROM orderlist WHERE status = '0'";
    

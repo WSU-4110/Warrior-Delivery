@@ -2,10 +2,7 @@
 session_start();
 
 
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -27,34 +24,14 @@ session_start();
 
 <br>
 <a href='ProfilePageKitchen.php'>Home</a>
-</body>
-
-</html>
-
-
-
-
 
 <?php
 
-	$db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
-	
-	$itemID = $_POST['deleteOrder'];
-	
 
-	$sql = "DELETE FROM menu WHERE item_id = '$itemID'";
-$result = mysqli_query($db,$sql);
+echo "<h3>Menu item submitted. The item will now be viewable on the menu page and will be selectable on the order page.</h3>";
 
-  if ($result){
-	  
-	  echo "<h3> Item Deleted! </h3>";
-	  
-	  
-  }
-	
-	
+
 ?>
-<br>
+
 <a href='ProfilePageKitchen.php'>Go Back</a><br>
 <a href='LogOut.php'>Sign Out</a>
-

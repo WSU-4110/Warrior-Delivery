@@ -2,12 +2,20 @@
 
 session_start();
 
-   $user_value = $_SESSION['login_user'];
-   if($user_value == NULL){
-	header("Location: StudentLogin.html");
+$user_value = $_SESSION['login_user'];
+
+if($user_value == NULL){
+    
+    ?>
+    
+    <script>
+	window.location.replace("StudentLogin.html");
+	</script>
+	<?php
 	exit();
 	
 }
+
 ?>
 
 <!DOCTYPE html>

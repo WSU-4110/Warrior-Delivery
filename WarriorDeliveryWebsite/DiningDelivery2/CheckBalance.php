@@ -2,14 +2,20 @@
 
 session_start();
 
-   $user_value = $_SESSION['login_user'];
-   
+$user_value = $_SESSION['login_user'];
+
 if($user_value == NULL){
-	header("Location: StudentLogin.html");
+    
+    ?>
+    
+    <script>
+	window.location.replace("StudentLogin.html");
+	</script>
+	<?php
 	exit();
 	
 }
-   
+
 ?>
 
 <!DOCTYPE html>
@@ -38,9 +44,9 @@ if($user_value == NULL){
 <h2> Current Balance </h2>
 <?php
 
-$db = new mysqli('localhost','root','','diningdelivery');
+$db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
 
- $sql = "SELECT balance FROM testvalues WHERE user_name = '$user_value'";
+ $sql = "SELECT balance FROM testvalues WHERE access_id = '$user_value'";
   $result = mysqli_query($db,$sql);
   
   $value = mysqli_fetch_assoc($result);

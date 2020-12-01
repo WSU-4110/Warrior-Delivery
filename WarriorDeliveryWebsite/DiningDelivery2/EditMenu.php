@@ -5,7 +5,13 @@ session_start();
 $user_value = $_SESSION['login_user'];
 
 if($user_value == NULL){
-	header("Location: StudentLogin.html");
+    
+    ?>
+    
+    <script>
+	window.location.replace("index.html");
+	</script>
+	<?php
 	exit();
 	
 }
@@ -96,7 +102,7 @@ $.ajax({
 	}
 })
 
-
+window.location.replace("menuAddConfirmation.php");
 
 
 }
@@ -109,25 +115,51 @@ $.ajax({
 
 <br>
 <h3> Current Active Menu </h3>
-
+<table style>
+	<thead>	
+		<th>Item ID</th>
+		<th>Item Name</th>
+		<th>Description</th>
+		<th>Price($)</th>
+		<th>Calories</th>
+	</thead>
 <?php
-$db = new mysqli('localhost','root','','diningdelivery');
-$sql = "SELECT item_id, item_name, price FROM menu";
+$db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
+$sql = "SELECT item_id, item_name, price, description, calories FROM menu";
 
 
 $result = mysqli_query($db,$sql);
 
 while($row = mysqli_fetch_array($result)){
 	   
-
-	   echo nl2br ("Item ID: " . $row['item_id'] . " Item Name: " . $row['item_name'] . " Price: " . $row['price']  . "\n");
 	   
-   }
+	   ?>
+	
+	
+	<tbody>
+		<tr>
+	
+	<td> <?php echo $row['item_id']; ?> </td>
+	<td> <?php echo $row['item_name']; ?> </td>
+	<td> <?php echo $row['description']; ?> </td>
+	<td> <?php echo $row['price']; ?>.00 </td>
+	<td> <?php echo $row['calories']; ?> </td>
+	</tr>
+	
+	
+	    
+	    <?php
+}
+
+
 
 
 ?>
+	   
 
 
+</tbody>
+</table>
 
 <br>
 
@@ -145,8 +177,7 @@ while($row = mysqli_fetch_array($result)){
 <label for="newMenuCalories">Item Calorie Count</label><br>
 <textarea id="itemCalories" rows="1" cols="30" placeholder="Please enter the item's calorie content" onchange="addCalories()" required></textarea><br>
 
-
-<button onclick="sendData()">Submit</button><br>
+<button onclick="return confirm('Are you sure you want to submit the item?') && sendData()">Submit</button><br>
 <br>
 
 
@@ -158,7 +189,7 @@ while($row = mysqli_fetch_array($result)){
 	<option> Select Item ID </option>
 	
 <?php
-$db = new mysqli('localhost','root','','diningdelivery');
+$db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
 $sql = "SELECT item_id FROM menu";
 $result = mysqli_query($db,$sql);
 		while($row = mysqli_fetch_array($result)){

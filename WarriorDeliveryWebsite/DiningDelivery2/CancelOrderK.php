@@ -5,7 +5,13 @@ session_start();
 $user_value = $_SESSION['login_user'];
 
 if($user_value == NULL){
-	header("Location: KitchenLogin.html");
+    
+    ?>
+    
+    <script>
+	window.location.replace("index.html");
+	</script>
+	<?php
 	exit();
 	
 }
@@ -45,7 +51,7 @@ if($user_value == NULL){
 	<option> Select Order ID </option>
 	
 <?php
-$db = new mysqli('localhost','root','','diningdelivery');
+$db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
 $sql = "SELECT order_id FROM orderlist WHERE status = '3'";
 $result = mysqli_query($db,$sql);
 		while($row = mysqli_fetch_array($result)){

@@ -2,10 +2,7 @@
 session_start();
 
 
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -20,41 +17,21 @@ session_start();
   crossorigin="anonymous"></script>
 </head>
 <body>
-<a href="ProfilePageKitchen.php" style="background:none;border:none;display:inline-block;margin:0px;">
+<a href="ProfilePageDeliverer.php" style="background:none;border:none;display:inline-block;margin:0px;">
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
 
 <br>
-<a href='ProfilePageKitchen.php'>Home</a>
-</body>
-
-</html>
-
-
-
-
+<a href='ProfilePageDeliverer.php'>Home</a><br>
 
 <?php
 
-	$db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
-	
-	$itemID = $_POST['deleteOrder'];
-	
 
-	$sql = "DELETE FROM menu WHERE item_id = '$itemID'";
-$result = mysqli_query($db,$sql);
+echo "<h3>Thank you for receiving an order. Please check the details of the order and deliver the order to complete the task.</h3>";
 
-  if ($result){
-	  
-	  echo "<h3> Item Deleted! </h3>";
-	  
-	  
-  }
-	
-	
+
 ?>
 <br>
-<a href='ProfilePageKitchen.php'>Go Back</a><br>
+<a href='ProfilePageDeliverer.php'>Go Back</a><br>
 <a href='LogOut.php'>Sign Out</a>
-
