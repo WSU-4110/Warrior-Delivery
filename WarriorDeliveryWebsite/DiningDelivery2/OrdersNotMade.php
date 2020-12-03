@@ -7,7 +7,6 @@ $user_value = $_SESSION['login_user'];
 if($user_value == NULL){
 	header("Location: KitchenLogin.html");
 	exit();
-	
 }
 
 ?>
@@ -35,6 +34,7 @@ if($user_value == NULL){
 
 <br>
 <a href='ProfilePageKitchen.php'>Home</a>
+
   
 
 <h2> Incoming Orders </h2>

@@ -107,6 +107,7 @@ var finalLocation;
 var finalStyle;
 var textField = "";
 var textComment = "";
+var itemPrices = [];
 
 
 function getRadioValue(){
@@ -218,6 +219,8 @@ function additionalText(){
 
 
 
+
+
 <br>
 
 <br>
@@ -235,8 +238,26 @@ var check = false;
 var finalList = '';
 var tempCounter = 0;
 var finalCost = 0;
+//var itemPrices = [[]];
 
-var itemPrices = [ ['pizza', 2.00], ['pepsi', 1.00], ['fries', 1.00], ['salad', 3.00], ['Apple Juice', 1.00] ];
+
+<?php
+$sql = "SELECT item_name, price FROM menu";
+$result = mysqli_query($db,$sql);
+		while($row = mysqli_fetch_array($result)){
+
+?> 
+	
+	itemPrices.push(["<?php echo $row['item_name'];?>","<?php echo $row['price'];?>"]);
+	console.log(itemPrices);
+	
+	
+	<?php
+		}
+?>
+		
+
+
 var finalPrice = 0;
 
 
@@ -286,7 +307,7 @@ function priceCalculator(name){
 for (i = 0; i<itemPrices.length; i++){
 	
 	if (name == itemPrices[i][0]){
-		finalCost = finalCost + itemPrices[i][1];
+		finalCost = finalCost + parseFloat(itemPrices[i][1]);
 		console.log(name);
 	
 	}
@@ -294,7 +315,7 @@ for (i = 0; i<itemPrices.length; i++){
 	
 	
 }
-	
+	console.log(itemPrices);
 	document.getElementById("showPrice").innerHTML = "Item(s) Price: $" + finalCost +".00";
 	taxCost = (0.06*finalCost);
 	document.getElementById("showTax").innerHTML = "Tax: $" + (0.06*finalCost).toFixed(2);
