@@ -5,7 +5,7 @@ session_start();
 $user_value = $_SESSION['login_user'];
 
 if($user_value == NULL){
-	header("Location: StudentLogin.html");
+	header("Location: KitchenLogin.html");
 	exit();
 	
 }
@@ -28,13 +28,15 @@ if($user_value == NULL){
   crossorigin="anonymous"></script>
 </head>
 <body>
-<a href="ProfilePage.php" style="background:none;border:none;display:inline-block;margin:0px;">
+<a href="ProfilePageKitchen.php" style="background:none;border:none;display:inline-block;margin:0px;">
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
 
 <br>
-<a href='ProfilePage.php'>Home</a>
+
+<a href='ProfilePageKitchen.php'>Home</a>
+
   
 
 
@@ -48,6 +50,7 @@ if($user_value == NULL){
 <a href = "OrdersNotMade.php">Incoming Orders</a><br>
 <a href = "OrdersInDelivery.php">Orders in Delivery</a><br>
 <a href = "CancelOrderK.php">Cancel Order</a><br>
+<a href = "EditMenu.php">Edit Menu</a><br>
 <a href = "Authentication.php">Authentication</a><br>
 <a href = "LogOut.php">Sign Out</a>
 

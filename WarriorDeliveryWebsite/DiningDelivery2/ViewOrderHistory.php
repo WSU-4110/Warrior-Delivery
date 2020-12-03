@@ -18,13 +18,13 @@ if($user_value == NULL){
 <head>
     <link rel="stylesheet" href="theme.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
-	<title>Warrior Delivery</title>
+	<title>Order History</title>
 </head>
 <body>
 <a href="ProfilePage.php" style="background:none;border:none;display:inline-block;margin:0px;">
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
-<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Order History | WSU Dining Delivery</h1><br>
 
 <br>
 <a href='ProfilePage.php'>Home</a>
@@ -34,10 +34,7 @@ if($user_value == NULL){
 
 <br>
 
-<?php
 
-echo "<h1>Welcome " . $user_value . "!</h1>";
-?>
 <h2> Previous Orders </h2>
 
 
@@ -52,7 +49,7 @@ $db = new mysqli('localhost','root','','diningdelivery');
   
   $currentBalance = $value['order_id'];
 if ($value != NULL){
-echo "<h4>Current Order: " . "Order ID: " . $value['order_id'] . "<br>" . 
+echo "<h4>Order ID: " . $value['order_id'] . "<br>" . 
 							 "Order Item(s) " . $value['order_item'] . "<br>"
 							. "Location: " . $value['location'] . "<br>"
 							. "Style: " . $value['style'] . "<br>"

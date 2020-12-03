@@ -8,7 +8,7 @@ session_start();
 $user_value = $_SESSION['login_user'];
 
 if($user_value == NULL){
-	header("Location: DelivererLoginPage.html");
+	header("Location: StudentLogin.html");
 	exit();
 	
 }
@@ -26,20 +26,20 @@ if($user_value == NULL){
 <head>
     <link rel="stylesheet" href="theme.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
-	<title>Warrior Delivery</title>
+	<title>Information</title>
 	<script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
 </head>
 <body>
-<a href="ProfilePageDeliverer.php" style="background:none;border:none;display:inline-block;margin:0px;">
+<a href="ProfilePage.php" style="background:none;border:none;display:inline-block;margin:0px;">
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
-<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Information | WSU Dining Delivery</h1><br>
 
 <br>
-<a href='ProfilePageDeliverer.php'>Home</a>
+<a href='ProfilePage.php'>Home</a>
   
 
 
