@@ -1,21 +1,21 @@
-
-
-
 <?php
-session_start();
 
+session_start();
 
 $user_value = $_SESSION['login_user'];
 
 if($user_value == NULL){
-	header("Location: DelivererLoginPage.html");
+    
+    ?>
+    
+    <script>
+	window.location.replace("DelivererLoginPage.html");
+	</script>
+	<?php
 	exit();
 	
 }
 
-
-
-   
 ?>
 
 
@@ -52,22 +52,66 @@ if($user_value == NULL){
 <?php
 
 
-if($_SESSION['orderIDnumber'] == NULL){
+ $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
+
+ $sql = "SELECT order_id, hasOrder FROM delivererlogin WHERE access_id = '$user_value'";
+  $result = mysqli_query($db,$sql);
+  
+  $value = mysqli_fetch_assoc($result);
+$compare = $value['order_id'];
+
+$sql2 = "SELECT location, style, phone, order_item, comment FROM orderlist WHERE order_id = '$compare'";
+$result2 = mysqli_query($db,$sql2);
+$value2 = mysqli_fetch_assoc($result2);
+
+
+
+if($value['hasOrder'] == 0){
 	
-	echo "You Currently Are Not Deliverying An Order";
-} else {
-$one = $_SESSION['orderIDnumber'];
-$two = $_SESSION['orderListItems'];
-echo nl2br ("Your Current Order: " . "\n");
-echo nl2br ("Order ID: " . $one . "\n");
-echo nl2br ("Order Item(s): " . $two . "\n");	
+    echo "<b>You are currently not delivering an order!</b><br>";
 	
+} else{
+    
+    
+ 
+?>
+
+
+<table style=>
+	<thead>	
+		<th>Order ID</th>
+		<th>Order Item(s)</th>
+		<th>Location</th>
+		<th>Style</th>
+		<th>Phone</th>
+		<th>Comment</th>
+		
+	</thead>
 	
+	<tbody>
+		<tr>
+	
+	<td> <?php echo $value['order_id']?> </td>
+	<td> <?php echo $value2['order_item']; ?> </td>
+	<td> <?php echo $value2['location']; ?> </td>
+	<td> <?php echo $value2['style']; ?> </td>
+	<td> <?php echo $value2['phone']; ?> </td>
+	<td> <?php echo $value2['comment']; ?> </td>
+	</tr>
+	
+	</tbody>
+	
+</table>
+
+
+
+<?php
+
 }
 
-
-
 ?>
+
+
 
 
 

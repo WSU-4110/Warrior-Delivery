@@ -6,8 +6,8 @@ $newPassword = $_POST['new'];
 
 
 
-$db = new mysqli('localhost','root','','diningdelivery');
-$sql = "SELECT access_id WHERE user_password = '$oldPassword'";
+$db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
+$sql = "SELECT access_id FROM testvalues WHERE user_password = '$oldPassword'";
  $result = mysqli_query($db,$sql);
 
 $row = mysqli_num_rows($result);
@@ -50,7 +50,7 @@ if($row==1){
 
 <br>
 <br>
-<a href='ProfilePage.php'>Go Back</a><br>
+<a href='index.html'>Go Back</a><br>
 
 
 

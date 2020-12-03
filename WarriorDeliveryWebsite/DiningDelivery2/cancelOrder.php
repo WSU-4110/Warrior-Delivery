@@ -3,6 +3,7 @@ session_start();
 ?>
 
 
+
 <!DOCTYPE html>
 <html>
 <br>
@@ -23,24 +24,18 @@ session_start();
 
 <br>
 <a href='ProfilePageKitchen.php'>Home</a>
-</body>
-
-</html>
-
-
-
 
 
 
 <?php
 
 
-	$db = new mysqli('localhost','root','','diningdelivery');
+	$db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
 	
 	$nameofuser = $_POST['cancelOrder'];
 	$reason = $_POST['reason'];
 
-	$sql = "SELECT user_name FROM orderlist WHERE order_id = '$nameofuser'";
+	$sql = "SELECT access_id FROM orderlist WHERE order_id = '$nameofuser'";
 $result = mysqli_query($db,$sql);
 
 $value = mysqli_fetch_assoc($result);
@@ -54,22 +49,48 @@ $value = mysqli_fetch_assoc($result);
 
 
  
-   $myusername = $value['user_name'];
+   $myusername = $value['access_id'];
+   
+   $sql2 = "SELECT email, firstname FROM testvalues WHERE access_id = '$myusername'";
+   $result2 = mysqli_query($db,$sql2);
+   $value2 = mysqli_fetch_assoc($result2);
+   
+   $myemail = $value2['email'];
+   $firstname = $value2['firstname'];
+   
+   
+   
+   
 
-
-	  
-	  echo "<h3> Item Deleted! </h3>";
-	  
-	  
-  
+    if($result){
+        
+        echo "<h3> Item Cancelled! An email will be sent to the user confirming the cancellation. </h3>";
+        
+        
+    }
 
 
 	//echo $nameofuser;
 
-	$message = "Hello " . $myusername . "!, Unfortunately your order has been cancelled!";
 
-	$title = "Your WSU Dining Delivery Order ID: " . $nameofuser . " has been cancelled";
+
+	$message = "Hello " . $firstname . "!, Unfortunately your order has been cancelled! for the following reason: " . 
+	$reason . '
+	
+	Thank You!
+	WSU Dining Delivery
+	
+	";
+
+	$title = "Your WSU Dining Delivery Order ID: " . $nameofuser . " has been cancelled 
+	';
+	
    
-   //mail('afnanatif@gmail.com', $title, $message, 'From: WSU Dining Delivery <wsudiningdelivery@gmail.com>');
+   
+   mail($myemail, $title, $message, 'From: WSU Dining Delivery <wsudiningdelivery@gmail.com>');
 	
 ?>
+<br>
+<a href='ProfilePageKitchen.php'>Go Back</a>
+</body>
+</html>

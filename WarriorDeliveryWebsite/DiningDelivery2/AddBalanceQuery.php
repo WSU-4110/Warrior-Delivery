@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,17 +26,17 @@
 
 <?php
 
-session_start();
+
 
    $user_value = $_SESSION['login_user'];
 
 
 
 
-$db = new mysqli('localhost','root','','diningdelivery');
+$db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
 
 $addBalance = $_POST['amount'];
-$sql = "SELECT balance FROM testvalues WHERE user_name = '$user_value'";
+$sql = "SELECT balance FROM testvalues WHERE access_id = '$user_value'";
 $result = mysqli_query($db,$sql);
   $value = mysqli_fetch_assoc($result);
   
@@ -37,7 +44,7 @@ $result = mysqli_query($db,$sql);
   
   $currentBalance = $currentBalance + $addBalance;
   
-  $sql = "UPDATE testvalues SET balance = '$currentBalance' WHERE user_name = '$user_value'";
+  $sql = "UPDATE testvalues SET balance = '$currentBalance' WHERE access_id = '$user_value'";
   $result = mysqli_query($db,$sql);
   
  

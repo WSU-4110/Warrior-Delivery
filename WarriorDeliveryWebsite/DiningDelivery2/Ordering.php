@@ -5,15 +5,23 @@ session_start();
 $user_value = $_SESSION['login_user'];
 
 if($user_value == NULL){
-	header("Location: StudentLogin.html");
+    
+    ?>
+    
+    <script>
+	window.location.replace("ProfilePage.php");
+	</script>
+	<?php
 	exit();
 	
 }
 
 
-$db = new mysqli('localhost','root','','diningdelivery');
 
- $sql = "SELECT balance FROM testvalues WHERE user_name = '$user_value'";
+
+$db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
+
+ $sql = "SELECT balance FROM testvalues WHERE access_id = '$user_value'";
   $result = mysqli_query($db,$sql);
   
   $value = mysqli_fetch_assoc($result);
@@ -58,8 +66,7 @@ $db = new mysqli('localhost','root','','diningdelivery');
 <fieldset>
 <legend>Choose food items and quantity:</legend>
        
-		
-<button onclick="cartCreator('fries')"><img src="C:\xampp\htdocs\DiningDelivery2\WayneLogo2.png">Add Fries</button><br>
+	
 
 
 <?php
@@ -90,14 +97,19 @@ $result = mysqli_query($db,$sql);
 
 <fieldset>
 <legend> Choose delivery location </legend>
-	<div id="location">
-		<input type="radio" id="Towers" name="location" value="Towers Residential" onclick="getRadioValue()"> Towers Residential<br>
-		<input type="radio" id="AWD" name="location" value="Anthony Wayne Drive Apartments" onclick="getRadioValue()"> Anthony Wayne Drive Apartments<br>
-		<input type="radio" id="Ghafari" name="location" value="Ghafari Hall" onclick="getRadioValue()"> Ghafari Hall<br>
-		<input type="radio" id="Atchison" name="location" value="Atchison Hall" onclick="getRadioValue()"> Atchison Hall<br>
-		<input type="radio" id="StudentCenter" name="location" value="Student Center" onclick="getRadioValue()"> Student Center<br>
-		<input type="radio" id="UGL" name="location" value="Undergraduate Library" onclick="getRadioValue()"> Undergraduate Library<br>
-	</div>
+		<input type="radio" id="Towers" name="location" value="Towers Residential" onclick="getRadioValue()"> 
+		<label for="hand">Towers Residential</label><br>
+		<input type="radio" id="AWD" name="location" value="Anthony Wayne Drive Apartments" onclick="getRadioValue()">
+		<label for="hand">Anthony Wayne Drive Apartments</label><br>
+		<input type="radio" id="Ghafari" name="location" value="Ghafari Hall" onclick="getRadioValue()">
+		<label for="hand">Ghafari Hall</label><br>
+		<input type="radio" id="Atchison" name="location" value="Atchison Hall" onclick="getRadioValue()">
+		<label for="hand">Atchison Hall</label><br>
+		<input type="radio" id="StudentCenter" name="location" value="Student Center" onclick="getRadioValue()">
+		<label for="hand">Student Center</label><br>
+		<input type="radio" id="UGL" name="location" value="Undergraduate Library" onclick="getRadioValue()">
+		<label for="hand">Undergraduate Library</label><br>
+	
 </fieldset>
 		
 		
@@ -333,12 +345,32 @@ for (i = 0; i<itemPrices.length; i++){
 <script>
 function sendData(){
 var nowBalance = <?php print $currentBalance; ?>;
+var tempBalance = nowBalance;
 nowBalance = nowBalance - finalPrice;
 
 finalLocation = finalLocation.toString();
 finalStyle = finalStyle.toString();
 textField = textField.toString();
 textComment = textComment.toString();
+
+
+if (nowBalance <= 0){
+    
+    $.ajax({
+
+	url: "notEnough.php",
+	method: "post",
+	data: {test1: tempBalance},
+	success: function(res){
+	console.log(res);
+	}
+})
+   
+    
+    window.location.replace('notEnough2.php');
+    
+    
+}else{
 
 
 $.ajax({
@@ -354,6 +386,7 @@ $.ajax({
 
 
 window.location.replace('ConfirmationPage.php');
+}
 }
 </script>
 

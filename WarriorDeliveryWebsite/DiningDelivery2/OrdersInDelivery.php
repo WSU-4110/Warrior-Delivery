@@ -5,7 +5,13 @@ session_start();
 $user_value = $_SESSION['login_user'];
 
 if($user_value == NULL){
-	header("Location: KitchenLogin.html");
+    
+    ?>
+    
+    <script>
+	window.location.replace("index.html");
+	</script>
+	<?php
 	exit();
 	
 }
@@ -38,11 +44,19 @@ if($user_value == NULL){
   
 
 <h2> Orders that are out for delivery </h2>
-
+<table style="width:40%">
+	<thead>	
+		<th>Order ID</th>
+		<th>Access ID</th>
+		<th> Order Item(s)</th>
+		<th> Status</th>
+		<th>Claimed By</th>
+		
+	</thead>
 <?php
-   $db = new mysqli('localhost','root','','diningdelivery');
+   $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
    
-  $sql = "SELECT order_id, user_name, order_item, status FROM orderlist WHERE status = '1'";
+  $sql = "SELECT order_id, access_id, order_item, status FROM orderlist WHERE status = '1'";
 
    
    $result = mysqli_query($db,$sql);
@@ -52,18 +66,37 @@ if($user_value == NULL){
 
    	$compare = $row['order_id'];
 	   
-	    $sql2 = "SELECT username FROM delivererlogin WHERE order_id = '$compare'";
+	    $sql2 = "SELECT access_id FROM delivererlogin WHERE order_id = '$compare'";
 
 		$result2 = mysqli_query($db,$sql2);
 	   $row2 = mysqli_fetch_assoc($result2);
 	   
-	   
-	   echo nl2br ("Order ID: " . $row['order_id'] . " Name: " . $row['user_name'] . " Order: " . $row['order_item'] . "STATUS: " . $row['status'] . "Claimed By: " . $row2['username'] . "\n");
-	   
-   }
+
+ ?>
+	
+	
+	<tbody>
+		<tr>
+	
+	<td> <?php echo $row['order_id']; ?> </td>
+	<td> <?php echo $row['access_id']; ?> </td>
+	<td> <?php echo $row['order_item']; ?> </td>
+	<td> <?php echo $row['status']; ?> </td>
+	<td> <?php echo $row2['access_id']; ?> </td>
+	</tr>
+	
+	
+	    
+	    <?php
+}
+
+
 
 
 ?>
+
+	</tbody>
+	</table>
 
 
 

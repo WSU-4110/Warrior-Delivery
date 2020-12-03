@@ -21,11 +21,11 @@
 
 <?php
   
-   $db = new mysqli('localhost','root','','diningdelivery');
+   $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
 	
   
-     $email = mysql_escape_string($_GET['email']);
-	 $hash = mysql_escape_string($_GET['hash']);
+     $email = $_GET['email'];
+	 $hash = $_GET['hash'];
 	 
 	 $sql = "UPDATE testvalues SET Authenticated = '1' WHERE email = '$email' AND hash='$hash'";
 	 
@@ -33,7 +33,7 @@
 	 
       if(mysqli_query($db,$sql)){
 		  
-		  echo "<h3>Your account has been verified! You can now sign in using the Student Log-in!</h3><br>"
+		  echo "<h3>Your account has been verified! You can now sign in using the Student Log-in!</h3><br>";
 		  
 	  }
 	 
@@ -46,3 +46,6 @@
    
 ?>
 <a href='StudentLogin.html'>Log-In</a><br>
+
+</body>
+</html>

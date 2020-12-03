@@ -27,7 +27,7 @@ echo "Welcome " . $user_value . "!";
 
 
 <?php
-   $db = new mysqli('localhost','root','','diningdelivery');
+   $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
    
   $sql = "SELECT order_id, user_name, order_item, status FROM orderlist WHERE status = '3'";
    
@@ -50,7 +50,7 @@ echo "Welcome " . $user_value . "!";
 <h2> Orders That Are Ready for Pickup </h2>
 
 <?php
-   $db = new mysqli('localhost','root','','diningdelivery');
+   $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
    
   $sql = "SELECT order_id, user_name, order_item, status FROM orderlist WHERE status = '0'";
    
@@ -70,7 +70,7 @@ echo "Welcome " . $user_value . "!";
 <h2> Orders that are out for delivery </h2>
 
 <?php
-   $db = new mysqli('localhost','root','','diningdelivery');
+   $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
    
   $sql = "SELECT order_id, user_name, order_item, status FROM orderlist WHERE status = '1'";
 
@@ -98,7 +98,7 @@ echo "Welcome " . $user_value . "!";
 
 <h2> Current Authenticated Registered Accounts </h2>
 <?php
-   $db = new mysqli('localhost','root','','diningdelivery');
+   $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
    
    $sql = "SELECT user_id, username, hasOrder, order_id, Authentication FROM delivererlogin WHERE Authentication = '1'";
    

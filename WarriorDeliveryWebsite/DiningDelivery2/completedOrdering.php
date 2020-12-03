@@ -2,10 +2,10 @@
 
 
 session_start();
-	$db = new mysqli('localhost','root','','diningdelivery');
+	$db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
 	
 	$nameofuser = $_SESSION['login_user'];
-	$sql = "SELECT order_id FROM delivererlogin WHERE username = '$nameofuser'";
+	$sql = "SELECT order_id FROM delivererlogin WHERE access_id = '$nameofuser'";
   echo $nameofuser;
   
   // $sql = "INSERT INTO `orderlist`(`order_id`, `user_name`, `order_item`) VALUES (NULL,'$nameofuser', '$_POST[send]')";
@@ -20,11 +20,12 @@ session_start();
 	$result = mysqli_query($db,$sql);
 	
 	
-	$sql = "UPDATE delivererlogin SET hasOrder = '0', order_id = '0' WHERE username = '$nameofuser'";
+	$sql = "UPDATE delivererlogin SET hasOrder = '0', order_id = '0' WHERE access_id = '$nameofuser'";
 	$result = mysqli_query($db,$sql);
 	
 	$_SESSION['orderIDnumber'] = NULL;
 	$_SESSION['orderListItems'] = NULL;
 	
-	echo "Thank You!";
+	header("Location: assignOrderCompleted.php");
+	
 ?>

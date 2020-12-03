@@ -3,7 +3,7 @@ session_start();
 
 if(session_destroy()){
 	
-	header("Location: Homepage.html");
+	header("Location: index.html");
 	
 }
    

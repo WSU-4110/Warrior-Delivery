@@ -5,13 +5,20 @@ session_start();
 $user_value = $_SESSION['login_user'];
 
 if($user_value == NULL){
-	header("Location: KitchenLogin.html");
-
+    
+    ?>
+    
+    <script>
+	window.location.replace("index.html");
+	</script>
+	<?php
 	exit();
 	
 }
 
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -27,30 +34,26 @@ if($user_value == NULL){
   crossorigin="anonymous"></script>
 </head>
 <body>
-
 <a href="ProfilePageKitchen.php" style="background:none;border:none;display:inline-block;margin:0px;">
-
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
 
 <br>
-
 <a href='ProfilePageKitchen.php'>Home</a>
-
  
 
 <h2> Current Authenticated Registered Accounts </h2>
 <?php
-   $db = new mysqli('localhost','root','','diningdelivery');
+   $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
    
-   $sql = "SELECT user_id, username, hasOrder, order_id, Authentication FROM delivererlogin WHERE Authentication = '1'";
+   $sql = "SELECT user_id, username, hasOrder, access_id, order_id, Authentication FROM delivererlogin WHERE Authentication = '1'";
    
    $result = mysqli_query($db,$sql);
    
    while($row = mysqli_fetch_array($result)){
 	   
-	   echo nl2br ("User ID: " . $row['user_id'] . " Name: " . $row['username'] . " Has Order?: " . $row['hasOrder'] . " Order ID: " . $row['order_id'] . " Authentication: " . $row['Authentication']  . "\n");
+	   echo nl2br ("User ID: " . $row['user_id'] . " Access ID: " . $row['access_id'] . " Name: " . $row['username'] . " Has Order?: " . $row['hasOrder'] . " Order ID: " . $row['order_id'] . " Authentication: " . $row['Authentication']  . "\n");
 	   
    }
 
@@ -60,7 +63,7 @@ if($user_value == NULL){
 
 <h2> Current UnAuthenticated Accounts </h2>
 <?php
-$sql = "SELECT user_id, username, hasOrder, order_id, Authentication FROM delivererlogin WHERE Authentication = '0'";
+$sql = "SELECT user_id, username, hasOrder, access_id, order_id, Authentication FROM delivererlogin WHERE Authentication = '0'";
 
 
 $result = mysqli_query($db,$sql);
@@ -70,7 +73,7 @@ while($row = mysqli_fetch_array($result)){
 
 
 
-	   echo nl2br ("User ID: " . $row['user_id'] . " Name: " . $row['username'] . " Authentication: " . $row['Authentication']  . "\n");
+	   echo nl2br ("User ID: " . $row['user_id'] . " Access ID: " . $row['access_id'] . " Name: " . $row['username'] . " Authentication: " . $row['Authentication']  . "\n");
 	   
    }
 
@@ -84,12 +87,12 @@ while($row = mysqli_fetch_array($result)){
 	<option> Select Account </option>
 	
 <?php
-$sql = "SELECT user_id, username, hasOrder, order_id, Authentication FROM delivererlogin WHERE Authentication = '0'";
+$sql = "SELECT user_id, username, access_id, hasOrder, order_id, Authentication FROM delivererlogin WHERE Authentication = '0'";
 $result = mysqli_query($db,$sql);
 		while($row = mysqli_fetch_array($result)){
 
 ?>
-			<option value="<?php echo ($row['username']); ?>"><?php echo ($row['username']); ?></option>
+			<option value="<?php echo ($row['access_id']); ?>"><?php echo ($row['access_id']); ?></option>
 <?php
 		}
 ?>

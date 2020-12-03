@@ -18,25 +18,22 @@
 </body>
 </html>
 
+
 <?php
   
-   $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
+   $db = new mysqli('localhost','root','','diningdelivery');
 	
   
       // username and password sent from form 
       
-	  
-	  
-	 // $_SESSION['orderIDnumber'] = $orderIDvalue;
-	  
-	  $myfirstname = $_POST['firstname'];
-	  $mylastname = $_POST['lastname'];
-	  $myID = $_POST['SID'];
 	  $myemail = $_POST['email'];
       $myusername = $_POST['username'];
-      $mypassword = $_POST['password']; 
-	  
-	  
+      $mypassword = $_POST['password'];
+	  $myID = $_POST['SID'];
+	  $myfirstname = $_POST['firstname'];
+	  $mylastname = $_POST['lastname'];
+	  $hash = md5(rand(0,1000));
+      
 	  $sql = "SELECT access_id FROM delivererlogin WHERE access_id = '$myID'";
 	  
 	  $result = mysqli_query($db,$sql);
@@ -51,16 +48,13 @@
 		  <?php
 		  
 	  }else{
-		  
-		   $sql = "INSERT INTO `delivererlogin`(`user_id`, `email`, `access_id`, `firstname`, `lastname`, `username`, `password`, `hasOrder`, `order_id`) VALUES (NULL,'$myemail', '$myID', '$myfirstname', '$mylastname', '$myusername','$mypassword', '0', NULL)";
+
+      $sql = "INSERT INTO `testvalues`(`user_id`, `email`, `access_id`, `firstname`, `lastname`, `user_name`, `user_password`, `hash`) VALUES (NULL, '$myemail', '$myID', '$myfirstname', '$mylastname', '$myusername','$mypassword', '$hash')";
       $result = mysqli_query($db,$sql);
 	  
 	 echo "<h3>Account Created!</h3><br>";
-	 echo "<a href = index.html>Go Back</a><br>";
+	 echo "<a href = Homepage.html>Go Back</a><br>";
 	  }
-      
-     
-   
    
 	 
 	

@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,20 +14,20 @@
 </head>
 <body>
 
-<a href="homepage.html" style="background:none;border:none;display:inline-block;margin:0px;">
+<a href="index.html" style="background:none;border:none;display:inline-block;margin:0px;">
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Menu</h1><br>
 <br>
-<a href='Homepage.html'>Home</a>
-<a href='menu.html'>Menu</a>  
+<a href='index.html'>Home</a>
+<a href='menu.php'>Menu</a>  
 <a href='StudentLogin.html'>Student Login</a>
 <a href='DelivererLoginPage.html'>Delivery Login</a>
 <a href='SelectCreation.html'>Create an Account</a>
 
 <br><br>
 <h3> Today's Available Menu </h3>
-<table style="width:15%">
+<table style>
 	<thead>	
 		<th>Item</th>
 		<th>Price*</th>
@@ -33,8 +40,8 @@
 		<?php
 
 
-session_start();
-	$db = new mysqli('localhost','root','','diningdelivery');
+
+	$db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
 
 	$sql = "SELECT item_name, description, price, calories FROM menu";
 $result = mysqli_query($db,$sql);

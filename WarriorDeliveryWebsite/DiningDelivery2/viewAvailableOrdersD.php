@@ -5,12 +5,19 @@ session_start();
 $user_value = $_SESSION['login_user'];
 
 if($user_value == NULL){
-	header("Location: DelivererLoginPage.html");
+    
+    ?>
+    
+    <script>
+	window.location.replace("DelivererLoginPage.html");
+	</script>
+	<?php
 	exit();
 	
 }
 
 ?>
+
 
 
 
@@ -43,25 +50,47 @@ if($user_value == NULL){
 
 
 <h2> Current Orders Available for Pick Up </h2>
-
+<table style="width:40%">
+	<thead>	
+		<th>Order ID</th>
+		<th>Access ID</th>
+		<th> Order Item(s)</th>
+		<th> Status</th>
+		
+	</thead>
 <?php
-   $db = new mysqli('localhost','root','','diningdelivery');
+   $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
    
-   $sql = "SELECT order_id, user_name, order_item, status FROM orderlist WHERE status = '0'";
+   $sql = "SELECT order_id, access_id, order_item, status FROM orderlist WHERE status = '0'";
    
    $result = mysqli_query($db,$sql);
    
    while($row = mysqli_fetch_array($result)){
-	   
-	   echo nl2br ("Order ID: " . $row['order_id'] . " Name: " . $row['user_name'] . " Order: " . $row['order_item'] . "STATUS: " . $row['status'] . "\n");
-	   
-   }
+       
+       ?>
+	
+	
+	<tbody>
+		<tr>
+	
+	<td> <?php echo $row['order_id']; ?> </td>
+	<td> <?php echo $row['access_id']; ?> </td>
+	<td> <?php echo $row['order_item']; ?> </td>
+	<td> <?php echo $row['status']; ?> </td>
+	</tr>
+	
+	
+	    
+	    <?php
+}
 
 
 
 
 ?>
-
+</tbody>
+	
+</table>
 
 <p> When you click "Accept Order", you will be given the most prioritized order, which 
 correlates to the oldest entry in the queue. 
@@ -95,6 +124,9 @@ $.ajax({
 
 alert("Order Assigned!");
 
+	window.location.replace("assignOrderConfirmation.php");
+	
+
 }
 
 function completedOrder(){
@@ -111,6 +143,8 @@ $.ajax({
 })
 
 alert("Order Completed!");
+
+window.location.replace("assignOrderCompleted.php");
 
 }
 </script>

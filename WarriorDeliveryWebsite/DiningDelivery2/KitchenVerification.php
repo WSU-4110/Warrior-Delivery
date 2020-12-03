@@ -1,7 +1,8 @@
 <?php
   
-   $db = new mysqli('localhost','root','','diningdelivery');
-	session_start();
+  session_start();
+   $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
+	
   
       // username and password sent from form 
       
@@ -16,9 +17,9 @@
    
 	 
 		if ($row == 1){
-			echo "Account Found!";
+			//echo "Account Found!";
 			$_SESSION['login_user'] = $myusername;
-			$foodItems = $_POST['items'];
+			//$foodItems = $_POST['items'];
 			//$sql = "INSERT INTO 'orderlist'('order_id', 'user_name', 'order_item') VALUES (NULL,NULL,'$foodItems')";
 			//$sql = "INSERT INTO `orderlist`(`order_id`, `user_name`, `order_item`) VALUES (NULL,'$myusername', '$foodItems')";
 			$result = mysqli_query($db,$sql);
