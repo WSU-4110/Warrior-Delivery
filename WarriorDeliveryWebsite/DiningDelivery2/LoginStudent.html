@@ -7,17 +7,16 @@
 </head>
 <body>
 
-<a href="homepage.html" style="background:none;border:none;display:inline-block;margin:0px;">
-<img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
-</a>
-<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Student Login</h1><br>
-<br>
-<a href='Homepage.html'>Home</a>
-<a href='menu.php'>Menu</a>  
-<a href='StudentLogin.html'>Student Login</a>
-<a href='DelivererLoginPage.html'>Delivery Login</a>
-<a href='SelectCreation.html'>Create an Account</a>
+<a href="homepage.html" style="background:none;border:none;display:inline;margin:0px;">
+<img src="shield_only_color.png" alt="Logo" style="max-width:10%;"></a>
+<h1 class="title">Login</h1><br>
 
+<nav>
+	<a style="float:left" href='Homepage.html'>Home</a>
+	<a href='ordering.html'>Order</a> <!--The last link on the left should not have float:left-->
+	<a class="on" style="float:right" href='CreateAccountStudent.html'>Sign Up</a> <!--Float rights go in reverse order-->
+	<a style="float:right" href='LoginDeliverer.html'>Deliverer</a>
+</nav>
 
 <form style="text-align:center;max-width:400px;margin:auto;padding:10px 0px 0px 0px" action="testPage.php" method = "post" autocomplete="on">
     <fieldset>
@@ -34,12 +33,10 @@
 		
 		<br>
 		<a style="padding:2px;font-size:0.8em" href="ForgotPassword.html">Forgot password?</a><br>
-		<input type="submit" style="font-size:1.3em;" value="Login as Student">
+		<input type="submit" style="font-size:1.3em;" value="Login">
 		
     </fieldset>
 </form><br>
-
-	
 
 </body>
 </html>
