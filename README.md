@@ -3,10 +3,10 @@
 
 Affan Atif, Neelesh Bollu, Timothy Haddad, Miguel Manzanarez, Sanaz Rabinia, Mazin Shulaiba
 
-| Backend       | Frontend      | Database | JUnit   |
+| Backend       | Frontend      | Database | PHPUnit   |
 | ------------- |:-------------:|:--------:| ------: |     
-|    Neelesh    |               |  Neelesh |         |
-|               | Affan         |          |         |
+|    Neelesh    | Neelesh       |          |  Neelesh|
+|               | Affan         |  Affan   | Affan   |
 |               | Timothy       |          |         |
 |               | Miguel        |          |         |
 |     Sanaz     | Sanaz         |  Sanaz   |  Sanaz  |
