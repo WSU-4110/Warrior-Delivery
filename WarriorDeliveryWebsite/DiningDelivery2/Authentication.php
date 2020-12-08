@@ -44,6 +44,14 @@ if($user_value == NULL){
  
 
 <h2> Current Authenticated Registered Accounts </h2>
+<table style>
+	<thead>	
+		<th>User ID</th>
+		<th>Access ID</th>
+		<th>Username</th>
+		<th>Authentication</th>
+		
+	</thead>
 <?php
    $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
    
@@ -52,16 +60,42 @@ if($user_value == NULL){
    $result = mysqli_query($db,$sql);
    
    while($row = mysqli_fetch_array($result)){
-	   
-	   echo nl2br ("User ID: " . $row['user_id'] . " Access ID: " . $row['access_id'] . " Name: " . $row['username'] . " Has Order?: " . $row['hasOrder'] . " Order ID: " . $row['order_id'] . " Authentication: " . $row['Authentication']  . "\n");
-	   
-   }
+       
+       ?>
+	
+	
+	<tbody>
+		<tr>
+	
+	<td> <?php echo $row['user_id']; ?> </td>
+	<td> <?php echo $row['access_id']; ?> </td>
+	<td> <?php echo $row['username']; ?> </td>
+	<td> <?php echo $row['Authentication']; ?> </td>
+	</tr>
+	
+	
+	    
+	    <?php
+}
+
+
 
 
 ?>
-
+       
+       
+</tbody>
+</table>
 
 <h2> Current UnAuthenticated Accounts </h2>
+<table style>
+	<thead>	
+		<th>User ID</th>
+		<th>Access ID</th>
+		<th>Username</th>
+		<th>Authentication</th>
+		
+	</thead>
 <?php
 $sql = "SELECT user_id, username, hasOrder, access_id, order_id, Authentication FROM delivererlogin WHERE Authentication = '0'";
 
@@ -71,14 +105,31 @@ $result = mysqli_query($db,$sql);
 while($row = mysqli_fetch_array($result)){
 	   
 
+ ?>
+	
+	
+	<tbody>
+		<tr>
+	
+	<td> <?php echo $row['user_id']; ?> </td>
+	<td> <?php echo $row['access_id']; ?> </td>
+	<td> <?php echo $row['username']; ?> </td>
+	<td> <?php echo $row['Authentication']; ?> </td>
+
+	</tr>
 
 
-	   echo nl2br ("User ID: " . $row['user_id'] . " Access ID: " . $row['access_id'] . " Name: " . $row['username'] . " Authentication: " . $row['Authentication']  . "\n");
-	   
-   }
+
+	    
+	    <?php
+}
+
+
 
 
 ?>
+</tbody>	
+	</table>
 
 
 <h2> Verify Delivery Account Here </h2>

@@ -9,7 +9,7 @@ if($user_value == NULL){
     ?>
     
     <script>
-	window.location.replace("ProfilePage.php");
+	window.location.replace("StudentLogin.html");
 	</script>
 	<?php
 	exit();
@@ -231,8 +231,6 @@ function additionalText(){
 
 
 
-
-
 <br>
 
 <br>
@@ -352,6 +350,10 @@ finalLocation = finalLocation.toString();
 finalStyle = finalStyle.toString();
 textField = textField.toString();
 textComment = textComment.toString();
+
+
+
+
 
 
 if (nowBalance <= 0){

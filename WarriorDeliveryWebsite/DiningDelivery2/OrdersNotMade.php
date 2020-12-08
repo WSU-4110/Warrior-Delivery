@@ -13,6 +13,7 @@ if($user_value == NULL){
 	</script>
 	<?php
 	exit();
+	
 }
 
 ?>
@@ -40,7 +41,6 @@ if($user_value == NULL){
 
 <br>
 <a href='ProfilePageKitchen.php'>Home</a>
-
   <script>
       
       function confirm(){

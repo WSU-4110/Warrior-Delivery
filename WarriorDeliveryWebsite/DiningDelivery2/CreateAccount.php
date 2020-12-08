@@ -11,7 +11,7 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-<a href="ProfilePageDeliverer.php" style="background:none;border:none;display:inline-block;margin:0px;">
+<a href="index.php" style="background:none;border:none;display:inline-block;margin:0px;">
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
 <br>
@@ -21,7 +21,7 @@
 
 <?php
   
-   $db = new mysqli('localhost','root','','diningdelivery');
+     $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
 	
   
       // username and password sent from form 
@@ -34,7 +34,7 @@
 	  $mylastname = $_POST['lastname'];
 	  $hash = md5(rand(0,1000));
       
-	  $sql = "SELECT access_id FROM delivererlogin WHERE access_id = '$myID'";
+	  $sql = "SELECT access_id FROM testvalues WHERE access_id = '$myID'";
 	  
 	  $result = mysqli_query($db,$sql);
       $row = mysqli_num_rows($result);
@@ -44,7 +44,7 @@
 		  
 		  ?>
 		  <h3> An account with this access id already exists, please use the forgot password page to reset your password. </h3>
-		  <a href = "Homepage.html">Go Back</a><br>
+		  <a href = "index.html">Go Back</a><br>
 		  <?php
 		  
 	  }else{
@@ -53,15 +53,32 @@
       $result = mysqli_query($db,$sql);
 	  
 	 echo "<h3>Account Created!</h3><br>";
-	 echo "<a href = Homepage.html>Go Back</a><br>";
+	 echo "<a href = index.html>Go Back</a><br>";
+	 
+	 
+	   $subject = "WSU Dining Delivery Account Confirmation";
+   
+   $message = "Hello " . $myfirstname . '!
+   
+   Your student WSU Dining Delivery account has been created. 
+   Before using the website, you must verify your account. To verify your account, please click on the following link:
+   
+   http://wsudiningdelivery.000webhostapp.com/verifyStudent.php?email='.$myemail.'&hash='.$hash.'
+   
+   WSU Dining Delivery
+   
+   ';
+   
+   $headers = 'From:wsudiningdelivery@gmail.com' . "\r\n";
+   mail($myemail, $subject, $message, $headers);
+	 
+	 
 	  }
    
 	 
 	
    
-   
-   
-   
+ 
    
    
 ?>

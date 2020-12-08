@@ -7,7 +7,7 @@ $newPassword = $_POST['new'];
 
 
 $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
-$sql = "SELECT access_id FROM testvalues WHERE user_password = '$oldPassword' AND email = '$myemail'";
+$sql = "SELECT access_id FROM delivererlogin WHERE password = '$oldPassword' AND email = '$myemail'";
  $result = mysqli_query($db,$sql);
 
 $row = mysqli_num_rows($result);
@@ -37,16 +37,16 @@ $row = mysqli_num_rows($result);
 
 <br>
 
-
 <?php
 
 if($row==1){
-	$sql = "UPDATE testvalues SET user_password = '$newPassword' WHERE email = '$myemail'";	
+	$sql = "UPDATE delivererlogin SET password = '$newPassword' WHERE email = '$myemail'";	
 	$result = mysqli_query($db,$sql);
 	echo "<h2>Your password has been changed. You can now sign in using your new password.</h2>";
+	
 }else{
     
-    echo "<h2>Incorrect Credentials.</h2>";
+    echo "<h2> Incorrect Credentials</h2>";
     
 }
 

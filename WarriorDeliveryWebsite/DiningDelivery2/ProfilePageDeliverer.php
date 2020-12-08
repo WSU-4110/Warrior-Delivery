@@ -57,6 +57,7 @@ echo "<h1>Welcome " . $value['firstname'] . "!</h1>";
 <a href='viewAvailableOrdersD.php'>Pick up an order!</a><br>
 <a href='viewCurrentOrders.php'>View Current Order</a><br>
 <a href='YourInfoD.php'>Your Info</a><br>
+<a href='ChangePasswordDeliverer.html'>Change Password</a><br>
 <a href = "LogOut.php">Sign Out</a>
 
 

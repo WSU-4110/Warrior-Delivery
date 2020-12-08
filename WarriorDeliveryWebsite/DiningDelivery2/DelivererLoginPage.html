@@ -7,15 +7,18 @@
 </head>
 <body>
 
-<a href="homepage.html" style="background:none;border:none;display:inline;margin:0px;">
-<img src="shield_only_color.png" alt="Logo" style="max-width:10%;"></a>
-<h1 class="title">Login</h1><br>
-
-<nav>
-	<a href='Homepage.html'>Home</a> <!--The last link on the left should not have float:left-->
-	<a class="on" style="float:right" href='CreateAccountDeliverer.html'>Sign Up</a> <!--Float rights go in reverse order-->
-	<a style="float:right" href='LoginStudent.html'>Student</a>
-</nav>
+<a href="index.html" style="background:none;border:none;display:inline-block;margin:0px;">
+<img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
+</a>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Delivery Page</h1><br>
+<br>
+<a href='index.html'>Home</a>
+<a href='menu.php'>Menu</a>  
+<a href='StudentLogin.html'>Student Login</a>
+<a href='DelivererLoginPage.html'>Delivery Login</a>
+<a href='SelectCreation.html'>Create an Account</a>
+<br>
+<p> </p>
 
 <form style="text-align:center;max-width:400px;margin:auto;padding:0px 0px 10px 0px" action="DelivererVerification.php" method="post">
 	<fieldset>
@@ -29,7 +32,7 @@
 
 	
 	<br>
-	<a style="padding:2px;font-size:1em" href="ForgotPassword.html">Forgot password?</a><br>
+	<a style="padding:2px;font-size:1em" href="ForgotPasswordDHTML.html">Forgot password?</a><br>
 	<input type="submit" style="font-size:1.3em;" value="Login as Deliverer">
 	</fieldset>
 </form><br>

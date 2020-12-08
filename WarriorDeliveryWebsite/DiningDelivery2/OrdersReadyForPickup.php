@@ -35,7 +35,6 @@ if($user_value == NULL){
 </head>
 <body>
 <a href="ProfilePageKitchen.php" style="background:none;border:none;display:inline-block;margin:0px;">
-
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>

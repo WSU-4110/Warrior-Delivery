@@ -112,6 +112,22 @@ click the "Finished" button to verify the completion of the order. Thank you! </
 function assignOrder(){
 
 
+
+<?php
+
+$sql = "SELECT hasOrder FROM delivererlogin WHERE access_id = '$user_value'";
+   
+   $result = mysqli_query($db,$sql);
+   
+   $row = mysqli_fetch_array($result);
+   
+   $checkValue = $row['hasOrder'];
+?>
+
+
+if (<?php echo $checkValue; ?> == 0){
+
+
 $.ajax({
 
 	url: "assignOrdering.php",
@@ -125,9 +141,15 @@ $.ajax({
 alert("Order Assigned!");
 
 	window.location.replace("assignOrderConfirmation.php");
-	
-
+}else{
+    
+ alert("You are already assigned an order. Please complete the order first before receiving another one.");
+    
+    
 }
+}
+
+
 
 function completedOrder(){
 

@@ -15,7 +15,7 @@ h1 {
 	color: #FFC842;
 	font-size: 2.25em;
 }
-h1.title {
+ .title {
 	display:inline-block;
 	font-size:5vw;
 	vertical-align:bottom;
@@ -124,7 +124,7 @@ nav a:hover {
 	text-decoration: none;
 }
 
-nav a.on {
+.on {
 	background-color: #F5AF00;
 	color: #000000;
 	font-size: 1.75em;
@@ -132,12 +132,13 @@ nav a.on {
 	text-decoration: none;
 }
 
-table { 
+table {
 	border: 5px solid #FFC842;
+	width: 85%;
 	border-collapse: collapse; 
 	background-color: white; 
 }
-		
+
 td, th { 
 	padding: 3px;
 	border: 2px solid #FFC842; 
@@ -158,10 +159,3 @@ td {
 	color: #FFFFFF;
 	font-weight: bold;
 }
-
-#output {
-    
- color: white;   
-    
-}
-

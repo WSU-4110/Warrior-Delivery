@@ -57,6 +57,28 @@
 	  
 	 echo "<h3>Account Created!</h3><br>";
 	 echo "<a href = index.html>Go Back</a><br>";
+	 
+	 $subject = "WSU Dining Delivery Account Confirmation";
+   
+   $message = "Hello " . $myfirstname . '!
+   
+   Your deliverer WSU Dining Delivery account has been created. 
+   Before using the website, WSU Dining Delivery must manually verify your account before you can accept orders. Please
+   wait for verification before signing in. Verification may take up to a week to register.
+   
+   If you have any questions, please email us at wsudiningdelivery@gmail.com
+   
+   WSU Dining Delivery
+   
+   ';
+   
+   $headers = 'From:wsudiningdelivery@gmail.com' . "\r\n";
+   mail($myemail, $subject, $message, $headers);
+	 
+	 
+	 
+	 
+	 
 	  }
       
      
