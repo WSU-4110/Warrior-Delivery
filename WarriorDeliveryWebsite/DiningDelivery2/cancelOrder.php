@@ -80,10 +80,9 @@ $value = mysqli_fetch_assoc($result);
 	Thank You!
 	WSU Dining Delivery
 	
-	";
-
-	$title = "Your WSU Dining Delivery Order ID: " . $nameofuser . " has been cancelled 
 	';
+
+	$title = "Your WSU Dining Delivery Order ID: " . $nameofuser . " has been cancelled";
 	
    
    

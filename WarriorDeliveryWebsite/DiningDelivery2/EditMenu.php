@@ -203,7 +203,7 @@ $result = mysqli_query($db,$sql);
 
 	
 </select>
-<input type="submit" onclick="return confirm('Are you sure you want to cancel the order?')" value="Submit">
+<input type="submit" onclick="return confirm('Are you sure you want to delete the item?')" value="Submit">
 </form>
 
 

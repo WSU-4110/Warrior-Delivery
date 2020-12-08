@@ -116,8 +116,8 @@ if ($value != NULL and $value['status'] == '1'){
 	?>
 	<table style="width:40%">
 	<thead>	
-		<th>Item</th>
-		<th>Price*</th>
+		<th>Details</th>
+		<th>Information</th>
 		
 	</thead>
 	
@@ -155,8 +155,8 @@ if ($value != NULL and $value['status'] == '3'){
 	?>
 	<table style="width:40%">
 	<thead>	
-		<th>Item</th>
-		<th>Price*</th>
+		<th>Details</th>
+		<th>Information</th>
 		
 	</thead>
 	
