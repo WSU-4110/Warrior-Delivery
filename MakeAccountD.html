@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="theme.css">
+	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
+    <title>Create Deliverer Account | Warrior Delivery</title>
+	<script type="text/javascript">
+		function validatePassword() {
+			<!-- grabs the data from the password and confirmPassword ID and stores them in variables -->
+			var password = document.getElementById("password")
+            if (password.value.match(/[a-z]/g) && password.value.match(/[A-Z]/g) && password.value.match(/[0-9]/g) && password.value.match(/[^a-zA-Z\d]/g) && password.value.length >= 8) {
+                password.setCustomValidity('');
+				checkMatching();
+			}
+            else {
+                password.setCustomValidity("Password doesn't meet minimum requirements");
+				password.onchange = validatePassword;
+			}				
+			
+		}
+		
+		function checkMatching() {
+			var confirm_password = document.getElementById("confirmPassword");
+			<!-- checks if the text value in the two variables are equal -->
+			if (password.value != confirm_password.value) {
+				confirm_password.setCustomValidity("Passwords don't match");
+			} 
+			else {
+				confirm_password.setCustomValidity('');
+			}	
+			confirm_password.onkeyup = checkMatching;
+		}
+	</script>
+</head>
+<body>
+<a href="index.html" style="background:none;border:none;display:inline-block;margin:0px;">
+<img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
+</a>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Deliverer Account Creation</h1><br>
+<a href='index.html'>Home</a>
+<a href='menu.php'>Menu</a>  
+<a href='StudentLogin.html'>Student Login</a>
+<a href='DelivererLoginPage.html'>Deliverer Login</a>
+<a href='SelectCreation.html'>Create an Account</a>
+
+<p> </p>
+
+<form action="CreateAccountDeliverer.php" method = "post" autocomplete="on">
+    <fieldset>
+        <legend>Please fill out the following information</legend>
+
+        <label for="name">First Name</label><br>
+        <input type="text" id="name" name="firstname" placeholder="First Name" required autofocus autocomplete><br>
+
+        <label for="Lname">Last Name</label><br>
+        <input type="text" id="Lname" name="lastname" placeholder="Last Name" required autofocus autocomplete><br>
+
+        <label for="SID">Access ID</label><br>
+        <input type="text" id="SID" name="SID" placeholder="Student ID" required autofocus autocomplete><br>
+		
+		<label for="email">Wayne Email</label><br>
+        <input type="text" id="email" name="email" placeholder="Wayne Email" pattern="[a-zA-Z0-9]*[@]\wayne.edu" required autofocus autocomplete><br>
+
+        <label for="uname">Username</label><br>
+        <input type="text" id="uname" name="username" placeholder="Username" required autofocus autocomplete><br>
+
+        <label for="password">Password (must contain 8 characters, one uppercase letter, one number, and one special character)</label><br>
+        <input type="password" id="password" name="password" placeholder="Password" required><br>
+
+        <label for="confirmPassword">Re-enter Password</label><br>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter Password" required><br>
+
+		<!--onclick forces the page to run the validatePassword when button pressed-->
+        <input type="submit" value="Register" onclick="validatePassword()"><br><br>
+   
+    </fieldset>
+</form>
+
+
+</body>
+</html>
