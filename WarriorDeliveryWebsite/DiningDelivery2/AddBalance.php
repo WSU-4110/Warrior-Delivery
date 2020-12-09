@@ -23,7 +23,7 @@ if($user_value == NULL){
 <br>
 <head>
     <link rel="stylesheet" href="theme.css">
-	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
+	<link rel="icon" href="WayneLogo1_small.png" type="image/gif">
 	<title>Add Balance</title>
 </head>
 <body>
@@ -35,22 +35,16 @@ if($user_value == NULL){
 <br>
 <a href='ProfilePage.php'>Home</a>
   
-
-
-
 <br>
-
 
 <h2> Update Balance </h2>
 
-
 <form action="AddBalanceQuery.php" method="post" autocomplete="on">
+	<label> Enter Balance to Add (In Dollars)</label><br>
+	<input type="text" id="amount" name="amount" placeholder="Enter Amount" min="0.01" max="2000"><br>
 
-<label> Enter Balance to Add (In Dollars)</label><br>
-<input type="text" id="amount" name="amount" placeholder="Enter Amount"><br>
-<input type="submit" onclick="return confirm('Confirm adding to balance?')" value="Submit"><br><br>
+	<input type="submit" onclick="return confirm('Confirm adding to balance?')" value="Submit"><br><br>
 </form>
-
 
 <br>
 <br>
