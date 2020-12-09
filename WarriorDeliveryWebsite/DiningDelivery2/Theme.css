@@ -124,7 +124,7 @@ nav a:hover {
 	text-decoration: none;
 }
 
-.on {
+nav a.on {
 	background-color: #F5AF00;
 	color: #000000;
 	font-size: 1.75em;
