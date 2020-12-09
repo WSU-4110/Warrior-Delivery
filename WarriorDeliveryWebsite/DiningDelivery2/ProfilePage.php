@@ -35,7 +35,7 @@ $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_d
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
 	<title>Profile Page Student</title>
 </head>
@@ -58,16 +58,18 @@ echo "<h1>Welcome " . $user . "!</h1>";
 
 ?>
 <br>
+<nav>
+    <a class="btn" href='Ordering.php'>Order</a><br>
+<a class="btn" href='StudentOrderStatus.php'>Check Order Status</a><br>
+<a class="btn" href='CheckBalance.php'>Check Balance</a><br>
+<a class="btn" href = "AddBalance.php">Add Balance</a><br>
+<a class="btn" href='ViewOrderHistory.php'>View Order History</a><br>
+<a class="btn" href='CancelOrderS.php'>Cancel Order</a><br>
+<a class="btn" href = "YourInfoS.php">Your Information</a><br>
+<a class="btn" href = "ChangePassword.html">Change Password</a><br><br>
+<a class="btn" href = "LogOut.php">Sign Out</a>
 
-<a href='Ordering.php'>Order</a><br>
-<a href='StudentOrderStatus.php'>Check Order Status</a><br>
-<a href='CheckBalance.php'>Check Balance</a><br>
-<a href = "AddBalance.php">Add Balance</a><br>
-<a href='ViewOrderHistory.php'>View Order History</a><br>
-<a href='CancelOrderS.php'>Cancel Order</a><br>
-<a href = "YourInfoS.php">Your Information</a><br>
-<a href = "ChangePassword.html">Change Password</a><br><br>
-<a href = "LogOut.php">Sign Out</a>
+    </nav>
 
 
 </body>

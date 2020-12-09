@@ -22,8 +22,8 @@ if($user_value == NULL){
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
-	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
+    <link rel="stylesheet" href="themeS.css">
+	<link rel="icon" href="WayneLogo1_small.png" type="image/gif">
 	<title>WSU Dining Delivery</title>
 </head>
 <body>
@@ -33,7 +33,10 @@ if($user_value == NULL){
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Order Status | WSU Dining Delivery</h1><br>
 
 <br>
-<a href='ProfilePage.php'>Home</a>
+    <nav>
+    <a class="btn" href='ProfilePage.php'>Home</a>
+    </nav>
+
   
 
 
@@ -203,8 +206,11 @@ if ($value != NULL and $value['status'] == '3'){
 
 <br>
 <br>
-<a href='ProfilePage.php'>Go Back</a><br>
-<a href = "LogOut.php">Sign Out</a>
+    <nav>
+        <a class="btn" href='ProfilePage.php'>Go Back</a><br>
+        <a class="btn" href = "LogOut.php">Sign Out</a>
+    </nav>
+
 
 
 

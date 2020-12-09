@@ -8,7 +8,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" >
     <title>WSU Dining Delivery</title>
 </head>
@@ -53,7 +53,10 @@ $result = mysqli_query($db,$sql);
 ?>
    
 <br>   
-<a href='ProfilePage.php'>Home</a>
+    <nav>
+        <a class="btn" href='ProfilePage.php'>Home</a>
+    </nav>
+
 
 </body>
 </html>

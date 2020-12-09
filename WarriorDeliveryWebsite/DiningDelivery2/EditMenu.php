@@ -25,7 +25,7 @@ if($user_value == NULL){
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
 	<title>Warrior Delivery</title>
 	<script
@@ -40,7 +40,10 @@ if($user_value == NULL){
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
 
 <br>
-<a href='ProfilePageKitchen.php'>Home</a>
+    <nav>
+    <a class="btn" href='ProfilePageKitchen.php'>Home</a>
+    </nav>
+
 
 <script>
 var textItem = "";
@@ -206,9 +209,11 @@ $result = mysqli_query($db,$sql);
 <input type="submit" onclick="return confirm('Are you sure you want to delete the item?')" value="Submit">
 </form>
 
+<nav>
+    <a class="btn" href = "ProfilePageKitchen.php">Go Back</a><br>
+<a class="btn" href = "LogOut.php">Sign Out</a>
 
-<a href = "ProfilePageKitchen.php">Go Back</a><br>
-<a href = "LogOut.php">Sign Out</a>
+    </nav>
 
 
 </body>

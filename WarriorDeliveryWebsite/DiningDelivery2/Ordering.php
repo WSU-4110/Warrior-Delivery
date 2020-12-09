@@ -35,7 +35,7 @@ $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_d
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
     <title>Order | Warrior Delivery</title>
 	<script
@@ -49,7 +49,10 @@ $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_d
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Order | WSU Dining Delivery</h1><br>
-<a href='ProfilePage.php'>Home</a>
+    <nav>
+    <a class="btn" href='ProfilePage.php'>Home</a>
+    </nav>
+
 
 
 <p><b>To place an order, please fill out the following fields below.</b></p>
@@ -236,8 +239,11 @@ function additionalText(){
 <br>
 <br>
 <br>
-<a href='ProfilePage.php'>Go Back</a><br>
-<a href = "LogOut.php">Sign Out</a>
+    <nav>
+    <a class="btn" href='ProfilePage.php'>Go Back</a><br><br>
+<a class="btn" href = "LogOut.php">Sign Out</a>
+    </nav>
+
 <script>
 var cart = '';
 var counter = 0;

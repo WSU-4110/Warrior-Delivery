@@ -32,7 +32,7 @@ $sql = "UPDATE testvalues SET balance = '$_POST[test1]' WHERE access_id = '$user
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
 	<title>Insufficient Balance</title>
 </head>
@@ -43,7 +43,10 @@ $sql = "UPDATE testvalues SET balance = '$_POST[test1]' WHERE access_id = '$user
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Insufficient Balance | WSU Dining Delivery</h1><br>
 
 <br>
-<a href='ProfilePage.php'>Home</a>
+    <nav>
+    <a class="btn" href='ProfilePage.php'>Home</a>
+    </nav>
+
   
 
 
@@ -57,7 +60,10 @@ $sql = "UPDATE testvalues SET balance = '$_POST[test1]' WHERE access_id = '$user
 
 <br>
 <br>
-<a href='ProfilePage.php'>Go Back</a><br>
+    <nav>
+    <a class="btn" href='ProfilePage.php'>Go Back</a><br>
+    </nav>
+
 
 
 

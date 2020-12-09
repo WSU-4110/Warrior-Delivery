@@ -6,7 +6,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
     <title>WSU Dining Delivery</title>
 </head>
@@ -26,5 +26,6 @@ $message = $_SESSION["reason"];
 echo "<h3>$message</h3>";
    
 ?>
-
-<a href='ProfilePage.php'>Home</a>
+<nav>
+    <a class="btn" href='ProfilePage.php'>Home</a>
+    </nav>

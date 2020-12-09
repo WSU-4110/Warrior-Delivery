@@ -39,7 +39,10 @@ if($user_value == NULL){
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Information | WSU Dining Delivery</h1><br>
 
 <br>
-<a href='ProfilePage.php'>Home</a>
+    <nav>
+    <a class="btn" href='ProfilePage.php'>Home</a>
+    </nav>
+
   
 
 
@@ -99,8 +102,10 @@ $value = mysqli_fetch_assoc($result);
 
 
 <br>
-<a href = "ProfilePage.php">Go Back</a><br>
-<a href = "LogOut.php">Sign Out</a>
+<nav>
+        <a class="btn" href = "ProfilePageDeliverer.php">Go Back</a><br>
+        <a class="btn" href = "LogOut.php">Sign Out</a>
+    </nav>
 
 
 </body>
