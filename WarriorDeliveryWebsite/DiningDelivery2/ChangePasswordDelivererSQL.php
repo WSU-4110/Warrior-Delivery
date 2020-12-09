@@ -24,13 +24,16 @@ $row = mysqli_num_rows($result);
 	<title>Change Password</title>
 </head>
 <body>
-<a href="index.html" style="background:none;border:none;display:inline-block;margin:0px;">
-<img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
-</a>
-<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Change Password</h1><br>
-
-<br>
-<a href='index.html'>Home</a>
+<a href="ProfilePageDeliverer.php" style="background:none;border:none;display:inline;margin:0px;">
+	<img src="shield_only_color.png" alt="Logo" style="max-width:10%;"></a>
+	<h1 class="title">Change Password</h1><br>
+	
+	<nav>
+		<a href='ProfilePageDeliverer.php'>Home</a>
+		<a style="float:right" href="LogOut.php">Sign Out</a>
+		<a style="float:right" href="YourInfoD.php">Your info</a>
+		<a class="on" style="float:right" href="ChangePasswordDeliverer.html">Change Password</a>
+	</nav>
 
 <br>
 
@@ -50,8 +53,6 @@ if($row==1){
 ?>
 
 <br>
-<br>
-<a href="ProfilePageDeliverer.php">Go Back</a><br>
 
 </body>
 </html>

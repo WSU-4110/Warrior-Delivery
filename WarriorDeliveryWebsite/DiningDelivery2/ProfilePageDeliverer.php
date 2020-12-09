@@ -32,20 +32,21 @@ $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_d
 <br>
 <head>
     <link rel="stylesheet" href="theme.css">
-	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
+	<link rel="icon" href="WayneLogo1_small.png" type="image/gif">
 	<title>Warrior Delivery</title>
 </head>
 <body>
-<a href="ProfilePageDeliverer.php" style="background:none;border:none;display:inline-block;margin:0px;">
-<img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
-</a>
-<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
 
-<br>
-<a href='ProfilePageDeliverer.php'>Home</a>
-  
+<a href="ProfilePageDeliverer.php" style="background:none;border:none;display:inline;margin:0px;">
+<img src="shield_only_color.png" alt="Logo" style="max-width:10%;"></a>
+<h1 class="title">Deliverer Profile</h1><br>
 
-
+<nav>
+	<a class="on" href='ProfilePageDeliverer.php'>Home</a>
+	<a style="float:right" href="LogOut.php">Sign Out</a>
+	<a style="float:right" href="YourInfoD.php">Your info</a>
+	<a style="float:right" href="ChangePasswordDeliverer.html">Change Password</a>
+</nav>
 
 <br>
 <?php
@@ -54,12 +55,8 @@ echo "<h1>Welcome " . $value['firstname'] . "!</h1>";
 ?>
 <br>
 
-<a href='viewAvailableOrdersD.php'>Pick up an order!</a><br>
-<a href='viewCurrentOrders.php'>View Current Order</a><br>
-<a href='YourInfoD.php'>Your Info</a><br>
-<a href='ChangePasswordDeliverer.html'>Change Password</a><br>
-<a href = "LogOut.php">Sign Out</a>
-
+<a class="side" href='viewAvailableOrdersD.php'>Pick up an order!</a><br>
+<a class="side" href='viewCurrentOrders.php'>View Current Order</a><br>
 
 </body>
 </html>
