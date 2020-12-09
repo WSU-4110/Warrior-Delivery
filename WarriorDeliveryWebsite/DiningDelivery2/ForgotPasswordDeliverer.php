@@ -33,7 +33,7 @@ mail($myemail, $subject, $message, $headers);
 <br>
 <head>
     <link rel="stylesheet" href="theme.css">
-	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
+	<link rel="icon" href="WayneLogo1_small.png" type="image/gif">
 	<title>Reset Password</title>
 </head>
 <body>
@@ -44,21 +44,15 @@ mail($myemail, $subject, $message, $headers);
 
 <br>
 <a href='ProfilePage.php'>Home</a>
-  
-
-
 
 <br>
-
 
 <h2> Your password has been reset. An email has been set the to the registered email containing the new password.</h2>
 
-
-
 <br>
 <br>
-<a href='ProfilePage.php'>Go Back</a><br>
-<a href = "LogOut.php">Sign Out</a>
+<a href='ProfilePageDeliverer.php'>Go Back</a><br>
+<!-- <a href = "LogOut.php">Sign Out</a> -->
 
 
 
