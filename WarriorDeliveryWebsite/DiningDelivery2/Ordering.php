@@ -36,7 +36,7 @@ $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_d
 <html>
 <head>
     <link rel="stylesheet" href="theme.css">
-	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
+	<link rel="icon" href="WayneLogo1_small.png" type="image/gif">
     <title>Order | Warrior Delivery</title>
 	<script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -49,71 +49,52 @@ $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_d
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Order | WSU Dining Delivery</h1><br>
-<a href='ProfilePage.php'>Home</a>
+<a href="ProfilePage.php">Home</a>
 
 
-<p><b>To place an order, please fill out the following fields below.</b></p>
-
-
-
-
-
-    
+<p><b>To place an order, please fill out the following fields below.</b></p>    
 	<fieldset>
         <legend>Place an Order</legend>
 
-
 <fieldset>
 <legend>Choose food items and quantity:</legend>
-       
-	
-
 
 <?php
-
 $sql = "SELECT item_name FROM menu";
 $result = mysqli_query($db,$sql);
 		while($row = mysqli_fetch_array($result)){
-
 ?>
 		<button onclick="cartCreator('<?php echo ($row['item_name']); ?>')"> Add <?php echo ($row['item_name']); ?></button>
-
 <?php
 		}
 		$_SESSION["reason"] = "Your Order has been successfully placed! Your order will be delivered as soon as possible!";
 ?>
-
-
 </fieldset>
-
- 
-
-
-
 
 <br>
 
-
-
 <fieldset>
-<legend> Choose delivery location </legend>
+	<legend> Choose delivery location </legend>
 		<input type="radio" id="Towers" name="location" value="Towers Residential" onclick="getRadioValue()"> 
-		<label for="hand">Towers Residential</label><br>
+		<label for="Towers">Towers Residential</label><br>
+
 		<input type="radio" id="AWD" name="location" value="Anthony Wayne Drive Apartments" onclick="getRadioValue()">
-		<label for="hand">Anthony Wayne Drive Apartments</label><br>
+		<label for="AWD">Anthony Wayne Drive Apartments</label><br>
+
 		<input type="radio" id="Ghafari" name="location" value="Ghafari Hall" onclick="getRadioValue()">
-		<label for="hand">Ghafari Hall</label><br>
+		<label for="Ghafari">Ghafari Hall</label><br>
+
 		<input type="radio" id="Atchison" name="location" value="Atchison Hall" onclick="getRadioValue()">
-		<label for="hand">Atchison Hall</label><br>
+		<label for="Atchison">Atchison Hall</label><br>
+
 		<input type="radio" id="StudentCenter" name="location" value="Student Center" onclick="getRadioValue()">
-		<label for="hand">Student Center</label><br>
+		<label for="StudentCenter">Student Center</label><br>
+
 		<input type="radio" id="UGL" name="location" value="Undergraduate Library" onclick="getRadioValue()">
-		<label for="hand">Undergraduate Library</label><br>
-	
+		<label for="UGL">Undergraduate Library</label><br>
 </fieldset>
 		
-		
-	
+
 <script>
 var finalLocation;
 var finalStyle;
@@ -126,7 +107,6 @@ function getRadioValue(){
 	var i = 0;
 	var selection = document.getElementsByName('location');
 	
-	
 	for (i=0; i<selection.length; i++){
 		
 		if(selection[i].checked){
@@ -135,11 +115,7 @@ function getRadioValue(){
 			console.log(selection[i].value);
 			finalLocation = selection[i].value;
 		}
-		
 	}
-	
-	
-	
 }
 
 
@@ -155,13 +131,8 @@ function DeliveryStyle(){
 			document.getElementById("deliverySelection").innerHTML = "Delivery Style: " + deliverySelection[i].value;
 			console.log(deliverySelection[i].value);
 			finalStyle = deliverySelection[i].value;
-		}
-		
+		}	
 	}
-	
-	 
-	
-	
 }
 
 
@@ -170,64 +141,52 @@ function phoneNumber(){
 	
 	textField = document.getElementById('phoneText').value;
 	console.log(textField);
-	
-	
 }
 
 function additionalText(){
 	
 	textComment = document.getElementById('additionalComment').value;
 	console.log(textComment);
-	
-	
 }
 
 
 </script>
+    <fieldset>
+        <legend>Select your Delivery Style:</legend>
+    	<input type="radio" id="hand" name="deliveryStyle" value="In your hand" onclick="DeliveryStyle()">
+    	<label for="hand">In your Hand</label><br>
+        <input type="radio" id="door" name="deliveryStyle" value="On your Doorstep" onclick="DeliveryStyle()">
+		<label for="door">On your Doorstep</label><br>
+		<input type="radio" id="na" name="deliveryStyle" value="N/A" onclick="DeliveryStyle()">
+    	<label for="na">N/A</label><br>
+   </fieldset>
 
+	<label for="Phone Number">Enter Phone Number</label><br>
+	<textarea id="phoneText" rows="1" cols="30" placeholder="Please enter your phone number" onchange="phoneNumber()" required></textarea><br>
 
+	<label for="comment">Comments: </label><br>
+	<textarea id="additionalComment" rows="3" cols="65" placeholder="Please enter your room number and additional comments..." onchange="additionalText()"></textarea><br>
 
-        <fieldset>
-            <legend>Select your Delivery Style:</legend>
-            <input type="radio" id="hand" name="deliveryStyle" value="In your hand" onclick="DeliveryStyle()">
-            <label for="hand">In your Hand</label><br>
-            <input type="radio" id="door" name="deliveryStyle" value="On your Doorstep" onclick="DeliveryStyle()">
-            <label for="door">On your Doorstep</label><br>
-			<input type="radio" id="na" name="deliveryStyle" value="N/A" onclick="DeliveryStyle()">
-            <label for="na">N/A</label><br>
-        </fieldset>
-
-
-		<label for="Phone Number">Enter Phone Number</label><br>
-        <textarea id="phoneText" rows="1" cols="30" placeholder="Please enter your phone number" onchange="phoneNumber()" required></textarea><br>
-
-
-
-        <label for="comment">Comments:</label><br>
-        <textarea id="additionalComment" rows="3" cols="65" placeholder="Additional Delivery Comments" onchange="additionalText()"></textarea><br>
-
-        
-    
-	<h2>Shopping Cart:</h2>
+<h2>Shopping Cart:</h2>
 	
 	
 	
 <p id="showCart"></p>
 
-<h2>Location / Delivery Style </h2>
-<div id="output"></div>
-<br>
-<div id="deliverySelection"></div>
-<h2> Price </h2>
-<p id="showPrice"></p>
-<p id="showTax"></p>
-<p id="showDeliveryCost"></p>
-<p id="showFinal"></p>
+	<h2>Order Details</h2>
+	<div id="output"></div>
+	<br>
+	<div id="deliverySelection"></div>
+		<h2> Price </h2>
+		<p id="showPrice"></p>
+		<p id="showTax"></p>
+		<p id="showDeliveryCost"></p>
+		<p id="showFinal"></p>
+	<br>
 
-<br>
 	<button onclick="return confirm('Are you sure you want to submit your order?') && sendData()">Checkout</button><br>
 	
-	</fieldset>
+</fieldset>
 
 
 
@@ -260,7 +219,6 @@ $result = mysqli_query($db,$sql);
 	
 	itemPrices.push(["<?php echo $row['item_name'];?>","<?php echo $row['price'];?>"]);
 	console.log(itemPrices);
-	
 	
 	<?php
 		}
