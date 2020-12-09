@@ -2,7 +2,7 @@
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
 	<title>Incorrect Login</title>
 </head>
@@ -16,7 +16,10 @@
 <h2> Unauthenticated Account </h2>
 <h3> Please verify your Wayne State email account by clicking the verification link provided in the registration email.</h3>
 <h3>Click here to send another verification link to the registered email. </h3>
-<a href='index.html'>Home</a>
+    <nav>
+    <a class="btn" href='index.html'>Home</a>
+    </nav>
+
 
 
 <br>

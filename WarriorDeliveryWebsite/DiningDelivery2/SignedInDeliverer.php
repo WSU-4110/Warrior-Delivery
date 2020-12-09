@@ -55,9 +55,9 @@ click the "Finished" button to verify the completion of the order. Thank you! </
 
 
 
-<h2><a href = "viewCurrentOrders.php">View Current Order</a></h2><br>
+<h2><nav><a class="btn" href = "viewCurrentOrders.php">View Current Order</a> </nav></h2><br>
 
-<h2><a href = "logout.php">Sign Out</a></h2>
+<h2><nav><a class="btn" href = "logout.php">Sign Out</a></nav></h2>
 
 </body>
 

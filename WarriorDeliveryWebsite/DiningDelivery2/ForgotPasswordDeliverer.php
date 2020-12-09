@@ -32,7 +32,7 @@ mail($myemail, $subject, $message, $headers);
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
 	<title>Reset Password</title>
 </head>
@@ -43,7 +43,10 @@ mail($myemail, $subject, $message, $headers);
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Reset Password | WSU Dining Delivery</h1><br>
 
 <br>
-<a href='ProfilePage.php'>Home</a>
+    <nav>
+    <a class="btn" href='ProfilePage.php'>Home</a>
+    </nav>
+
   
 
 
@@ -57,8 +60,11 @@ mail($myemail, $subject, $message, $headers);
 
 <br>
 <br>
-<a href='ProfilePage.php'>Go Back</a><br>
-<a href = "LogOut.php">Sign Out</a>
+    <nav>
+    <a class="btn" href='ProfilePage.php'>Go Back</a><br>
+<a class="btn" href = "LogOut.php">Sign Out</a>
+
+    </nav>
 
 
 

@@ -55,7 +55,10 @@ echo "Current Balance: $" . (number_format($currentBalance,2));
 <br>
 <br>
 <br>
-<h2><a href = "logout.php">Sign Out</a></h2>
+<h2>
+    <nav>
+    <a class="btn" href = "logout.php">Sign Out</a></h2>
+    </nav>
 <script>
 var cart = '';
 var counter = 0;

@@ -25,7 +25,7 @@ if($user_value == NULL){
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
 	<title>Warrior Delivery</title>
 	<script
@@ -40,7 +40,10 @@ if($user_value == NULL){
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
 
 <br>
-<a href='ProfilePageKitchen.php'>Home</a>
+    <nav>
+    <a class="btn" href='ProfilePageKitchen.php'>Home</a>
+    </nav>
+
   
 
 
@@ -49,14 +52,17 @@ if($user_value == NULL){
 
 <h1> Kitchen Admin Page </h1>
 <br>
+    <nav>
+    <a class="btn" href = "OrdersReadyForPickup.php">Orders for Pickup</a><br>
+<a class="btn" href = "OrdersNotMade.php">Incoming Orders</a><br>
+<a class="btn" href = "OrdersInDelivery.php">Orders in Delivery</a><br>
+<a class="btn" href = "CancelOrderK.php">Cancel Order</a><br>
+<a class="btn" href = "EditMenu.php">Edit Menu</a><br>
+<a class="btn" href = "Authentication.php">Authentication</a><br>
+<a class="btn" href = "LogOut.php">Sign Out</a>
+    </nav>
 
-<a href = "OrdersReadyForPickup.php">Orders for Pickup</a><br>
-<a href = "OrdersNotMade.php">Incoming Orders</a><br>
-<a href = "OrdersInDelivery.php">Orders in Delivery</a><br>
-<a href = "CancelOrderK.php">Cancel Order</a><br>
-<a href = "EditMenu.php">Edit Menu</a><br>
-<a href = "Authentication.php">Authentication</a><br>
-<a href = "LogOut.php">Sign Out</a>
+
 
 
 </body>

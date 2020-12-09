@@ -2,8 +2,8 @@
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
-	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
+    <link rel="stylesheet" href="themeS.css">
+	<link rel="icon" href="WayneLogo1_small.png" type="image/gif">
 	<title>Incorrect Login</title>
 </head>
 <body>
@@ -14,7 +14,10 @@
 
 <br>
 <h3> Incorrect login </h3>
-<a href='index.html'>Home</a>
+    <nav>
+    <a class="btn" href='index.html'>Home</a>
+    </nav>
+
 
 
 <br>

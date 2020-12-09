@@ -19,7 +19,7 @@ $row = mysqli_num_rows($result);
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
 	<title>Change Password</title>
 </head>
@@ -30,7 +30,10 @@ $row = mysqli_num_rows($result);
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Change Password | WSU Dining Delivery</h1><br>
 
 <br>
-<a href='index.html'>Home</a>
+    <nav>
+    <a class="btn" href='index.html'>Home</a>
+    </nav>
+
   
 
 
@@ -57,7 +60,10 @@ if($row==1){
 
 <br>
 <br>
-<a href='index.html'>Go Back</a><br>
+    <nav>
+    <a class="btn" href='index.html'>Go Back</a><br>
+    </nav>
+
 
 
 

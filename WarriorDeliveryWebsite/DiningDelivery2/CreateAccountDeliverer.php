@@ -2,7 +2,7 @@
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
 	<title>Warrior Delivery</title>
 	<script
@@ -47,7 +47,9 @@
 		  
 		  ?>
 		  <h3> An account with this access id already exists, please use the forgot password page to reset your password. </h3>
-		  <a href = "Homepage.html">Go Back</a><br>
+		  <nav>
+<a class="btn" href = "Homepage.html">Go Back</a><br>
+</nav>
 		  <?php
 		  
 	  }else{

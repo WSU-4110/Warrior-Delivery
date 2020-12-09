@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding:0;
+	font-family: Arial; 
+}
+
+html,
+footer{
+    background-color: #0c5449;
+}
+
+header {
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(Gold_N_Greens_image.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+head {
+  
+    background-position: center;
+    height: 100vh;
+}
+
+.menu{
+    margin-top: 00px;
+}
+.Warrior-image {
+    position: absolute;
+    width: 1140;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body {
+	background-color:#00584D;
+	
+}
+
+
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+	color: #FFC842;
+	font-size: 2.25em;
+    
+}
+
+h1.title {
+	display:inline-block;
+	font-size:5vw;
+	vertical-align:bottom;
+	
+}
+h2 {
+	color: #FFC842;
+	font-size: 180%;
+    margin-bottom: 30px;
+    word-spacing: 2px;
+    text-align: center;
+    
+    
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #FFC842;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3 {
+	color: #FFC842;
+	font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+p {
+	color: #FBFBFF;
+}
+
+.section-currentisues{
+    text-align: center;
+   
+}
+
+.section-thiswebsite{
+    text-align: center;
+   
+}
+
+
+a:link {
+	color: #DDDDDD;
+	background-color: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	font-size: 1.5em;
+	border:2px outset linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	border-radius: 3px;
+	padding: 5px;
+	text-decoration: none;
+	display: inline-block;
+}
+a:visited {
+	color: #DDDDDD;
+	background-color: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	font-size: 1.5em;
+	border:2px outset linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	text-decoration: none;
+}
+a:hover {
+	color: #FFFFFF;
+	background-color: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	font-size: 1.5em;
+	border:2px solid linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	text-decoration: none;
+}
+a:active {
+	color: #FFFFFF;
+	background-color: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	font-size: 1.5em;
+	border:2px inset linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	text-decoration: none;
+}
+fieldset {
+	border:2px solid #FFC842;
+	padding: 1.5vw;
+}
+legend {
+	color: #DDDDDD;
+	/*border:2px solid #FFC842;*/
+	background-color: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	font-size: 1.75em;
+}
+
+label {
+	color: #DDDDDD;
+	line-height: 2.5;
+}
+
+input[type=submit] {
+	padding: 2px;
+	
+	color: #01BAEF;
+	background-color: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	border:2px outset linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	border-radius: 3px;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+nav {
+	position: sticky;
+	top: 0;
+	background-color: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	padding: 0px;
+	display: block;
+	margin: 1vw 0vw 1vw 0vw;
+}
+
+nav a:link{
+	color: #DDDDDD;
+	background-color: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	font-size: 1.75em;
+	border: none;
+	border-radius: 0px;
+	padding: 1vw;
+}
+nav a:visited {
+	color: #DDDDDD;
+	background-color: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	font-size: 1.75em;
+	border: none;
+	text-decoration: none;
+}
+nav a:hover {
+	color: #FFFFFF;
+	background-color: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	font-size: 1.75em;
+	border: none;
+	text-decoration: none;
+}
+
+nav a.btn:link,
+nav a.btn:visited {
+	background-color: #F5AF00;
+	color: #fff;
+	font-size: 1.75em;
+	text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 200px;
+    border: 1px solid #F5AF00;
+    
+}
+nav a.btn:hover,
+nav a.btn:active {
+    background-color: #daa31b;
+}
+
+table { 
+	border: 5px solid #FFC842;
+	border-collapse: collapse; 
+	background-color: white; 
+}
+		
+td, th { 
+	padding: 3px;
+	border: 2px solid #FFC842; 
+}
+		
+td { 
+	text-align: center; 
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+#columnresult, #BeverageResult {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+#output {
+    
+ color: white;   
+    
+}
+
+section {
+    padding: 80px 0 ;
+    
+}
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+
+.row {
+    zoom: 1; 
+    margin-left: 20px;
+}
+
+.row:before,
+.row:after {
+    content:"";
+    display:table;
+}
+.row:after {
+    clear:both;
+}
+
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } 
+
+@media only screen and (max-width: 480px) {
+	.col { 
+		
+        margin: 0;
+	}
+}
+
+.column-2-of-2 {
+	width: 100%;
+}
+
+.column-1-of-2 {
+	width: 49.2%;
+}
+
+
+@media only screen and (max-width: 480px) {
+	.column-2-of-2 {
+		width: 100%; 
+	}
+	.column-1-of-2 {
+		width: 100%; 
+	}
+}
+
+
+	
+.column-3-of-3 {
+	width: 100%; 
+}
+
+.column-2-of-3 {
+	width: 66.13%; 
+}
+
+.column-1-of-3 {
+	width: 32.26%; 
+}
+
+
+
+@media only screen and (max-width: 480px) {
+	.column-3-of-3 {
+		width: 100%; 
+	}
+	.column-2-of-3 {
+		width: 70%; 
+	}
+	.column-1-of-3 {
+		width: 50%;
+	}
+}
+
+	
+.column-4-of-4 {
+	width: 100%; 
+}
+
+.column-3-of-4 {
+	width: 71.6%; 
+}
+
+.column-2-of-4 {
+	width: 45.2%; 
+}
+
+.column-1-of-4 {
+	width: 20.8%; 
+}
+.section-clickablemenu{
+    text-align: center;
+}

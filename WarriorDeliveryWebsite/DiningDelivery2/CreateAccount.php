@@ -2,8 +2,8 @@
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
-	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
+    <link rel="stylesheet" href="themeS.css">
+	<link rel="icon" href="WayneLogo1_small.png" type="image/gif">
 	<title>Warrior Delivery</title>
 	<script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -44,7 +44,11 @@
 		  
 		  ?>
 		  <h3> An account with this access id already exists, please use the forgot password page to reset your password. </h3>
-		  <a href = "index.html">Go Back</a><br>
+        <nav>
+         <a class="btn" href = "index.html">Go Back</a>
+        </nav>
+<br>
+		 
 		  <?php
 		  
 	  }else{
