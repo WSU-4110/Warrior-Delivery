@@ -27,19 +27,14 @@ $row = mysqli_num_rows($result);
 <a href="index.html" style="background:none;border:none;display:inline-block;margin:0px;">
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
-<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Change Password | WSU Dining Delivery</h1><br>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Change Password</h1><br>
 
 <br>
-    <nav>
-    <a class="btn" href='index.html'>Home</a>
-    </nav>
+
+<a href='ProfilePage.php'>Home</a>
 
   
-
-
-
 <br>
-
 
 <?php
 
@@ -55,16 +50,10 @@ if($row==1){
 
 ?>
 
-
-
-
 <br>
 <br>
-    <nav>
-    <a class="btn" href='index.html'>Go Back</a><br>
-    </nav>
 
-
+<a href="ProfilePage.php">Go Back</a><br>
 
 
 </body>

@@ -25,8 +25,8 @@ if($user_value == NULL){
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="themeS.css">
-	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
+    <link rel="stylesheet" href="theme.css">
+	<link rel="icon" href="WayneLogo1_small.png" type="image/gif">
 	<title>Warrior Delivery</title>
 	<script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -40,10 +40,7 @@ if($user_value == NULL){
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
 
 <br>
-    <nav>
-    <a class="btn" href='ProfilePageKitchen.php'>Home</a>
-    </nav>
-
+<a href='ProfilePageKitchen.php'>Home</a>
 
 <script>
 var textItem = "";
@@ -159,31 +156,31 @@ while($row = mysqli_fetch_array($result)){
 
 ?>
 	   
-
-
 </tbody>
 </table>
 
 <br>
 
-<h3> Enter new menu item here: </h3>
-<label for="newMenuItem">Item Name</label><br>
-        <textarea id="itemName" rows="1" cols="30" placeholder="Please enter item name" onchange="addItem()" required></textarea><br>
+<fieldset>
+	<legend>Add a new menu item:</legend>
+
+	<label for="newMenuItem">Item Name</label><br>
+	<input type="text" id="itemName" placeholder="Please enter item name" onchange="addItem()" required></input><br>
 		
-<label for="newMenuPrice">Item Price</label><br>
-<textarea id="itemPrice" rows="1" cols="30" placeholder="Please enter item price" onchange="addPrice()" required></textarea><br>
+	<label for="newMenuPrice">Item Price</label><br>
+	<input type="number" id="itemPrice" placeholder="Please enter item price" onchange="addPrice()" required></input><br>
 
-<label for="newMenuDescription">Item Description</label><br>
-<textarea id="itemDescription" rows="1" cols="30" placeholder="Please enter item description" onchange="addDescription()" required></textarea><br>
+	<label for="newMenuDescription">Item Description</label><br>
+	<textarea id="itemDescription" rows="1" cols="30" placeholder="Please enter item description" onchange="addDescription()" required></textarea><br>
 
+	<label for="newMenuCalories">Item Calorie Count</label><br>
+	<input type="number" id="itemCalories"  placeholder="Please enter the item's calorie content" onchange="addCalories()" required></input><br>
 
-<label for="newMenuCalories">Item Calorie Count</label><br>
-<textarea id="itemCalories" rows="1" cols="30" placeholder="Please enter the item's calorie content" onchange="addCalories()" required></textarea><br>
+	<button onclick="return confirm('Are you sure you want to submit the item?') && sendData()">Submit</button><br>
 
-<button onclick="return confirm('Are you sure you want to submit the item?') && sendData()">Submit</button><br>
+</fieldset>
+
 <br>
-
-
 <h3> Delete item from menu </h3>
 
 
@@ -209,11 +206,9 @@ $result = mysqli_query($db,$sql);
 <input type="submit" onclick="return confirm('Are you sure you want to delete the item?')" value="Submit">
 </form>
 
-<nav>
-    <a class="btn" href = "ProfilePageKitchen.php">Go Back</a><br>
-<a class="btn" href = "LogOut.php">Sign Out</a>
 
-    </nav>
+<a href = "ProfilePageKitchen.php">Go Back</a><br>
+<a href = "LogOut.php">Sign Out</a>
 
 
 </body>

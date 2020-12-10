@@ -32,8 +32,8 @@ mail($myemail, $subject, $message, $headers);
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="themeS.css">
-	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
+    <link rel="stylesheet" href="theme.css">
+	<link rel="icon" href="WayneLogo1_small.png" type="image/gif">
 	<title>Reset Password</title>
 </head>
 <body>
@@ -43,30 +43,16 @@ mail($myemail, $subject, $message, $headers);
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Reset Password | WSU Dining Delivery</h1><br>
 
 <br>
-    <nav>
-    <a class="btn" href='ProfilePage.php'>Home</a>
-    </nav>
-
-  
-
-
+<a href='ProfilePage.php'>Home</a>
 
 <br>
-
 
 <h2> Your password has been reset. An email has been set the to the registered email containing the new password.</h2>
 
-
-
 <br>
 <br>
-    <nav>
-    <a class="btn" href='ProfilePage.php'>Go Back</a><br>
-<a class="btn" href = "LogOut.php">Sign Out</a>
-
-    </nav>
-
-
+<a href='ProfilePageDeliverer.php'>Go Back</a><br>
+<!-- <a href = "LogOut.php">Sign Out</a> -->
 
 </body>
 </html>

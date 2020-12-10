@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="theme.css">
+	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
+    <title>Order | Warrior Delivery</title>
+	<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+<a href="ProfilePage.php" style="background:none;border:none;display:inline-block;margin:0px;">
+<img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
+</a>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Ordering Page</h1><br>
+<a href='ProfilePage.php'>Home</a>
+
+
+<p><b>To place an order, please fill out the following fields below.</b></p>
+
+
+
+
+
+    
+	<fieldset>
+        <legend>Place an Order</legend>
+
+        <label for="item">Choose food items and quantity:</label>
+		 <br>
+<button onclick="cartCreator('pizza')">Add Pizza</button><br>
+<button onclick="cartCreator('salad')">Add Salad</button><br>
+<button onclick="cartCreator('pepsi')">Add Pepsi</button><br>
+<button onclick="cartCreator('fries')">Add Fries</button><br>
+<br>
+
+
+ 
+
+        <label for="beverage">Choose beverages and quantity:</label>
+        
+
+
+
+
+<br>
+
+
+
+
+
+      
+        <fieldset>
+            <legend>Select Campus Location:</legend>
+            <input type="radio" id="towers" name="location" value="Towers Residential">
+            <label for="towers">Towers Residential</label><br>
+            <input type="radio" id="awd" name="location" value="Anthony Wayne Drive Apartments">
+            <label for="awd">Anthony Wayne Drive Apartments</label><br>
+			<input type="radio" id="ghafari" name="location" value="Ghafari Hall">
+            <label for="ghafari">Ghafari Hall</label><br>
+			<input type="radio" id="atchinson" name="location" value="Atchison Hall">
+            <label for="atchinson">Atchison Hall</label><br>
+			<input type="radio" id="stucen" name="location" value="Student Center">
+            <label for="stucen">Student Center</label><br>
+			<input type="radio" id="ugl" name="location" value="Undergraduate Library">
+            <label for="ugl">Undergraduate Library</label><br>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>(If selecting a housing location) Select your Delivery Style:</legend>
+            <input type="radio" id="hand" name="ordStyle" value="In your hand">
+            <label for="hand">In your Hand</label><br>
+            <input type="radio" id="door" name="ordStyle" value="On your Doorstep">
+            <label for="door">On your Doorstep</label><br>
+			<input type="radio" id="na" name="ordStyle" value="N/A">
+            <label for="na">N/A</label><br>
+        </fieldset>
+
+
+		<label for="Phone Number">Enter Phone Number</label><br>
+        <textarea name="comment" rows="1" cols="30" placeholder="Please enter your phone number" required></textarea><br>
+
+
+
+        <label for="comment">Comments:</label><br>
+        <textarea name="comment" rows="3" cols="65" placeholder="Additional Delivery Comments"></textarea><br>
+
+        
+    
+	<h2>Shopping Cart:</h2>
+	
+	
+	
+<p id="showCart"></p>
+<br>
+<h2> Price </h2>
+<p id="showPrice"></p>
+<p id="showTax"></p>
+<p id="showDeliveryCost"></p>
+<p id="showFinal"></p>
+
+<br>
+	<button onclick="sendData()">Checkout</button><br>
+	</fieldset>
+
+
+
+<br>
+
+<br>
+<br>
+<br>
+<a href='ProfilePage.php'>Go Back</a><br>
+<a href = "LogOut.php">Sign Out</a>
+<script>
+var cart = '';
+var counter = 0;
+var itemNames = [];
+var itemCounter = [];
+var i = 0
+var check = false;
+var finalList = '';
+var tempCounter = 0;
+var finalCost = 0;
+
+var itemPrices = [ ['pizza', 2.00], ['pepsi', 1.00], ['fries', 1.00], ['salad', 3.00] ];
+var finalPrice = 0;
+
+
+function cartCreator(name){
+for (i = 0; i<itemNames.length;i++){
+	if (itemNames[i] == name){
+		check = true;
+		itemCounter[i] = itemCounter[i] + 1;
+		tempCounter = i;
+
+	}
+
+}
+
+if (check == false){
+
+itemNames.push(name);
+itemCounter.push(1);
+}
+
+
+
+
+i = 0;
+//cart = itemNames.toString();
+finalList = '';
+for (i=0; i<itemNames.length;i++){
+finalList = finalList + itemNames[i] + "(x" + itemCounter[i] + ")  ,  ";
+
+
+}
+
+document.getElementById("showCart").innerHTML = finalList;
+check = false;
+
+priceCalculator(name);
+}
+
+
+
+
+function priceCalculator(name){
+	i = 0;
+	x = 0;
+	taxCost = 0;
+for (i = 0; i<itemPrices.length; i++){
+	
+	if (name == itemPrices[i][0]){
+		finalCost = finalCost + itemPrices[i][1];
+		console.log(name);
+	
+	}
+		
+	
+	
+}
+	
+	document.getElementById("showPrice").innerHTML = "Item(s) Price: $" + finalCost +".00";
+	taxCost = (0.06*finalCost);
+	document.getElementById("showTax").innerHTML = "Tax: $" + (0.06*finalCost).toFixed(2);
+	document.getElementById("showDeliveryCost").innerHTML = "Delivery Cost: $" + (3.00).toFixed(2);
+	finalPrice = (finalCost + taxCost + 3.00);
+	document.getElementById("showFinal").innerHTML = "Total Cost: $" + (finalCost + taxCost + 3.00).toFixed(2);
+	
+	
+}
+</script>
+
+
+
+
+<script>
+function sendData(){
+var nowBalance = <?php print $currentBalance; ?>;
+nowBalance = nowBalance - finalPrice;
+console.log(cart);
+
+$.ajax({
+
+	url: "ajaxTest.php",
+	method: "post",
+	data: {test1: finalList, test2: nowBalance},
+	success: function(res){
+	console.log(res);
+	}
+})
+
+
+
+
+}
+</script>
+
+
+</body>
+</html>
