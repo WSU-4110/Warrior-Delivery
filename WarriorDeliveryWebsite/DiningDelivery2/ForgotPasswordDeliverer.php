@@ -54,7 +54,5 @@ mail($myemail, $subject, $message, $headers);
 <a href='ProfilePageDeliverer.php'>Go Back</a><br>
 <!-- <a href = "LogOut.php">Sign Out</a> -->
 
-
-
 </body>
 </html>

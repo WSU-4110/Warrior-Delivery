@@ -19,9 +19,6 @@ if($user_value == NULL){
 ?>
 
 
-
-
-
 <!DOCTYPE html>
 <html>
 <br>
@@ -45,9 +42,6 @@ if($user_value == NULL){
 	<a style="float:right" href="YourInfoD.php">Your info</a>
 	<a style="float:right" href="ChangePasswordDeliverer.html">Change Password</a>
 </nav>
-  
-
-
 
 <br>
 
@@ -104,8 +98,10 @@ click the "Finished" button to verify the completion of the order. Thank you! </
 <button onclick="assignOrder()">Receive Order!</button><br>
 <br>
 <button onclick="completedOrder()">Completed Order</button><br><br>
+    <nav>
+    <a class="btn" href = "viewCurrentOrders.php">View Current Order</a><br>
+    </nav>
 
-<a href = "viewCurrentOrders.php">View Current Order</a><br>
 
 
 </body>

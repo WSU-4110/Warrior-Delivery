@@ -22,7 +22,7 @@ if($user_value == NULL){
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
 	<title>Check Balance</title>
 </head>
@@ -33,7 +33,10 @@ if($user_value == NULL){
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Check Balance | WSU Dining Delivery</h1><br>
 
 <br>
-<a href='ProfilePage.php'>Home</a>
+    <nav>
+    <a class="btn" href='ProfilePage.php'>Home</a>
+    </nav>
+
   
 
 
@@ -58,8 +61,11 @@ echo "<h3>Your Current Balance: $" . (number_format($currentBalance,2)) . "</h3>
 ?>
 <br>
 <br>
-<a href='ProfilePage.php'>Go Back</a><br>
-<a href = "LogOut.php">Sign Out</a>
+    <nav>
+    <a class="btn" href='ProfilePage.php'>Go Back</a><br>
+<a class="btn" href = "LogOut.php">Sign Out</a>
+    </nav>
+
 
 
 

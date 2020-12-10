@@ -143,8 +143,11 @@ alert("Order Completed!");
 
 
 <br>
-<a href = "ProfilePageDeliverer.php">Go Back</a><br>
-<a href = "LogOut.php">Sign Out</a>
+    <nav>
+        <a class="btn" href = "ProfilePageDeliverer.php">Go Back</a><br>
+        <a class="btn" href = "LogOut.php">Sign Out</a>
+
+    </nav>
 
 
 </body>

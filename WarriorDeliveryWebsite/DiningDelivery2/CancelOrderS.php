@@ -34,7 +34,10 @@ if($user_value == NULL){
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
 
 <br>
-<a href='ProfilePage.php'>Home</a>
+    <nav>
+    <a class="btn" href='ProfilePage.php'>Home</a>
+    </nav>
+
   
 <h2> Cancel Order Here </h2>
 <p> If you would like to cancel an order, please select the Order ID. Reminder that you can only cancel orders that have not been made by the kitchen. </p>
@@ -65,8 +68,11 @@ $result = mysqli_query($db,$sql);
 
 
 <br>
-<a href = "ProfilePage.php">Go Back</a><br>
-<a href = "LogOut.php">Sign Out</a>
+    <nav>
+        <a class="btn" href = "ProfilePage.php">Go Back</a><br>
+        <a class="btn" href = "LogOut.php">Sign Out</a>
+    </nav>
+
 
 
 </body>

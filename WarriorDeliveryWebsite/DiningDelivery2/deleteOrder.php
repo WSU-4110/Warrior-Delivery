@@ -11,7 +11,7 @@ session_start();
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
 	<title>Warrior Delivery</title>
 	<script
@@ -26,7 +26,10 @@ session_start();
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
 
 <br>
-<a href='ProfilePageKitchen.php'>Home</a>
+    <nav>
+        <a class="btn" href='ProfilePageKitchen.php'>Home</a>
+    </nav>
+
 </body>
 
 </html>
@@ -55,6 +58,9 @@ $result = mysqli_query($db,$sql);
 	
 ?>
 <br>
-<a href='ProfilePageKitchen.php'>Go Back</a><br>
-<a href='LogOut.php'>Sign Out</a>
+<nav>
+<a class="btn" href='ProfilePageKitchen.php'>Go Back</a><br>
+<a class="btn" href='LogOut.php'>Sign Out</a>
+</nav>
+
 

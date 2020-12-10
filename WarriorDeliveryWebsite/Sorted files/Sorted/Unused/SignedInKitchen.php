@@ -224,7 +224,9 @@ $result = mysqli_query($db,$sql);
 <input type="submit" onclick="return confirm('Are you sure you want to verify the account?')" value="Submit">
 </form>
 
-<h2><a href = "logout.php">Sign Out</a></h2>
+<h2><nav>
+    <a class="btn" href = "logout.php">Sign Out</a>
+    </nav></h2>
 
 </body>
 

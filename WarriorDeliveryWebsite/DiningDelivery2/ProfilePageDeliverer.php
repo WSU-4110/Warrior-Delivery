@@ -36,7 +36,6 @@ $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_d
 	<title>Warrior Delivery</title>
 </head>
 <body>
-
 <a href="ProfilePageDeliverer.php" style="background:none;border:none;display:inline;margin:0px;">
 <img src="shield_only_color.png" alt="Logo" style="max-width:10%;"></a>
 <h1 class="title">Deliverer Profile</h1><br>
