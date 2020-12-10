@@ -1,6 +1,6 @@
-# Warrior-Delivery: A dining hall food delivery service.
-## Developers:  
 
+## Developers:  
+[# Warrior-Delivery: A dining hall food delivery service.](http://wsudiningdelivery.000webhostapp.com/)
 Affan Atif, Neelesh Bollu, Timothy Haddad, Miguel Manzanarez, Sanaz Rabinia, Mazin Shulaiba
 
 | Backend       | Frontend      | Database | PHPUnit   |
