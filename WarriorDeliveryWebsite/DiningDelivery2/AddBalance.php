@@ -42,10 +42,11 @@ if($user_value == NULL){
 
 <h2> Update Balance </h2>
 
-<form action="AddBalanceQuery.php" method="post" autocomplete="on">
+<form action="AddBalanceQuery.php" method="post" autocomplete="on" style="text-align: center">
 	<label> Enter Balance to Add (In Dollars)</label><br>
 	<input type="text" id="amount" name="amount" placeholder="Enter Amount" min="0.01" max="2000"><br>
 
+<br>
 	<input type="submit" onclick="return confirm('Confirm adding to balance?')" value="Submit"><br><br>
 </form>
 

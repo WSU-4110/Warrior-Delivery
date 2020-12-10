@@ -342,3 +342,47 @@ section {
 .section-clickablemenu{
     text-align: center;
 }
+
+
+
+table{
+    
+    margin-left: auto;
+  margin-right: auto;
+    
+    
+}
+
+
+.myAlign{
+    
+ text-align:center;   
+    
+}
+
+button{
+    
+    background-color: #F5AF00;
+    color: #FFF;
+	font-size: 1.20em;
+	
+	display: inline-block;
+    padding: 10px 30px;
+    border-radius: 200px;
+    border: 1px solid #F5AF00;
+}
+
+button:hover{
+    
+    background-color: #E78D0A;
+    transform: translateY(-4px);
+}
+
+footer{
+    
+    color: #FFF;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+

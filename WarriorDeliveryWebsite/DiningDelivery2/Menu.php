@@ -28,7 +28,7 @@ session_start();
 
 
 <br><br>
-<h3> Today's Available Menu </h3>
+<h3 style=text-align:center> &nbsp&nbsp&nbspToday's Available Menu </h3>
 <table style>
 	<thead>	
 		<th>Item</th>
@@ -68,8 +68,8 @@ $result = mysqli_query($db,$sql);
 
 
 
-
-<p>*Items do not include tax or delivery fee</p>
+<br>
+<p style=text-align:center><b>&nbsp&nbsp&nbsp*Items do not include tax or delivery fee</b></p>
 
 </body>
 </html>

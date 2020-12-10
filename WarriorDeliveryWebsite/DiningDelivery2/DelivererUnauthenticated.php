@@ -14,9 +14,9 @@
 
 <br>
 <h2> Unauthenticated Account </h2>
-<h3> Your Wayne State Deliverer Account has not been authenticated by WSU Dining Delivery.</h3>
-<h3>Please wait for authentication before signing in. </h3>
-<h3>If you have any questions, please email wsudiningdelivery@gmail.com </h3>
+<h3 style=text-align:center> Your Wayne State Deliverer Account has not been authenticated by WSU Dining Delivery.</h3>
+<h3 style=text-align:center>Please wait for authentication before signing in. </h3>
+<h3 style=text-align:center>If you have any questions, please email wsudiningdelivery@gmail.com </h3>
     <nav>
     <a class="btn" href='index.html'>Home</a>
     </nav>

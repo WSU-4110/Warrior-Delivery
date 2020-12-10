@@ -41,7 +41,7 @@ if($user_value == NULL){
 
 <br>
     <nav>
-    <a class="btn" href='ProfilePageKitchen.php'>Home</a>
+    &nbsp&nbsp&nbsp<a class="btn" href='ProfilePageKitchen.php'>Home</a>
     </nav>
 
   
@@ -50,16 +50,16 @@ if($user_value == NULL){
 
 <br>
 
-<h1> Kitchen Admin Page </h1>
+<h1> &nbsp Kitchen Admin Page </h1>
 <br>
     <nav>
-    <a class="btn" href = "OrdersReadyForPickup.php">Orders for Pickup</a><br>
-<a class="btn" href = "OrdersNotMade.php">Incoming Orders</a><br>
-<a class="btn" href = "OrdersInDelivery.php">Orders in Delivery</a><br>
-<a class="btn" href = "CancelOrderK.php">Cancel Order</a><br>
-<a class="btn" href = "EditMenu.php">Edit Menu</a><br>
-<a class="btn" href = "Authentication.php">Authentication</a><br>
-<a class="btn" href = "LogOut.php">Sign Out</a>
+&nbsp&nbsp&nbsp<a class="btn" href = "OrdersReadyForPickup.php">Orders for Pickup</a><br>
+&nbsp&nbsp&nbsp<a class="btn" href = "OrdersNotMade.php"> Incoming Orders</a><br>
+&nbsp&nbsp&nbsp<a class="btn" href = "OrdersInDelivery.php">Orders in Delivery</a><br>
+&nbsp&nbsp&nbsp<a class="btn" href = "CancelOrderK.php">Cancel Order</a><br>
+&nbsp&nbsp&nbsp<a class="btn" href = "EditMenu.php">Edit Menu</a><br>
+&nbsp&nbsp&nbsp<a class="btn" href = "Authentication.php">Authentication</a><br>
+&nbsp&nbsp&nbsp<a class="btn" href = "LogOut.php">Sign Out</a>
     </nav>
 
 

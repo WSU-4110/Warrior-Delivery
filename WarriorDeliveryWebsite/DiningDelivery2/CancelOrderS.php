@@ -19,7 +19,7 @@ if($user_value == NULL){
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
 	<title>Warrior Delivery</title>
 	<script
@@ -40,10 +40,10 @@ if($user_value == NULL){
 
   
 <h2> Cancel Order Here </h2>
-<p> If you would like to cancel an order, please select the Order ID. Reminder that you can only cancel orders that have not been made by the kitchen. </p>
+<p style="text-align: center"> If you would like to cancel an order, please select the Order ID. Reminder that you can only cancel orders that have not been made by the kitchen. </p>
 
 
-<form action = "cancelOrderStudentSQL.php" method="post">
+<form action = "cancelOrderStudentSQL.php" method="post" style="text-align: center">
 <select id="cancelOrder" name="cancelOrder">
 	<option> Select Order ID </option>
 	

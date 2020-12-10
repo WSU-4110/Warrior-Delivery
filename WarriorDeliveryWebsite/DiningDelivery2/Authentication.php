@@ -37,7 +37,7 @@ if($user_value == NULL){
 <a href="ProfilePageKitchen.php" style="background:none;border:none;display:inline-block;margin:0px;">
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
-<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Authentication | Warrior Delivery</h1><br>
 
 <br>
     <nav>
@@ -90,7 +90,8 @@ if($user_value == NULL){
 </tbody>
 </table>
 
-<h2> Current UnAuthenticated Accounts </h2>
+<br><br><br>
+<h2> Current Unauthenticated Accounts </h2>
 <table style>
 	<thead>	
 		<th>User ID</th>
@@ -134,9 +135,9 @@ while($row = mysqli_fetch_array($result)){
 </tbody>	
 	</table>
 
-
+<br><br><br><br>
 <h2> Verify Delivery Account Here </h2>
-<form action = "verify.php" method="post">
+<form action = "verify.php" method="post" style=text-align:center>
 <select id="accounts" name="accounts">
 	<option> Select Account </option>
 	

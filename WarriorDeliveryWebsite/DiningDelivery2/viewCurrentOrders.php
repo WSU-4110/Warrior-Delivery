@@ -22,7 +22,7 @@ if($user_value == NULL){
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif">
 	<title>Warrior Delivery</title>
 	<script
@@ -31,16 +31,12 @@ if($user_value == NULL){
   crossorigin="anonymous"></script>
 </head>
 <body>
-<a href="ProfilePageDeliverer.php" style="background:none;border:none;display:inline;margin:0px;">
-<img src="shield_only_color.png" alt="Logo" style="max-width:10%;"></a>
-<h1 class="title">View Current Order</h1><br>
+<a href="ProfilePageDeliverer.php" style="background:none;border:none;display:inline-block;margin:0px;">
+<img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
+</a>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">View Current Order | WSU Dining Delivery</h1><br>
 
-<nav>
-	<a  href='ProfilePageDeliverer.php'>Home</a>
-	<a style="float:right" href="LogOut.php">Sign Out</a>
-	<a style="float:right" href="YourInfoD.php">Your info</a>
-	<a style="float:right" href="ChangePasswordDeliverer.html">Change Password</a>
-</nav>
+
   
 <br>
 
@@ -65,7 +61,7 @@ $value2 = mysqli_fetch_assoc($result2);
 
 if($value['hasOrder'] == 0){
 	
-    echo "<b>You are currently not delivering an order!</b><br>";
+    echo "<p style=text-align:center><b>You are currently not delivering an order!</b></p><br>";
 	
 } else{
     

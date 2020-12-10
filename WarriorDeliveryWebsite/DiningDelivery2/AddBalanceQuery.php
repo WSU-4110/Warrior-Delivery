@@ -36,6 +36,17 @@ session_start();
 $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_diningdelivery');
 
 $addBalance = $_POST['amount'];
+
+if ($addBalance < 0.01 || $addBalance > 2000){
+    
+    
+    
+    echo "<h2> Error: You must enter a value greater than 0 or less than 2000 </h2>";
+    
+    
+}else{
+
+
 $sql = "SELECT balance FROM testvalues WHERE access_id = '$user_value'";
 $result = mysqli_query($db,$sql);
   $value = mysqli_fetch_assoc($result);
@@ -48,8 +59,8 @@ $result = mysqli_query($db,$sql);
   $result = mysqli_query($db,$sql);
   
  
-  echo nl2br ("<h3>$" . number_format($addBalance,2) . " added to balance!" . "\n" . "Your balance is now: $" . number_format($currentBalance, 2) . "</h3>");
-
+  echo nl2br ("<h3>&nbsp&nbsp&nbsp$" . number_format($addBalance,2) . " added to balance!" . "\n" . "&nbsp&nbsp&nbspYour balance is now: $" . number_format($currentBalance, 2) . "</h3>");
+}
 ?>
    
 <br>   
