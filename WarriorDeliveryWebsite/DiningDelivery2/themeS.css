@@ -142,14 +142,22 @@ label {
 }
 
 input[type=submit] {
-	padding: 2px;
-	
-	color: #01BAEF;
-	background-color: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	/* padding: 3px;
+	color: #a52e2e;
+	background-color: linear-gradient(rgba(167, 137, 137, 0.7), rgba(0,0,0,0.7));
 	border:2px outset linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
 	border-radius: 3px;
 	font-size: 1em;
+	text-decoration: none; */
+
+	color: #EFEFEF;
+	background-color: #F5AF00;
+	font-size: 1.5em;
+	border:2px outset linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+	border-radius: 3px;
+	padding: 5px;
 	text-decoration: none;
+	display: inline-block;
 }
 
 nav {
