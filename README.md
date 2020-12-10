@@ -1,6 +1,6 @@
 # Warrior-Delivery: A dining hall food delivery service.
  
-![](WarriorDelivery/WayneLogo1_small.png)
+![](Warrior-Delivery/WarriorDeliveryWebsite/DiningDelivery2/WayneLogo1_small.png)
 # [Please visit Warrior-Delivery Website](http://wsudiningdelivery.000webhostapp.com/)
 
 ## Developers:  
