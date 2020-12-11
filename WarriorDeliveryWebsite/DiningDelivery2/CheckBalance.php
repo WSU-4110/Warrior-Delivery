@@ -56,7 +56,7 @@ $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_d
   
   $currentBalance = $value['balance'];
 	
-echo "<h3>Your Current Balance: $" . (number_format($currentBalance,2)) . "</h3>";
+echo "<h3 style=text-align:center>Your Current Balance: $" . (number_format($currentBalance,2)) . "</h3>";
 
 ?>
 <br>

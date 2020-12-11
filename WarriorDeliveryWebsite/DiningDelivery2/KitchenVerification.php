@@ -27,7 +27,7 @@
          header("location: ProfilePageKitchen.php");
 			
 		}else{
-			echo "Incorrect Login";
+			header("location: StudentIncorrectLogin.php");
 		}
    
    

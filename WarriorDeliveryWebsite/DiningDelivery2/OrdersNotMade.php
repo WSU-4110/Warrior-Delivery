@@ -103,10 +103,12 @@ if($user_value == NULL){
 
 
 <br>
+<br>
+<br>
 <h2> Update Order Status </h2>
 
-<p> Please select the Order ID that is ready to be picked up by the deliverer and click submit </p>
-<form action = "updateStatus.php" method="post">
+<p style=text-align:center> Please select the Order ID that is ready to be picked up by the deliverer and click submit </p>
+<form style=text-align:center action = "updateStatus.php" method="post">
 <select id="updateStatus" name="updateStatus">
 	<option> Select Order ID </option>
 	
@@ -128,7 +130,7 @@ $result = mysqli_query($db,$sql);
 </form>
 
 <br>
-    <nav>
+    <nav >
     <a class="btn" href = "ProfilePageKitchen.php">Go Back</a><br>
 <a class="btn" href = "LogOut.php">Sign Out</a>
     </nav>

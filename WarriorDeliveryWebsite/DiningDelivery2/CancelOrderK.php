@@ -46,10 +46,10 @@ if($user_value == NULL){
 
   
 <h2> Cancel Order Here </h2>
-<p> If you would like to cancel an order, please select the Order ID and select a reason. This will notify the student through email. </p>
+<p style=text-align:center> If you would like to cancel an order, please select the Order ID and select a reason. This will notify the student through email. </p>
 
 
-<form action = "cancelOrder.php" method="post">
+<form style=text-align:center action = "cancelOrder.php" method="post">
 <select id="cancelOrder" name="cancelOrder">
 	<option> Select Order ID </option>
 	

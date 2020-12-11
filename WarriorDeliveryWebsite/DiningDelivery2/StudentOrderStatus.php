@@ -107,7 +107,7 @@ if ($value != NULL and $value['status'] == '0'){
 	</tbody>
 	
 </table>
-	    
+	    <br>
 	    <?php
 }
 
@@ -149,7 +149,7 @@ if ($value != NULL and $value['status'] == '1'){
 	</tbody>
 	
 </table>
-	    
+	    <br>
 	    <?php
 }
 
@@ -188,6 +188,7 @@ if ($value != NULL and $value['status'] == '3'){
 	</tbody>
 	
 </table>
+<br>
 	    
 	    <?php
 }

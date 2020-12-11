@@ -55,7 +55,9 @@ $db = new mysqli('localhost','id15421026_affan','Rj!cId5d+)xiYL$7','id15421026_d
     </nav>
 
 
-<p><b>To place an order, please fill out the following fields below.</b></p>    
+<p><b> &nbsp To place an order, please fill out the following fields below.</b></p>
+<br>
+&nbsp
 	<fieldset>
         <legend>Place an Order</legend>
 
@@ -131,7 +133,7 @@ function DeliveryStyle(){
 		
 		if(deliverySelection[i].checked){
 			
-			document.getElementById("deliverySelection").innerHTML = "Delivery Style: " + deliverySelection[i].value;
+			document.getElementById("deliverySelection").innerHTML = "<span style=color:white>" + "Delivery Style: " + deliverySelection[i].value;
 			console.log(deliverySelection[i].value);
 			finalStyle = deliverySelection[i].value;
 		}	

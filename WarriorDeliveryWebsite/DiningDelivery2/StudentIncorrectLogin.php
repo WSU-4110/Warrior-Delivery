@@ -7,23 +7,29 @@
 	<title>Incorrect Login</title>
 </head>
 <body>
-<a href="homepage.html" style="background:none;border:none;display:inline-block;margin:0px;">
+<a href="index.html" style="background:none;border:none;display:inline-block;margin:0px;">
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px"></a>
 
 <h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Incorrect Login</h1><br>
 
-<a href='Homepage.html'>Home</a>
-<a href='menu.html'>Menu</a>  
-<a href='StudentLogin.html'>Student Login</a>
-<a href='DelivererLoginPage.html'>Delivery Login</a>
-<a href='SelectCreation.html'>Create an Account</a>
+<nav>
+<a style="float:left" class="btn" href="index.html">Home</a>
+<a class="btn" href="menu.php">Menu</a>  
+<a class="btn" href="StudentLogin.html">Student Login</a>
+<a class="btn" href="DelivererLoginPage.html">Delivery Login</a>
+<a class="btn" href="SelectCreation.html">Create an Account</a>
+    </nav>
 <br>
-<h3> Incorrect login </h3><br>
-<p>The provided username and password did not match any existing account</p>
+<br>
+<h3> &nbsp Incorrect login </h3><br>
+<p> &nbsp The provided username and password did not match any existing account</p>
 <br>
 <br>
-<a href='StudentLogin.html'>Back</a>
+<nav>
+<a class="btn" href="index.html">Go Back</a>
+ 
 
+    </nav>
 <br>
 </body>
 </html>

@@ -23,7 +23,7 @@ if($user_value == NULL){
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif">
 	<title>Warrior Delivery</title>
 	<script
@@ -32,16 +32,12 @@ if($user_value == NULL){
   crossorigin="anonymous"></script>
 </head>
 <body>
-<a href="ProfilePageDeliverer.php" style="background:none;border:none;display:inline;margin:0px;">
-<img src="shield_only_color.png" alt="Logo" style="max-width:10%;"></a>
-<h1 class="title">View Available Orders</h1><br>
+<a href="ProfilePageDeliverer.php" style="background:none;border:none;display:inline-block;margin:0px;">
+<img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
+</a>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Available Orders | WSU Dining Delivery</h1><br>
 
-<nav>
-	<a  href='ProfilePageDeliverer.php'>Home</a>
-	<a style="float:right" href="LogOut.php">Sign Out</a>
-	<a style="float:right" href="YourInfoD.php">Your info</a>
-	<a style="float:right" href="ChangePasswordDeliverer.html">Change Password</a>
-</nav>
+
 
 <br>
 
@@ -88,8 +84,9 @@ if($user_value == NULL){
 </tbody>
 	
 </table>
+<br>
 
-<p> When you click "Accept Order", you will be given the most prioritized order, which 
+<p style=text-align:center> When you click "Accept Order", you will be given the most prioritized order, which 
 correlates to the oldest entry in the queue. 
 You will only be allowed to take on one order at a time only. Once finished, 
 click the "Finished" button to verify the completion of the order. Thank you! </p>
@@ -99,7 +96,8 @@ click the "Finished" button to verify the completion of the order. Thank you! </
 <br>
 <button onclick="completedOrder()">Completed Order</button><br><br>
     <nav>
-    <a class="btn" href = "viewCurrentOrders.php">View Current Order</a><br>
+    <a class="btn" href = "viewCurrentOrders.php">View Current Order</a><br><br>
+    <a class="btn" href = "ProfilePageDeliverer.php">Go Back</a><br>
     </nav>
 
 

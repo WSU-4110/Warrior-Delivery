@@ -25,7 +25,7 @@ if($user_value == NULL){
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif">
 	<title>Warrior Delivery</title>
 	<script
@@ -37,10 +37,13 @@ if($user_value == NULL){
 <a href="ProfilePageKitchen.php" style="background:none;border:none;display:inline-block;margin:0px;">
 <img src="shield_only_color.png" alt="Logo" style="width:96px;height:81px">
 </a>
-<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Warrior Delivery</h1><br>
+<h1 style="display:inline-block;height:64px;vertical-align:bottom;margin:5px;">Edit Menu | Warrior Delivery</h1><br>
 
 <br>
-<a href='ProfilePageKitchen.php'>Home</a>
+<nav>
+<a class="btn" href='ProfilePageKitchen.php'>Home</a>    
+</nav>
+
 
 <script>
 var textItem = "";
@@ -111,10 +114,9 @@ window.location.replace("menuAddConfirmation.php");
 </script>
  
 
-<h3> Create / Edit / Delete Menu Items </h3>
 
 <br>
-<h3> Current Active Menu </h3>
+<h2> Current Active Menu </h2>
 <table style>
 	<thead>	
 		<th>Item ID</th>
@@ -161,30 +163,31 @@ while($row = mysqli_fetch_array($result)){
 
 <br>
 
-<fieldset>
+<fieldset style=text-align:center>
 	<legend>Add a new menu item:</legend>
 
 	<label for="newMenuItem">Item Name</label><br>
-	<input type="text" id="itemName" placeholder="Please enter item name" onchange="addItem()" required></input><br>
+	<input type="text" id="itemName" style="width:500px" placeholder="Please enter item name" onchange="addItem()" required></input><br>
 		
 	<label for="newMenuPrice">Item Price</label><br>
-	<input type="number" id="itemPrice" placeholder="Please enter item price" onchange="addPrice()" required></input><br>
+	<input type="number" id="itemPrice" style="width:500px" placeholder="Please enter item price" onchange="addPrice()" required></input><br>
 
 	<label for="newMenuDescription">Item Description</label><br>
-	<textarea id="itemDescription" rows="1" cols="30" placeholder="Please enter item description" onchange="addDescription()" required></textarea><br>
+	<textarea id="itemDescription" style="width:500px" required rows="1" cols="30" size=50 placeholder="Please enter item description" onchange="addDescription()" required></textarea><br>
 
 	<label for="newMenuCalories">Item Calorie Count</label><br>
-	<input type="number" id="itemCalories"  placeholder="Please enter the item's calorie content" onchange="addCalories()" required></input><br>
+	<input type="number" id="itemCalories" style="width:500px" placeholder="Please enter the item's calorie content" onchange="addCalories()" required></input><br>
 
+<br>
 	<button onclick="return confirm('Are you sure you want to submit the item?') && sendData()">Submit</button><br>
 
 </fieldset>
 
 <br>
-<h3> Delete item from menu </h3>
+<h2> Delete item from menu </h2>
 
 
-<form action = "deleteOrder.php" method="post">
+<form action = "deleteOrder.php" style=text-align:center method="post">
 <select id="deleteOrder" name="deleteOrder">
 	<option> Select Item ID </option>
 	
@@ -207,8 +210,10 @@ $result = mysqli_query($db,$sql);
 </form>
 
 
-<a href = "ProfilePageKitchen.php">Go Back</a><br>
-<a href = "LogOut.php">Sign Out</a>
+<nav>
+<a class="btn" href = "ProfilePageKitchen.php">Go Back</a><br>
+<a class="btn" href = "LogOut.php">Sign Out</a>
+</nav>
 
 
 </body>

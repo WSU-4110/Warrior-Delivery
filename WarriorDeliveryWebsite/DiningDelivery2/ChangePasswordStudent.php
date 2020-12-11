@@ -31,7 +31,6 @@ $row = mysqli_num_rows($result);
 
 <br>
 
-<a href='ProfilePage.php'>Home</a>
 
   
 <br>
@@ -53,8 +52,11 @@ if($row==1){
 <br>
 <br>
 
-<a href="ProfilePage.php">Go Back</a><br>
+<nav>
+        <a class="btn" href = "ProfilePage.php">Go Back</a><br>
+       
 
+    </nav>
 
 </body>
 </html>

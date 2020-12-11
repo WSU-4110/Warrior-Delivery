@@ -24,7 +24,7 @@ if($user_value == NULL){
 <html>
 <br>
 <head>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="themeS.css">
 	<link rel="icon" href="WayneLogo1_small.png" type="image/gif" </link>
 	<title>Information</title>
 	<script
@@ -103,7 +103,7 @@ $value = mysqli_fetch_assoc($result);
 
 <br>
 <nav>
-        <a class="btn" href = "ProfilePageDeliverer.php">Go Back</a><br>
+        <a class="btn" href = "ProfilePage.php">Go Back</a><br>
         <a class="btn" href = "LogOut.php">Sign Out</a>
     </nav>
 
