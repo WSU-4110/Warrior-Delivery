@@ -3,7 +3,7 @@ language: php
 # before_script: 
 # - composer install
 
-script: Warrior-Delivery/PHPUnitTest/vendor/bin/phpunit
+script: PHPUnitTest/vendor/bin/phpunit
 
 php:
   - '8.0'
