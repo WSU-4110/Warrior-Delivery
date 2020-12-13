@@ -4,8 +4,6 @@ before_script: cd Warrior-Delivery\PHPUnitTest\tests
 
 script: Warrior-Delivery/PHPUnitTest/phpunit tests/EditMenuTest.php
 
-os: windows
-
 php:
   - '8.0'
   # - hhvm # on Trusty only
