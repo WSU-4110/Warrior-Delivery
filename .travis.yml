@@ -1,9 +1,6 @@
 language: php
 
-before_script: cd Warrior-Delivery\PHPUnitTest\tests
-
 script: php PHPUnitTest/tests/EditMenuTest.php
 
 php:
   - '8.0'
-  # - hhvm # on Trusty only
