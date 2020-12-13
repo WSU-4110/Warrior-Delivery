@@ -1,7 +1,10 @@
 language: php
+
+before_script: 
+- composer install
+
+script: PHPUnitTest/vendor/bin/phpunit
+
 php:
-  - '5.4'
-  - '5.6'
-  - '7.0'
-  - hhvm # on Trusty only
-  - nightly
+  - '8.0'
+  # - hhvm # on Trusty only
