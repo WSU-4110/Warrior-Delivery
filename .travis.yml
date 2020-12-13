@@ -1,6 +1,6 @@
 language: php
 
-script: php PHPUnitTest/tests/EditMenuTest.php
+script: php tests/EditMenuTest.php
 
 php:
   - '8.0'
