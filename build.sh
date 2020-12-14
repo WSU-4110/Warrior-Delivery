@@ -2,7 +2,7 @@
 cd $TRAVIS_BUILD_DIR/
 sbt ++$TRAVIS_SCALA_VERSION Warrior-Delivery
 
-  - php PHPUnitTest/tests/CancelOrderKTest.php
+  - phpunit tests\CancelOrderKTest.php
   - php PHPUnitTest/tests/countValuesTest.php
   - php PHPUnitTest/tests/CreateDelivererAccountTest.php
   - php PHPUnitTest/tests/CreateStudentAccountTest.php
