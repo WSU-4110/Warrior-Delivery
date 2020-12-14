@@ -3,16 +3,16 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-final class DelivererEmailTest extends TestCase
+final class EmailTest extends TestCase
 {
-   public function testThatIsCreatedForGmailAddress(): void
+   public function testThatIsCreatedFromWayneEmailAddress(): void
    { require 'src\Email.php';
        $this->assertInstanceOf(
            Email::class,
-           Email::fromString('user@gmail.com')
+           Email::fromString('user@wayne.edu')
        );
    }
-   public function testThatIsNotCreatedForGmailAddress(): void
+   public function testThatIsNotCreatedFromWayneEmailAddress(): void
    {
        $this->expectException(InvalidArgumentException::class);
        Email::fromString('invalid');
@@ -20,8 +20,8 @@ final class DelivererEmailTest extends TestCase
    public function testPrintAsString(): void
    {
        $this->assertEquals(
-           'user@gmail.com',
-           Email::fromString('user@gmail.com')
+           'user@wayne.edu',
+           Email::fromString('user@wayne.edu')
        );
    }
 }
