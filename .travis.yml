@@ -1,6 +1,6 @@
 language: php
 
-before_install: cd Warrior-Delivery
+# before_script: cd Warrior-Delivery
 
 script: 
   # - php PHPUnitTest/tests/CancelOrderKTest.php
