@@ -29,8 +29,8 @@ script:
   deploy:
     provider: script
     script: bash scripts/build.sh
-     on:
-       branch: Continuous-Integration
+    #  on:
+    #    branch: Continuous-Integration
 
   
 
