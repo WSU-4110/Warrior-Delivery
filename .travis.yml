@@ -22,8 +22,7 @@ script:
   - php PHPUnitTest/tests/PasswordTest.php
   - php PHPUnitTest/tests/StudentEmailTest.php
   - php PHPUnitTest/tests/UserTest.php
-
-  # - php PHPUnitTest/tests/.php
+  - php PHPUnitTest/tests/AddBalanceQueryClass.php
   # - php PHPUnitTest/tests/.php
   # - phpunit --bootstrap src/autoload.php --testsuite deliv
   # - phpunit --bootstrap PHPUnitTest/vendor/autoload.php
