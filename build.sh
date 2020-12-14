@@ -1,6 +1,6 @@
 #!/bin/sh
 cd $TRAVIS_BUILD_DIR/
-sbt ++$TRAVIS_SCALA_VERSION package
+sbt ++$TRAVIS_SCALA_VERSION Warrior-Delivery
 
   - php PHPUnitTest/tests/CancelOrderKTest.php
   - php PHPUnitTest/tests/countValuesTest.php

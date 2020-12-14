@@ -1,5 +1,7 @@
 language: php
 
+before_script: cd Warrior-Delivery
+
 script: 
   # - php PHPUnitTest/tests/CancelOrderKTest.php
   # - php PHPUnitTest/tests/countValuesTest.php
