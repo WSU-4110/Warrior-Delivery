@@ -3,7 +3,7 @@ language: php
 # before_script: cd Warrior-Delivery
 
 script: 
-  - cd
+  - pwd
 
   # - php PHPUnitTest/tests/CancelOrderKTest.php
   # - php PHPUnitTest/tests/countValuesTest.php
