@@ -1,4 +1,4 @@
-<?php
+<?
 use PHPUnit\Framework\TestCase;
 
 class CreateStudentAccountTest extends TestCase
