@@ -5,7 +5,7 @@ language: php
 script: 
   - pwd
 
-  # - php PHPUnitTest/tests/CancelOrderKTest.php
+  - php PHPUnitTest/tests/CancelOrderKTest.php
   # - php PHPUnitTest/tests/countValuesTest.php
   # - php PHPUnitTest/tests/CreateDelivererAccountTest.php
   # - php PHPUnitTest/tests/CreateStudentAccountTest.php
@@ -27,7 +27,6 @@ script:
   # - php PHPUnitTest/tests/.php
 
   - bash build.sh
-  - /usr/local/bin/sbt -sbt-create
   
 
 php:

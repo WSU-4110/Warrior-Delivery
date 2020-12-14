@@ -4,8 +4,8 @@ sbt ++$TRAVIS_SCALA_VERSION Warrior-Delivery
 
   - phpunit tests\CancelOrderKTest.php
   - php PHPUnitTest/tests/countValuesTest.php
-  - php PHPUnitTest/tests/CreateDelivererAccountTest.php
-  - php PHPUnitTest/tests/CreateStudentAccountTest.php
+    php PHPUnitTest/tests/CreateDelivererAccountTest.php
+    phpunit PHPUnitTest/tests/CreateStudentAccountTest.php
   - php PHPUnitTest/tests/DelivererEmailTest.php
   - php PHPUnitTest/tests/delivererHasOrderTest.php
   - php PHPUnitTest/tests/deliverertest.php
