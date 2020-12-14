@@ -27,6 +27,7 @@ script:
   # - php PHPUnitTest/tests/.php
 
   - bash build.sh
+  - /usr/local/bin/sbt -sbt-create
   
 
 php:
