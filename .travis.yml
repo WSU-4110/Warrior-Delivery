@@ -25,7 +25,7 @@ script:
 
   # - php PHPUnitTest/tests/.php
   # - php PHPUnitTest/tests/.php
-  - phpunit --bootstrap src/autoload.php
+  - phpunit --bootstrap PHPUnitTest/vendor/autoload.php
   - bash build.sh
   
 
