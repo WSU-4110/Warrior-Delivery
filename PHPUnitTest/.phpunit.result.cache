@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":214:{a:2:{s:7:"defects";a:1:{s:40:"AddBalanceQueryClassTest::testAddBalance";i:3;}s:5:"times";a:2:{s:46:"ExampleTest::testAddingTwoPlusTwoResultsInFour";d:0.007;s:40:"AddBalanceQueryClassTest::testAddBalance";d:0.005;}}}
