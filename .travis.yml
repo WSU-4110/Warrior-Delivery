@@ -3,6 +3,8 @@ language: php
 # before_script: cd Warrior-Delivery
 
 script: 
+  - cd
+
   # - php PHPUnitTest/tests/CancelOrderKTest.php
   # - php PHPUnitTest/tests/countValuesTest.php
   # - php PHPUnitTest/tests/CreateDelivererAccountTest.php
