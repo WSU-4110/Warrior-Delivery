@@ -1,12 +1,16 @@
 # Warrior-Delivery: A dining hall food delivery service.
+ 
+![](Warrior-Delivery/WarriorDeliveryWebsite/DiningDelivery2/WayneLogo1_small.png)
+# [Please visit Warrior-Delivery Website](http://wsudiningdelivery2020.000webhostapp.com/)
+
 ## Developers:  
 
 Affan Atif, Neelesh Bollu, Timothy Haddad, Miguel Manzanarez, Sanaz Rabinia, Mazin Shulaiba
 
-| Backend       | Frontend      | Database | JUnit   |
+| Backend       | Frontend      | Database | PHPUnit   |
 | ------------- |:-------------:|:--------:| ------: |     
-|    Neelesh    |               |  Neelesh |         |
-|               | Affan         |          |         |
+|    Neelesh    | Neelesh       |          |  Neelesh|
+|  Affan        | Affan         |  Affan   | Affan   |
 |               | Timothy       |          |         |
 |               | Miguel        |          |         |
 |     Sanaz     | Sanaz         |  Sanaz   |  Sanaz  |
@@ -26,5 +30,8 @@ This Website:
 2. verifies the user is a Wayne State student based on access ID.
 3. can specify the cafeteria and can support multiple menu items.
 4. confirms order and displays delivery status for each user.
+
+## Link to Website:
+http://wsudiningdelivery2020.000webhostapp.com/index.html
 
 

@@ -1,0 +1,161 @@
+* {
+	font-family: Arial; 
+}
+
+footer{
+    background-color: #0c5449;
+}
+
+body {
+	background-color:#00584D;
+	margin: 5vw 10vw 5vw 10vw;
+}
+
+h1 {
+	color: #FFC842;
+	font-size: 2.25em;
+}
+ .title {
+	display:inline-block;
+	font-size:5vw;
+	vertical-align:bottom;
+	margin:1vw;
+}
+h2 {
+	color: #FFC842;
+	font-size: 1.5em;
+}
+h3 {
+	color: #FFC842;
+	font-size: 1.2em;
+}
+
+p {
+	color: #FBFBFF;
+}
+
+a:link {
+	color: #DDDDDD;
+	background-color: #B80C09;
+	font-size: 1.5em;
+	border:2px outset #B80C09;
+	border-radius: 3px;
+	padding: 5px;
+	text-decoration: none;
+	display: inline-block;
+}
+a:visited {
+	color: #DDDDDD;
+	background-color: #B80C09;
+	font-size: 1.5em;
+	border:2px outset #B80C09;
+	text-decoration: none;
+}
+a:hover {
+	color: #FFFFFF;
+	background-color: #B80C09;
+	font-size: 1.5em;
+	border:2px solid #B80C09;
+	text-decoration: none;
+}
+a:active {
+	color: #FFFFFF;
+	background-color: #B80C09;
+	font-size: 1.5em;
+	border:2px inset #B80C09;
+	text-decoration: none;
+}
+fieldset {
+	border:2px solid #FFC842;
+	padding: 1.5vw;
+}
+legend {
+	color: #DDDDDD;
+	/*border:2px solid #FFC842;*/
+	background-color: #B80C09;
+	font-size: 1.75em;
+}
+
+label {
+	color: #DDDDDD;
+	line-height: 2.5;
+}
+
+input[type=submit] {
+	padding: 2px;
+	margin: 15px 0px 15px;
+	color: #01BAEF;
+	background-color: #B80C09;
+	border:2px outset #B80C09;
+	border-radius: 3px;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+nav {
+	position: sticky;
+	top: 0;
+	background-color: #960D0D;
+	padding: 0px;
+	display: block;
+	margin: 1vw 0vw 1vw 0vw;
+}
+
+nav a:link{
+	color: #DDDDDD;
+	background-color: #960D0D;
+	font-size: 1.75em;
+	border: none;
+	border-radius: 0px;
+	padding: 1vw;
+}
+nav a:visited {
+	color: #DDDDDD;
+	background-color: #960D0D;
+	font-size: 1.75em;
+	border: none;
+	text-decoration: none;
+}
+nav a:hover {
+	color: #FFFFFF;
+	background-color: #B80C09;
+	font-size: 1.75em;
+	border: none;
+	text-decoration: none;
+}
+
+nav a.on {
+	background-color: #F5AF00;
+	color: #000000;
+	font-size: 1.75em;
+	border: none;
+	text-decoration: none;
+}
+
+table {
+	border: 5px solid #FFC842;
+	width: 85%;
+	border-collapse: collapse; 
+	background-color: white; 
+}
+
+td, th { 
+	padding: 3px;
+	border: 2px solid #FFC842; 
+}
+		
+td { 
+	text-align: center; 
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+#spanresult, #BeverageResult {
+	color: #FFFFFF;
+	font-weight: bold;
+}
