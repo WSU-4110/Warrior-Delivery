@@ -2,7 +2,7 @@ language: php
 
 # before_script: cd Warrior-Delivery
 
-# script: 
+script: 
   # - pwd
 
   # - php PHPUnitTest/tests/CancelOrderKTest.php
@@ -25,7 +25,7 @@ language: php
 
   # - php PHPUnitTest/tests/.php
   # - php PHPUnitTest/tests/.php
-
+  - phpunit --bootstrap src/autoload.php
   - bash build.sh
   
 
