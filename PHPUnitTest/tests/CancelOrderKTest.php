@@ -17,5 +17,3 @@ class CancelOrderKTest extends TestCase
 		$this->assertSame("Out of Stock", $order->getReason());
 	}
 }
-
-?>
