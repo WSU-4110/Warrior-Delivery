@@ -1,6 +1,6 @@
 language: php
 
-# before_script: cd Warrior-Delivery
+before_script: cd Warrior-Delivery
 
 script: 
   # - php PHPUnitTest/tests/CancelOrderKTest.php
@@ -23,6 +23,8 @@ script:
 
   # - php PHPUnitTest/tests/.php
   # - php PHPUnitTest/tests/.php
+
+  - build.sh
 
   deploy:
     provider: script
